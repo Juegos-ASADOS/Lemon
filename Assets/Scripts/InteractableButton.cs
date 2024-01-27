@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableButton : InteractableObject
 {
-    protected override void Interact() {
+    public override void Interact(GameObject pickedObject) {
         if(this.name == "Enter")
         {
             this.transform.parent.GetComponentInParent<Register>().Enter();

@@ -9,7 +9,7 @@ public class InteractableObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        // Player.click(type)
+        PlayerInstance.instance.ClickObject(gameObject);
     }
 
     public virtual void Interact(GameObject pickedObject) { }

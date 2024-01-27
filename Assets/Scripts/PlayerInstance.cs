@@ -22,7 +22,7 @@ public class PlayerInstance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        pickTransform = transform.GetChild(0);
     }
 
     // Update is called once per frame
@@ -31,7 +31,7 @@ public class PlayerInstance : MonoBehaviour
 
     }
 
-    void ClickObject(GameObject obj)
+    public void ClickObject(GameObject obj)
     {
         InteractableObject interact = obj.GetComponent<InteractableObject>();
         if (interact == null)
@@ -47,7 +47,8 @@ public class PlayerInstance : MonoBehaviour
             else
                 interact.Interact(null);
 
-            pickedObject.transform.position = pickTransform.position;
+            if(pickedObject != null)
+                pickedObject.transform.position = pickTransform.position;
         }
         else
         {
