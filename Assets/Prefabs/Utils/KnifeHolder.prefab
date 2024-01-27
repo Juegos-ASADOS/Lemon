@@ -156,7 +156,7 @@ GameObject:
   - component: {fileID: 3936167387789256323}
   - component: {fileID: 3936167387789256322}
   - component: {fileID: 3936167387789256349}
-  - component: {fileID: 3936167387789256320}
+  - component: {fileID: 4327937290282901898}
   m_Layer: 0
   m_Name: Knife
   m_TagString: Untagged
@@ -243,7 +243,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &3936167387789256320
+--- !u!114 &4327937290282901898
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,7 +252,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3936167387789256351}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f5138ad783f5d84bb42c4dc46da1f9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c7ea2576e10a564697988d2c7907319, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   objType: 3
