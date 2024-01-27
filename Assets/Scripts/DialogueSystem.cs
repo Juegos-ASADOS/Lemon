@@ -61,6 +61,7 @@ public class DialogueSystem : MonoBehaviour
     private IEnumerator letterByLetter(dialogueLine dialogue)
     {
         char[] messageArray = dialogue.text.ToCharArray();
+        //TODO SONIDO DE HABLAR
         for (int i = 0; i < messageArray.Length; i++)
         {
             dialogueTMP.text += messageArray[i];
@@ -93,7 +94,6 @@ public class DialogueSystem : MonoBehaviour
 struct dialogueLine
 {
     public string text;
-    public bool isEnd;
 
     [Header("Events")]
     public UnityEvent startLineEvent;
