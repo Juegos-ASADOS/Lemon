@@ -8,7 +8,7 @@ public class PlayerInstance : MonoBehaviour
 
     GameObject pickedObject;
 
-    // La posición de los objetos al cogerlos
+    // La posiciï¿½n de los objetos al cogerlos
     Transform pickTransform;
 
     [SerializeField] float MoveSpeed = 30f;
@@ -33,6 +33,7 @@ public class PlayerInstance : MonoBehaviour
         {
             pickedObject.transform.position = Vector3.MoveTowards(pickedObject.transform.position, pickTransform.position, MoveSpeed * Time.deltaTime);
         }
+
     }
 
     public void ClickObject(GameObject obj)
@@ -44,10 +45,15 @@ public class PlayerInstance : MonoBehaviour
         ObjectType t = interact.objType;
         if (pickedObject == null)
         {
-            if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || (obj.transform.parent != null && (t == ObjectType.FRUTA || t == ObjectType.VASO || t == ObjectType.BOLLO)) || t == ObjectType.DINERO)
+            if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t == ObjectType.PLATO)
+            {
+                if (obj.transform.parent != null)
+                    pickedObject = obj;
+                else
+                    pickedObject = Instantiate(obj);
+            }
+            else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || t == ObjectType.DINERO)
                 pickedObject = obj;
-            else if(t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
-                pickedObject = Instantiate(obj);             
             else
                 interact.Interact(null);
             
@@ -69,7 +75,7 @@ public class PlayerInstance : MonoBehaviour
     {
         ObjectType t = pickedObject.GetComponent<InteractableObject>().objType;
 
-        if (t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
+        if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO)
             Destroy(pickedObject);
     }
     public void RemoveHandObject()
