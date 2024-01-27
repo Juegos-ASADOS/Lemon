@@ -9,8 +9,8 @@ public class CutboardInteraction : InteractableObject
     private float holdTime = 1.0f;
     private float restingTime = 0.0f;
 
-    [SerializeField]
-    private ParticleSystem cutParticles;
+    //[SerializeField]
+    //private ParticleSystem cutParticles;
 
     private GameObject knife;
 
@@ -24,13 +24,16 @@ public class CutboardInteraction : InteractableObject
         if (pickedObject != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO &&
-                transform.childCount == 2  && transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.FRUTA &&
+                transform.childCount == 2  && (transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.FRUTA ||
+                (transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.COMIDA &&
+                transform.GetChild(1).GetComponent<FruitCharacteristics>().GetTypeFruit() == JuiceType.CAKE)) &&
                 !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
             {
                 canHold = true;
                 knife = pickedObject;
             }
-            else if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
+            else if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA ||
+                (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.COMIDA && pickedObject.GetComponent<FruitCharacteristics>().GetTypeFruit() == JuiceType.CAKE))
             {
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);
                 //pickedObject.transform.position = transform.GetChild(0).position;
@@ -56,8 +59,8 @@ public class CutboardInteraction : InteractableObject
                 transform.GetChild(1).GetComponent<FruitCharacteristics>().cutFruit();
                 canHold = false;
             }
-            cutParticles.transform.position = transform.GetChild(0).position;
-            cutParticles.Play();
+            //cutParticles.transform.position = transform.GetChild(0).position;
+            //cutParticles.Play();
             restingTime = holdTime;
             if (knife != null)
             {

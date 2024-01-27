@@ -14,6 +14,7 @@ public class SqueezerHolderInteractable : InteractableObject
             PlayerInstance.instance.RemoveHandObject();
             pickedObject.transform.parent = transform;
             pickedObject.transform.position = transform.GetChild(0).position;
+            pickedObject.transform.rotation = transform.GetChild(0).rotation;
         }
             
     }
