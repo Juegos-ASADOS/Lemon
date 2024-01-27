@@ -1,5 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 using UnityEngine;
 
 [System.Serializable]
@@ -41,7 +46,8 @@ public class CameraWaypoint : MonoBehaviour
         Gizmos.color = Color.blue;
         Gizmos.DrawSphere(transform.position, .2f);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawRay(transform.position, transform.forward);
+        
+        Handles.DrawLine(transform.position, transform.position + transform.forward, 2.5f);
     }
 #endif
 }
