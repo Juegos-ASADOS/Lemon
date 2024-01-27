@@ -32,6 +32,7 @@ public class Register : MonoBehaviour
         if(actCode.Length > 0  && code == int.Parse(actCode))
         {
             //SONIDO inicioCaja
+            OpenDrawer(0);
             Debug.Log("Abrir");
         }
         else
@@ -45,9 +46,13 @@ public class Register : MonoBehaviour
     public void OpenDrawer(int drawer)
     {
         transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Open");
+        if (transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>() != null)
+            transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>().enabled = true;
     }
     public void CloseDrawer(int drawer)
     {
         transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Close");
+        if (transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>() != null)
+            transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>().enabled = false;
     }
 }
