@@ -12,6 +12,7 @@ public class DialogueSystem : MonoBehaviour
         dialogueTMP = dialogueBox.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
         Cliente.ClientEnter += startCoroutines;
         Cliente.ClientExit += dialogueStop;
+        //TODO: Evento de diálogo de limoncín (esto igual es con otro script)
     }
 
     void startCoroutines(string clientName)
@@ -37,12 +38,18 @@ public class DialogueSystem : MonoBehaviour
         }
         yield return StartCoroutine(PrintDialogue(characters[i].dialogueList));
     }
-
     private IEnumerator PrintDialogue(List<dialogueLine> dialogueList)
     {
-        dialogueIndex = 0;
+        short dialogueIndex = 0;
         while (dialogueIndex < dialogueList.Count)
         {
+            if (dialogueList[dialogueIndex].startWaitTimeSeconds > 0)
+            {
+                dialogueBox.SetActive(false);
+                yield return new WaitForSeconds(dialogueList[dialogueIndex].startWaitTimeSeconds);
+                dialogueBox.SetActive(true);
+            }
+
             dialogueList[dialogueIndex].startLineEvent?.Invoke();
 
             dialogueTMP.text = "";
@@ -51,13 +58,15 @@ public class DialogueSystem : MonoBehaviour
 
             dialogueList[dialogueIndex].endLineEvent?.Invoke();
 
+            //if (dialogueList[dialogueIndex].endWaitTimeSeconds > 0)
+            //    yield return new WaitForSeconds(dialogueList[dialogueIndex].endWaitTimeSeconds);
+
             dialogueIndex++;
         }
 
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
         dialogueStop();
     }
-
     private IEnumerator letterByLetter(dialogueLine dialogue)
     {
         char[] messageArray = dialogue.text.ToCharArray();
@@ -65,7 +74,10 @@ public class DialogueSystem : MonoBehaviour
         for (int i = 0; i < messageArray.Length; i++)
         {
             dialogueTMP.text += messageArray[i];
-            yield return new WaitForSeconds(textSpeed);
+            if (dialogue.letterSpeedSeconds == 0)
+                dialogue.letterSpeedSeconds = defaultLetterSpeed;
+
+            yield return new WaitForSeconds(dialogue.letterSpeedSeconds);
         }
 
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
@@ -77,23 +89,34 @@ public class DialogueSystem : MonoBehaviour
         dialogueTMP.text = "";
         dialogueBox.SetActive(false);
     }
+    //Can be called in the event part of the dialogue for any NPC
+    public void changeTextFont()
+    {
+        
+    }
 
     [SerializeField]
     private List<dialogueCharacter> characters;
 
     [SerializeField]
-    private float textSpeed = 0.25f;
+    private float defaultLetterSpeed = 0.04f;
 
     private GameObject dialogueBox;
     private TextMeshProUGUI dialogueTMP;
 
-    short dialogueIndex;
+    private GameObject limDialogueBox;
+    private TextMeshProUGUI limDialogueTMP;
+
+    //short dialogueIndex;
 }
 
 [System.Serializable]
 struct dialogueLine
 {
     public string text;
+    public float startWaitTimeSeconds;
+    //public float endWaitTimeSeconds;
+    public float letterSpeedSeconds;
 
     [Header("Events")]
     public UnityEvent startLineEvent;
