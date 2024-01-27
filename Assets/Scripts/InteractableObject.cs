@@ -1,23 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum Type { LIMON, CRUASAN, MANZANA }
 
 public class InteractableObject : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField]
+    Type type;
 
     private void OnMouseDown()
     {
-        Debug.Log("A");
+        // Player.click(type)
+        Interact();
     }
+
+    protected virtual void Interact() { }
 }
