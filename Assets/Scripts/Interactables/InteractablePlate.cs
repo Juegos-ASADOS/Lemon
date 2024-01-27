@@ -12,10 +12,11 @@ public class InteractablePlate : InteractableObject
     }
     public override void Interact(GameObject pickedObject)
     {
-        if (pickedObject != null)
-        {           
+        if (pickedObject != null && transform.parent != null)
+        {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.COMIDA)
             {
+                if (pickedObject.GetComponent<FruitCharacteristics>() == null || !pickedObject.GetComponent<FruitCharacteristics>().IsCut()) return;
                 pickedObject.transform.position = transform.GetChild(0).position;
                 pickedObject.transform.parent = transform;
                 objectContained = pickedObject;
