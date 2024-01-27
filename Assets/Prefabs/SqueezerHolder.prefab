@@ -95,7 +95,6 @@ GameObject:
   - component: {fileID: 5211287213427488629}
   - component: {fileID: 2050602846389293515}
   - component: {fileID: 5997070736878685093}
-  - component: {fileID: 4522265941645780831}
   - component: {fileID: 2848988700712465158}
   m_Layer: 0
   m_Name: Recipiente_Exprimidor
@@ -184,20 +183,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 3352908213220788912, guid: efda8a73115e8d1489f8f717a5120f60, type: 3}
---- !u!114 &4522265941645780831
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1511110625495058237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f0a9772574dc845871d757e815c1a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdTime: 1
-  tag: 
 --- !u!114 &2848988700712465158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,8 +257,8 @@ Transform:
   m_GameObject: {fileID: 8475723000526515382}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 239.09676, y: 239.09676, z: 239.09676}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 50, y: 50, z: 50}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5764898518230567198}
   - {fileID: 8390719594635719761}
