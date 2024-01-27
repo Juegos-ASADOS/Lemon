@@ -112,9 +112,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   counterPos: {x: 0, y: 0, z: 7}
-  OutOfSightPos: {x: 0, y: 0, z: -10}
+  OutOfSightPos: {x: 0, y: 0, z: 0}
   MoveSpeed: 3
   aceptableDistance: 0.5
-  intention: 0
-  moving: 1
+  intention: 4
+  moving: 0
   teleport: 0
