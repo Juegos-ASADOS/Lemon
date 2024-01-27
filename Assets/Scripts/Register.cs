@@ -32,13 +32,11 @@ public class Register : MonoBehaviour
         if(actCode.Length > 0  && code == int.Parse(actCode))
         {
             //SONIDO inicioCaja
-            OpenDrawer(0);
             Debug.Log("Abrir");
         }
         else
         {
             //SONIDO errorCodigo
-            CloseDrawer(0);
             Debug.Log("Error");
             actCode = "";
         }

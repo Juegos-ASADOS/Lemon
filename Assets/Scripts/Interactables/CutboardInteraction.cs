@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CutboardInteraction : InteractableObject
 {
-    [SerializeField]
     private GameObject objectContained;
 
     void Update()
@@ -18,7 +17,7 @@ public class CutboardInteraction : InteractableObject
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO && 
                 objectContained != null && objectContained.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
-                GetComponent<HoldToComplete>().changeHold(true);
+                GetComponent<HoldToComplete>().ChangeHold(true);
             }
             else if(pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
