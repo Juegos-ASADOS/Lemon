@@ -17,7 +17,7 @@ public class Cliente : MonoBehaviour
     [SerializeField] float aceptableDistance = 0.5f;
 
     //provisional cambiar segun situacion
-    public Intention intention = Intention.ENTER;
+    public Intention intention;//= Intention.ENTER;
 
     private Vector3 destino;
     public bool moving = false;
@@ -27,12 +27,12 @@ public class Cliente : MonoBehaviour
     {
         //provisional
         destino = counterPos;
-        moving = true;
+        //moving = true;
         //teleport = true;
         //
 
         InteractableTimbre.SendOrder += CheckOrder;
-        InteractableTimbre.CounterOutOfSight += enterTeleport;
+        ClientCounterPosition.CounterOutOfSight += enterTeleport;
 
     }
 
@@ -87,7 +87,8 @@ public class Cliente : MonoBehaviour
     }
     void onOutOffSight()
     {
-        teleportToDest();
+        if (intention == Intention.DISAPPEAR)
+            teleportToDest();
     }
 
     public void enterTeleport()
