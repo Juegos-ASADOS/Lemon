@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 2c8765ab355ff054fbac5ff0cfedee95
+guid: 07f654e59c40ddb41ad67c7805b158c3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_vaso
+    second: {fileID: 2100000, guid: fccd69073488ace4bbdba3f0389d4154, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
