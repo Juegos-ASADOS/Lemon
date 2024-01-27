@@ -17,6 +17,14 @@ public class CutboardInteraction : InteractableObject
     private bool hover = false;
     private bool canHold = false;
 
+
+    private void FixedUpdate()
+    {
+        if (objectContained != null)
+        {
+            //objectContained.transform.position = Vector3.MoveTowards(objectContained.transform.position, transform.GetChild(0).position, 30f * Time.deltaTime);
+        }
+    }
     public override void Interact(GameObject pickedObject)
     {
         if (pickedObject != null)
