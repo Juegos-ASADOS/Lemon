@@ -791,6 +791,11 @@ PrefabInstance:
       propertyPath: name
       value: Dani
       objectReference: {fileID: 0}
+    - target: {fileID: 3768878257224201312, guid: 756179a778166b540a683ff5026ad2d6,
+        type: 3}
+      propertyPath: nombre
+      value: Dani
+      objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
       propertyPath: m_RootOrder
@@ -1870,7 +1875,7 @@ MonoBehaviour:
           m_Calls: []
     - text: ...
       startWaitTimeSeconds: 0.6
-      letterSpeedSeconds: 1
+      letterSpeedSeconds: 0.6
       fontSize: 0
       startLineEvent:
         m_PersistentCalls:
@@ -1920,8 +1925,66 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
+  - name: Lemonian
+    dialogueList:
+    - text: soy un limon
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 1993256032}
+            m_TargetAssemblyTypeName: DialogueSystem, Assembly-CSharp
+            m_MethodName: changeFont
+            m_Mode: 2
+            m_Arguments:
+              m_ObjectArgument: {fileID: 11400000, guid: 4a913b0c5685f5746963bfe17637ac52,
+                type: 2}
+              m_ObjectArgumentAssemblyTypeName: TMPro.TMP_FontAsset, Unity.TextMeshPro
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+          - m_Target: {fileID: 1993256032}
+            m_TargetAssemblyTypeName: DialogueSystem, Assembly-CSharp
+            m_MethodName: changeToLemonianColor
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "Un lim\xF3n mam\xF3n"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: jeje
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
   defaultLetterSpeed: 0.03
   defaultFontSize: 36
+  defaultFont: {fileID: 11400000, guid: 07380b3ae2588cb48a0a9aba3a64dfcf, type: 2}
 --- !u!1001 &2099270877
 PrefabInstance:
   m_ObjectHideFlags: 0

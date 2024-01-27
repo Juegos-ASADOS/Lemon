@@ -33,7 +33,7 @@ public class Cliente : MonoBehaviour
         //teleport = true;
         //
 
-        InteractableTimbre.SendOrder += CheckOrder;
+        TrayInteraction.GiveOrder += CheckOrder;
         ClientCounterPosition.CounterOutOfSight += enterTeleport;
 
         DirectorClients.ClientEnter += setEnter;
@@ -101,12 +101,38 @@ public class Cliente : MonoBehaviour
     }
 
 
-    private void CheckOrder(items i)
+    private void CheckOrder(comandas com)
     {
 
-        moving = true;
+        //moving = true;
         Debug.Log("Pedido recibidio y procesado");
         //eventos de conseguir o fallar pedido
+
+        if (com == comandas.Empty_Cup)
+        {
+            //vaso vacio
+            return;
+        }
+        if (com == comandas.Empty_Plate)
+        {
+            //plato vacio
+            return;
+        }
+        if (com == comandas.No_Tray)
+        {
+            //bandeja vacia
+            return;
+        }
+
+        if (com == ComandasClientes.Instance.GetCommandByName(name))
+        {
+            //success
+
+            Debug.Log("acertastes!");
+            return;
+        }
+        
+
 
     }
     void OnBecameVisible()

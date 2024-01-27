@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum JuiceType { EMPTY, LEMON, ORANGE, GRAPEFRUIT }
+public enum JuiceType { EMPTY, LEMON, ORANGE, GRAPEFRUIT, CAKE }
 public class SqueezerInteraction : InteractableObject
 {
     [SerializeField]
