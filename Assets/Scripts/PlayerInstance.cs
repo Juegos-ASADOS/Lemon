@@ -66,4 +66,8 @@ public class PlayerInstance : MonoBehaviour
         if (t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
             Destroy(pickedObject);
     }
+    public void RemoveHandObject()
+    {
+        pickedObject = null;
+    }
 }
