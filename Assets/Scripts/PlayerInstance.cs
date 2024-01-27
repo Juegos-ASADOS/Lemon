@@ -55,4 +55,12 @@ public class PlayerInstance : MonoBehaviour
             interact.Interact(pickedObject);
         }
     }
+
+    public void DumpObject()
+    {
+        ObjectType t = pickedObject.GetComponent<InteractableObject>().objType;
+
+        if (t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
+            Destroy(pickedObject);
+    }
 }
