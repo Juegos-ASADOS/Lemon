@@ -7,7 +7,7 @@ public class KnifeHolderInteractable : InteractableObject
     public override void Interact(GameObject pickedObject)
     {
         /*if(pickedObject == null)
-            PlayerInstance.instance.ClickObject(transform.GetChild(0).gameObject);
+            PlayerInstance.instance.ClickObject(transform.GetChild(1).gameObject);
         else*/ if (pickedObject != null && pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO)
         {
             PlayerInstance.instance.RemoveHandObject();

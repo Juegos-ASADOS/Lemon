@@ -9,12 +9,14 @@ public class InteractableCup : InteractableObject
     public JuiceType GetJuice() { return juice; }
     public override void Interact(GameObject pickedObject)
     {
-        if(pickedObject != null)
+        if (pickedObject != null && transform.parent != null)
         {
-            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
+            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.EXPRIMIDOR)
             {
                 juice = pickedObject.GetComponent<SqueezerInteraction>().GetJuice();
-
+                gameObject.GetComponent<Renderer>().material = pickedObject.GetComponent<Renderer>().material;
+                pickedObject.GetComponent<SqueezerInteraction>().RemoveJuice();
+                Debug.Log(juice.ToString());
             }
         }
     }
