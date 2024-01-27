@@ -6,35 +6,40 @@ public class SqueezerInteraction : InteractableObject
 {
     [SerializeField]
     private float holdTime = 1.0f;
+
+    [SerializeField]
+    private ParticleSystem finishParticles;
+
     private float restingTime = 0.0f;
     private GameObject fruit;
     private JuiceType juice = JuiceType.EMPTY;
+
+    private Transform originalPos;
     Material mat;
     private bool hover = false;
     private bool canHold = false;
-    private bool completed = false;
     private void Start()
     {
         restingTime = holdTime;
         mat = GetComponent<Renderer>().material;
+        originalPos = transform.parent;
     }
     void Update()
     {
         if (hover && canHold && Input.GetMouseButton(0) && restingTime >= 0.0f)
         {
-            if (completed) completed = false;
             restingTime -= Time.deltaTime;
         }
-        
+
         if (restingTime <= 0.0f)
         {
-            completed = true;            
             gameObject.GetComponent<Renderer>().material = fruit.GetComponent<Renderer>().material;
             PlayerInstance.instance.RemoveHandObject();
             Destroy(fruit);
             fruit = null;
+            finishParticles.transform.position = gameObject.transform.position;
+            finishParticles.Play();
             restingTime = holdTime;
-            Debug.Log("Tiempo restante: "+restingTime);
         }
     }
     public override void Interact(GameObject pickedObject)
@@ -44,9 +49,11 @@ public class SqueezerInteraction : InteractableObject
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
                 fruit = pickedObject;
-
-                juice = fruit.GetComponent<FruitCharacteristics>().GetTypeFruit();
-                canHold = true;
+                if (fruit.GetComponent<FruitCharacteristics>().IsCut())
+                {
+                    juice = fruit.GetComponent<FruitCharacteristics>().GetTypeFruit();
+                    canHold = true;
+                }
             }
         }
     }
@@ -58,6 +65,9 @@ public class SqueezerInteraction : InteractableObject
     {
         juice = JuiceType.EMPTY;
         gameObject.GetComponent<Renderer>().material = mat;
+        PlayerInstance.instance.RemoveHandObject();
+        transform.parent = originalPos;
+        transform.position = originalPos.GetChild(0).position;
     }
 
     void OnMouseOver() { hover = true; }

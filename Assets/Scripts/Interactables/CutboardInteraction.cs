@@ -5,14 +5,18 @@ using UnityEngine;
 
 public class CutboardInteraction : InteractableObject
 {
-    private GameObject objectContained;
-
     [SerializeField]
     private float holdTime = 1.0f;
+    private float restingTime = 0.0f;
+
+    [SerializeField]
+    private ParticleSystem cutParticles;
+
+    private GameObject objectContained;
+    private GameObject knife;
 
     private bool hover = false;
     private bool canHold = false;
-    private bool completed = false;
 
     public override void Interact(GameObject pickedObject)
     {
@@ -22,11 +26,12 @@ public class CutboardInteraction : InteractableObject
                 objectContained != null && objectContained.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
                 canHold = true;
+                knife = pickedObject;
             }
             else if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
-                pickedObject.transform.position = gameObject.transform.position;
-                pickedObject.transform.parent = gameObject.transform;
+                pickedObject.transform.position = transform.GetChild(0).position;
+                pickedObject.transform.parent = transform;
                 objectContained = pickedObject;
                 PlayerInstance.instance.RemoveHandObject();
             }
@@ -38,15 +43,22 @@ public class CutboardInteraction : InteractableObject
 
     void Update()
     {
-        if (hover && canHold && Input.GetMouseButton(0) && holdTime >= 0.0f)
+        if (hover && canHold && Input.GetMouseButton(0) && restingTime >= 0.0f)
         {
-            holdTime -= Time.deltaTime;
+            restingTime -= Time.deltaTime;
         }
-        if (holdTime <= 0.0f && !completed)
+        if (restingTime <= 0.0f)
         {
-            Debug.Log(tag + " Completed!");
-            completed = true;
-            ///TODO: acción de clic completada
+            if (objectContained != null)
+                objectContained.GetComponent<FruitCharacteristics>().cutFruit();
+            cutParticles.transform.position = transform.GetChild(0).position;
+            cutParticles.Play();
+            restingTime = holdTime;
+            if (knife != null)
+            {
+                knife.GetComponent<KnifeInteraction>().CutEnd();
+                knife = null;
+            }
         }
     }
 }

@@ -13,8 +13,8 @@ public class TrayInteraction : InteractableObject
         {            
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.VASO)
             {
-                pickedObject.transform.position = gameObject.transform.position;
-                pickedObject.transform.parent = gameObject.transform;
+                pickedObject.transform.position = transform.GetChild(0).position;
+                pickedObject.transform.parent = transform;
                 objectContained = pickedObject;
                 PlayerInstance.instance.RemoveHandObject();
             }
