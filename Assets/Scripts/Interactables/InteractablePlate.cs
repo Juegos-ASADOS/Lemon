@@ -5,6 +5,11 @@ using UnityEngine;
 public class InteractablePlate : InteractableObject
 {
     private GameObject objectContained;
+
+    public GameObject getFood()
+    {
+        return objectContained;
+    }
     public override void Interact(GameObject pickedObject)
     {
         if (pickedObject != null && transform.parent != null)

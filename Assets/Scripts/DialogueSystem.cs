@@ -4,12 +4,35 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
 
+[System.Serializable]
+struct dialogueLine
+{
+    public string text;
+    public float startWaitTimeSeconds;
+    //public float endWaitTimeSeconds;
+    public float letterSpeedSeconds;
+    public float fontSize;
+
+    [Header("Events")]
+    public UnityEvent startLineEvent;
+    public UnityEvent endLineEvent;
+}
+
+[System.Serializable]
+struct dialogueCharacter
+{
+    public string name;
+    public List<dialogueLine> dialogueList;
+}
+
 public class DialogueSystem : MonoBehaviour
 {
     private void Awake()
     {
         dialogueBox = transform.Find("TextBox").gameObject;
         dialogueTMP = dialogueBox.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+        
+   
         Cliente.ClientEnter += startCoroutines;
         Cliente.ClientExit += dialogueStop;
         //TODO: Evento de diálogo de limoncín (esto igual es con otro script)
@@ -17,6 +40,9 @@ public class DialogueSystem : MonoBehaviour
 
     void startCoroutines(string clientName)
     {
+        dialogueTMP.color = defaultFontColor;
+        dialogueTMP.font = defaultFont;
+        StopAllCoroutines();
         StartCoroutine(dialogueStart(clientName));
     }
 
@@ -95,10 +121,14 @@ public class DialogueSystem : MonoBehaviour
         dialogueTMP.text = "";
         dialogueBox.SetActive(false);
     }
-    //Can be called in the event part of the dialogue for any NPC
-    public void changeTextFont()
+
+    public void changeFont(TMP_FontAsset font)
     {
-        
+        dialogueTMP.font = font;
+    }
+    public void changeToLemonianColor()
+    {
+        dialogueTMP.color = Color.yellow;
     }
 
     [SerializeField]
@@ -110,32 +140,15 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField]
     private float defaultFontSize = 36f;
 
+    [SerializeField]
+    TMP_FontAsset defaultFont;
+
+    Color defaultFontColor = Color.white;
+
     private GameObject dialogueBox;
     private TextMeshProUGUI dialogueTMP;
 
+    //Limoncin
     private GameObject limDialogueBox;
     private TextMeshProUGUI limDialogueTMP;
-
-    //short dialogueIndex;
-}
-
-[System.Serializable]
-struct dialogueLine
-{
-    public string text;
-    public float startWaitTimeSeconds;
-    //public float endWaitTimeSeconds;
-    public float letterSpeedSeconds;
-    public float fontSize;
-
-    [Header("Events")]
-    public UnityEvent startLineEvent;
-    public UnityEvent endLineEvent;
-}
-
-[System.Serializable]
-struct dialogueCharacter
-{
-    public string name;
-    public List<dialogueLine> dialogueList;
 }
