@@ -47,8 +47,11 @@ public class PlayerInstance : MonoBehaviour
             else
                 interact.Interact(null);
 
-            if(pickedObject != null)
+            if (pickedObject != null)
+            {
                 pickedObject.transform.position = pickTransform.position;
+                pickedObject.transform.SetParent(transform);
+            }
         }
         else
         {
