@@ -29,7 +29,7 @@ public class Register : MonoBehaviour
 
     public void Enter()
     {
-        if(code == int.Parse(actCode))
+        if(actCode.Length > 0  && code == int.Parse(actCode))
         {
             //SONIDO inicioCaja
             Debug.Log("Abrir");
@@ -40,5 +40,14 @@ public class Register : MonoBehaviour
             Debug.Log("Error");
             actCode = "";
         }
+    }
+
+    public void OpenDrawer(int drawer)
+    {
+        transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Open");
+    }
+    public void CloseDrawer(int drawer)
+    {
+        transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Close");
     }
 }
