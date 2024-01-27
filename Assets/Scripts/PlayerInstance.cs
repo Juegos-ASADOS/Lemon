@@ -40,19 +40,34 @@ public class PlayerInstance : MonoBehaviour
         ObjectType t = interact.objType;
         if (pickedObject == null)
         {
-            if (t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
-                pickedObject = Instantiate(obj);
-            else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR)
+            if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || obj.transform.parent != null)
                 pickedObject = obj;
+            else if(t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
+                pickedObject = Instantiate(obj);             
             else
                 interact.Interact(null);
 
-            if(pickedObject != null)
+            if (pickedObject != null)
+            {
                 pickedObject.transform.position = pickTransform.position;
+                pickedObject.transform.SetParent(transform);
+            }
         }
         else
         {
             interact.Interact(pickedObject);
         }
+    }
+
+    public void DumpObject()
+    {
+        ObjectType t = pickedObject.GetComponent<InteractableObject>().objType;
+
+        if (t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
+            Destroy(pickedObject);
+    }
+    public void RemoveHandObject()
+    {
+        pickedObject = null;
     }
 }
