@@ -6,7 +6,7 @@ using UnityEngine;
 public class Cliente : MonoBehaviour
 {
     //Eventos a los que se les puede añadir informacion
-    public static event Action ClientEnter = delegate { };
+    public static event Action<string> ClientEnter = delegate { };
     public static event Action ClientExit = delegate { };
     public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, OTHER }
 
@@ -15,6 +15,8 @@ public class Cliente : MonoBehaviour
 
     [SerializeField] float MoveSpeed;
     [SerializeField] float aceptableDistance = 0.5f;
+
+    [SerializeField] string name;
 
     //provisional cambiar segun situacion
     public Intention intention;//= Intention.ENTER;
@@ -139,7 +141,7 @@ public class Cliente : MonoBehaviour
         if (intention == Intention.APPEAR)
         {
             appearInScene();
-            ClientEnter();
+            ClientEnter(name);
         }
     }
     public void teleportToDest()
@@ -153,7 +155,7 @@ public class Cliente : MonoBehaviour
     void enterScene()
     {
         //Go to CounterPos
-        ClientEnter(); //evento de cliente entrado
+        ClientEnter(name); //evento de cliente entrado
         destino = OutOfSightPos;
     }
 
