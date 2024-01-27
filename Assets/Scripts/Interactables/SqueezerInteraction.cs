@@ -7,8 +7,8 @@ public class SqueezerInteraction : InteractableObject
     [SerializeField]
     private float holdTime = 1.0f;
 
-    [SerializeField]
-    private ParticleSystem finishParticles;
+    //[SerializeField]
+    //private ParticleSystem finishParticles;
 
     private float restingTime = 0.0f;
     private GameObject fruit;
@@ -37,8 +37,8 @@ public class SqueezerInteraction : InteractableObject
             PlayerInstance.instance.RemoveHandObject();
             Destroy(fruit);
             fruit = null;
-            finishParticles.transform.position = gameObject.transform.position;
-            finishParticles.Play();
+            //finishParticles.transform.position = gameObject.transform.position;
+            //finishParticles.Play();
             restingTime = holdTime;
         }
     }
