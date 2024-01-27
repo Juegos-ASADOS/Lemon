@@ -32,7 +32,7 @@ public class CutboardInteraction : InteractableObject
                 canHold = true;
                 knife = pickedObject;
             }
-            else if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA ||
+            else if (transform.childCount < 2 && pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA ||
                 (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.COMIDA && pickedObject.GetComponent<FruitCharacteristics>().GetTypeFruit() == JuiceType.CAKE))
             {
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);

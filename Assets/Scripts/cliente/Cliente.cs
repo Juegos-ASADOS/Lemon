@@ -124,7 +124,7 @@ public class Cliente : MonoBehaviour
             return;
         }
 
-        if (com == ComandasClientes.Instance.GetCommandByName(name))
+        if (com == ComandasClientes.Instance.GetCommandByName(nombre))
         {
             //success
 
