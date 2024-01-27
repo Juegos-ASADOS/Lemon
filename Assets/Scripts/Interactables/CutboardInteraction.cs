@@ -24,7 +24,8 @@ public class CutboardInteraction : InteractableObject
         if (pickedObject != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO &&
-                transform.childCount == 2  && transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
+                transform.childCount == 2  && transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.FRUTA &&
+                !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
             {
                 canHold = true;
                 knife = pickedObject;
