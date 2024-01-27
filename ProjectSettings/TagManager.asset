@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Cutboard
   - Squeezer
+  - Orange
+  - Grapefruit
+  - Lemon
   layers:
   - Default
   - TransparentFX

@@ -1504,7 +1504,7 @@ PrefabInstance:
     - target: {fileID: 3768878257224201312, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
       propertyPath: OutOfSightPos.z
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}

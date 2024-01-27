@@ -15,7 +15,7 @@ public class InteractableCup : InteractableObject
             {
                 juice = pickedObject.GetComponent<SqueezerInteraction>().GetJuice();
                 gameObject.GetComponent<Renderer>().material = pickedObject.GetComponent<Renderer>().material;
-
+                pickedObject.GetComponent<SqueezerInteraction>().RemoveJuice();
                 Debug.Log(juice.ToString());
             }
         }

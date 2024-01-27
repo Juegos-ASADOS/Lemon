@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8288898055146063473}
   - component: {fileID: 6578215723610780043}
   - component: {fileID: 6574510291712928604}
+  - component: {fileID: 1007117656581562085}
   m_Layer: 0
   m_Name: Lemon
   m_TagString: Untagged
@@ -111,3 +112,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objType: 0
+--- !u!114 &1007117656581562085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370718274239443191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29df627380909ac41a2db50283ff6afe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruit: 0
