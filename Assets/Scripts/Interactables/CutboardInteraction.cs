@@ -13,6 +13,7 @@ public class CutboardInteraction : InteractableObject
     private ParticleSystem cutParticles;
 
     private GameObject objectContained;
+    private GameObject knife;
 
     private bool hover = false;
     private bool canHold = false;
@@ -25,11 +26,12 @@ public class CutboardInteraction : InteractableObject
                 objectContained != null && objectContained.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
                 canHold = true;
+                knife = pickedObject;
             }
             else if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
-                pickedObject.transform.position = gameObject.transform.position;
-                pickedObject.transform.parent = gameObject.transform;
+                pickedObject.transform.position = transform.GetChild(0).position;
+                pickedObject.transform.parent = transform;
                 objectContained = pickedObject;
                 PlayerInstance.instance.RemoveHandObject();
             }
@@ -49,9 +51,14 @@ public class CutboardInteraction : InteractableObject
         {
             if (objectContained != null)
                 objectContained.GetComponent<FruitCharacteristics>().cutFruit();
-            cutParticles.transform.position = gameObject.transform.position;
+            cutParticles.transform.position = transform.GetChild(0).position;
             cutParticles.Play();
             restingTime = holdTime;
+            if (knife != null)
+            {
+                knife.GetComponent<KnifeInteraction>().CutEnd();
+                knife = null;
+            }
         }
     }
 }

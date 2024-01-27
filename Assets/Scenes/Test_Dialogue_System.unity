@@ -137,6 +137,7 @@ GameObject:
   - component: {fileID: 101565306}
   - component: {fileID: 101565307}
   - component: {fileID: 101565308}
+  - component: {fileID: 101565309}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -319,6 +320,21 @@ MonoBehaviour:
     m_RotationOrder: 4
   animationDuration: 0.5
   actualWaypoint: {fileID: 899490216}
+--- !u!114 &101565309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101565302}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 396d0f6baa021864197db5c07e31ef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakeDuration: 0.5
+  shakeAmount: 0.1
+  decreaseFactor: 1
 --- !u!1 &232706765
 GameObject:
   m_ObjectHideFlags: 0
@@ -1540,7 +1556,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41bac113e5e69614c90f65b1312627f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
 --- !u!1 &1885815577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1784,79 +1799,69 @@ MonoBehaviour:
   m_GameObject: {fileID: 1993256027}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2c7cb1b2beff3245af1b4db3d0e7912, type: 3}
+  m_Script: {fileID: 11500000, guid: 28921f22fe1b27e4db576c1a489b38bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - name: Jose
-    dialogueList:
-    - text: JOSEEEEEEE
-      isEnd: 0
-      startLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
-      endLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    - text: Asi me llaman a mi, Jose. Soy yo, yo soy jose
-      isEnd: 0
-      startLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
-      endLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    - text: adsfasdfasgaffgaf
-      isEnd: 0
-      startLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
-      endLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
-    - text: oyeeeeeeeeeeeeeeeee
-      isEnd: 0
-      startLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
-      endLineEvent:
-        m_PersistentCalls:
-          m_Calls: []
   - name: Dani
     dialogueList:
-    - text: olabuenas
-      isEnd: 0
+    - text: "T\xEDo me llamo Dani"
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: asgsfg
-      isEnd: 0
+    - text: I want a "Zumo de pera"
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 101565309}
+            m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+            m_MethodName: set_enabled
+            m_Mode: 6
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 1
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "Ey ey ey peque\xF1a no digas eso"
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: ey
-      isEnd: 0
+  - name: Jose
+    dialogueList:
+    - text: Me duele la barriga
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: oooooo
-      isEnd: 0
+    - text: De puro comer pisa
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  textSpeed: 0.05
+    - text: jeje
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+  textSpeed: 0.04
 --- !u!1001 &2099270877
 PrefabInstance:
   m_ObjectHideFlags: 0
