@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InteractableLemon : InteractableObject
 {
-    protected override void Interact() {
+    public override void Interact(GameObject pickedObject) {
         Debug.Log("B");
     }
 }

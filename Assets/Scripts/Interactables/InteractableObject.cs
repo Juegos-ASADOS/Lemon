@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum Type { LIMON, CRUASAN, MANZANA }
+public enum ObjectType { FRUTA, BOLLO, VASO, CUCHILLO, EXPRIMIDOR, CAJA }
 
 public class InteractableObject : MonoBehaviour
 {
-    [SerializeField]
-    Type type;
+    public ObjectType objType;
 
     private void OnMouseDown()
     {
         // Player.click(type)
-        Interact();
     }
 
-    protected virtual void Interact() { }
+    public virtual void Interact(GameObject pickedObject) { }
 }
