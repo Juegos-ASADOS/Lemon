@@ -814,22 +814,22 @@ PrefabInstance:
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.08539329
       objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0.9963473
       objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
@@ -839,7 +839,7 @@ PrefabInstance:
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -170.203
       objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
@@ -1806,6 +1806,9 @@ MonoBehaviour:
   - name: Dani
     dialogueList:
     - text: "T\xEDo me llamo Dani"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1813,6 +1816,40 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     - text: I want a "Zumo de pera"
+      startWaitTimeSeconds: 0.5
+      letterSpeedSeconds: 0.07
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "Ey ey ey peque\xF1a no digas eso"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: Mira, soy eminem
+      startWaitTimeSeconds: 2
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: But for me to rap like a computer, it must be in my genes I got a laptop
+        in my back pocket My pen'll rap god. bla bla y demas cosas que dice.
+      startWaitTimeSeconds: 0.1
+      letterSpeedSeconds: 0.0005
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls:
@@ -1831,7 +1868,20 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: "Ey ey ey peque\xF1a no digas eso"
+    - text: ...
+      startWaitTimeSeconds: 0.6
+      letterSpeedSeconds: 1
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: jeje, que bueno macho
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 16
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1841,6 +1891,9 @@ MonoBehaviour:
   - name: Jose
     dialogueList:
     - text: Me duele la barriga
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1848,6 +1901,9 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     - text: De puro comer pisa
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1855,13 +1911,17 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
     - text: jeje
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  textSpeed: 0.04
+  defaultLetterSpeed: 0.03
+  defaultFontSize: 36
 --- !u!1001 &2099270877
 PrefabInstance:
   m_ObjectHideFlags: 0

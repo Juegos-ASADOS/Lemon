@@ -15,13 +15,13 @@ public class CameraEvent : MonoBehaviour
 {
     public NamedCameraEvents[] events;
 
-    private Camera camera;
+    private Camera cam;
     private Volume cameraVolume;
     private bool eventInProcess = false;
 
     private void Awake()
     {
-        camera = GetComponent<Camera>();
+        cam = GetComponent<Camera>();
         cameraVolume = GetComponent<Volume>();
     }
 
@@ -52,7 +52,7 @@ public class CameraEvent : MonoBehaviour
     {
         eventInProcess = true;
 
-        float camFov = camera.fieldOfView;
+        float camFov = cam.fieldOfView;
         cameraVolume.weight = 0;
         cameraVolume.profile = CEvent.PostProcessingProfile;
 
@@ -60,29 +60,29 @@ public class CameraEvent : MonoBehaviour
         while(elapsedTime < CEvent.EnterTransitionTime)
         {
             cameraVolume.weight = Mathf.Lerp(0, CEvent.Weight, elapsedTime / CEvent.EnterTransitionTime);
-            camera.fieldOfView = Mathf.Lerp(camFov, camFov*CEvent.Zoom, elapsedTime / CEvent.EnterTransitionTime);
+            cam.fieldOfView = Mathf.Lerp(camFov, camFov*CEvent.Zoom, elapsedTime / CEvent.EnterTransitionTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
         cameraVolume.weight = CEvent.Weight;
-        camera.fieldOfView = camFov * CEvent.Zoom;
+        cam.fieldOfView = camFov * CEvent.Zoom;
         
         while(eventInProcess) 
             yield return null;
 
-        camFov = camera.fieldOfView;
+        camFov = cam.fieldOfView;
         elapsedTime = 0;
         while (elapsedTime < CEvent.LeaveTransitionTime)
         {
             cameraVolume.weight = Mathf.Lerp(CEvent.Weight, 0, elapsedTime / CEvent.LeaveTransitionTime);
-            camera.fieldOfView = Mathf.Lerp(camFov, camFov / CEvent.Zoom, elapsedTime / CEvent.LeaveTransitionTime);
+            cam.fieldOfView = Mathf.Lerp(camFov, camFov / CEvent.Zoom, elapsedTime / CEvent.LeaveTransitionTime);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
         cameraVolume.weight = 0;
-        camera.fieldOfView = camFov / CEvent.Zoom;
+        cam.fieldOfView = camFov / CEvent.Zoom;
         cameraVolume.profile = null;
     }
 

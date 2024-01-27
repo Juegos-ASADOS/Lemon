@@ -11,7 +11,8 @@ public class TrayInteraction : InteractableObject
     {
         if (pickedObject != null)
         {            
-            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.VASO)
+            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.VASO||
+                pickedObject.GetComponent<InteractableObject>().objType == ObjectType.PLATO)
             {
                 pickedObject.transform.position = transform.GetChild(0).position;
                 pickedObject.transform.parent = transform;
