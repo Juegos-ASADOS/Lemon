@@ -7,11 +7,13 @@ public class Register : MonoBehaviour
     [SerializeField]
     uint code;
 
+    FMOD_Manager fmodManager;
+
     string actCode = "";
     // Start is called before the first frame update
     void Start()
     {
-        
+        fmodManager = FMOD_Manager.instance;
     }
 
     // Update is called once per frame
@@ -31,12 +33,16 @@ public class Register : MonoBehaviour
     {
         if(actCode.Length > 0  && code == int.Parse(actCode))
         {
+            fmodManager.SetGlobalParameterByName("CashRegister", 0);
             //SONIDO inicioCaja
             OpenDrawer(0);
             Debug.Log("Abrir");
+            fmodManager.PlaySingleInstanceEmitterControllerGroup("CashRegister");
+
         }
         else
         {
+            fmodManager.SetGlobalParameterByName("CashRegister", 1);
             //SONIDO errorCodigo
             Debug.Log("Error");
             actCode = "";
