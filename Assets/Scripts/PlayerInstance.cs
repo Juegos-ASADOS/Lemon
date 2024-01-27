@@ -11,6 +11,8 @@ public class PlayerInstance : MonoBehaviour
     // La posición de los objetos al cogerlos
     Transform pickTransform;
 
+    [SerializeField] float MoveSpeed = 30f;
+
     private void Awake()
     {
         if (instance == null)
@@ -25,10 +27,12 @@ public class PlayerInstance : MonoBehaviour
         pickTransform = transform.GetChild(0);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        
+        if (pickedObject != null)
+        {
+            pickedObject.transform.position = Vector3.MoveTowards(pickedObject.transform.position, pickTransform.position, MoveSpeed * Time.deltaTime);
+        }
     }
 
     public void ClickObject(GameObject obj)
@@ -46,12 +50,14 @@ public class PlayerInstance : MonoBehaviour
                 pickedObject = Instantiate(obj);             
             else
                 interact.Interact(null);
+            
 
+            //
             if (pickedObject != null)
             {
-                pickedObject.transform.position = pickTransform.position;
+                //pickedObject.transform.position = pickTransform.position;
                 pickedObject.transform.SetParent(transform);
-            }
+            } 
         }
         else
         {
