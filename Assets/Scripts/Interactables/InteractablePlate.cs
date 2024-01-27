@@ -16,7 +16,7 @@ public class InteractablePlate : InteractableObject
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.COMIDA)
             {
-                if (pickedObject.GetComponent<FruitCharacteristics>() == null || pickedObject.GetComponent<FruitCharacteristics>().IsCut())
+                if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>() == null || pickedObject.GetComponent<FruitCharacteristics>().IsCut())
                 {
 
                 pickedObject.transform.position = transform.GetChild(0).position;

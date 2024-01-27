@@ -75,7 +75,7 @@ public class PlayerInstance : MonoBehaviour
     {
         ObjectType t = pickedObject.GetComponent<InteractableObject>().objType;
 
-        if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO)
+        if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t==ObjectType.PLATO)
             Destroy(pickedObject);
     }
     public void RemoveHandObject()
