@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: efda8a73115e8d1489f8f717a5120f60
+guid: 2cff21c13a1226e4c8a041aafc99c664
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MAT_cuchillo
+    second: {fileID: 2100000, guid: b3b58eb9a72afe640902152c6205b3d1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

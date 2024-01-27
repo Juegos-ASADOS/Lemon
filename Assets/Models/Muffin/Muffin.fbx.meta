@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: efda8a73115e8d1489f8f717a5120f60
+guid: d894fdd763a642a4582a1f1fed6db879
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Muffin
+    second: {fileID: 2100000, guid: e79360fa22a3e344e8f8a14488bbe46b, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
