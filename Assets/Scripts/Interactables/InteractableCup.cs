@@ -9,7 +9,7 @@ public class InteractableCup : InteractableObject
     public JuiceType GetJuice() { return juice; }
     public override void Interact(GameObject pickedObject)
     {
-        if (pickedObject != null)
+        if (pickedObject != null && gameObject.transform.parent != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.EXPRIMIDOR)
             {
