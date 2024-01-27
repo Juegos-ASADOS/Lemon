@@ -17,6 +17,11 @@ public class DrawerInteractable : InteractableObject
     }
     public override void Interact(GameObject pickedObject)
     {
-        
+        if (pickedObject.GetComponent<InteractableObject>().objType != ObjectType.DINERO) return;
+        if (pickedObject != null)
+            PlayerInstance.instance.RemoveHandObject();
+        pickedObject.transform.parent = transform.GetChild(0);
+        pickedObject.transform.position = Vector3.zero;
+        pickedObject.transform.GetComponent<Rigidbody>().isKinematic = false;
     }
 }
