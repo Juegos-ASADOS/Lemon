@@ -11,37 +11,40 @@ public class HoldToComplete : MonoBehaviour
     [SerializeField]
     private String tag;
 
+    private bool hover = false;
     private bool canHold = false;
-    void Start()
-    {
+    private bool completed = false;
 
-    }
     void OnMouseOver()
     {
         if (tag == gameObject.tag)
         {
-            canHold = true;
-            Debug.Log("Can hold");
+            hover = true;
         }
     }
     void OnMouseExit()
     {
         if (tag == gameObject.tag)
         {
-            canHold = false;
-            Debug.Log("Can't hold");
+            hover = false;
         }
     }
     void Update()
     {
-        if (canHold && Input.GetMouseButton(0) && holdTime >= 0.0f)
+        if (hover && canHold && Input.GetMouseButton(0) && holdTime >= 0.0f)
         {
             holdTime -= Time.deltaTime;
         }
-        if (holdTime <= 0.0f)
+        if (holdTime <= 0.0f &&!completed)
         {
-            Debug.Log(tag+" Completed!");
+            Debug.Log(tag + " Completed!");
+            completed = true;
             ///TODO: acción de clic completada
         }
     }
+    public void changeHold(bool canHold_)
+    {
+        canHold = canHold_;
+    }
+    public bool getCompleted() { return completed; }
 }
