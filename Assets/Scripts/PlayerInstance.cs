@@ -61,7 +61,7 @@ public class PlayerInstance : MonoBehaviour
             //
             if (pickedObject != null)
             {
-                //pickedObject.transform.position = pickTransform.position;
+                pickedObject.GetComponent<InteractableObject>().destMovement = pickTransform;
                 pickedObject.transform.parent = transform;
             } 
         }
