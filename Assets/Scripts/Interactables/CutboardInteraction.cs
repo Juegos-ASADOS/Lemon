@@ -9,34 +9,24 @@ public class CutboardInteraction : InteractableObject
     private float holdTime = 1.0f;
     private float restingTime = 0.0f;
 
-    //[SerializeField]
-    //private ParticleSystem cutParticles;
-
     private GameObject knife;
 
     private bool hover = false;
     private bool canHold = false;
-
-
 
     public override void Interact(GameObject pickedObject)
     {
         if (pickedObject != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO &&
-                transform.childCount == 2  && (transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.FRUTA ||
-                (transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.COMIDA &&
-                transform.GetChild(1).GetComponent<FruitCharacteristics>().GetTypeFruit() == JuiceType.CAKE)) &&
-                !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
+                transform.childCount == 2  && !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
             {
                 canHold = true;
                 knife = pickedObject;
             }
-            else if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA ||
-                (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.COMIDA && pickedObject.GetComponent<FruitCharacteristics>().GetTypeFruit() == JuiceType.CAKE))
+            else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>()!= null)
             {
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);
-                //pickedObject.transform.position = transform.GetChild(0).position;
                 pickedObject.transform.parent = transform;
                 PlayerInstance.instance.RemoveHandObject();
             }
