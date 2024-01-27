@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum ObjectType { FRUTA, BOLLO, VASO, CUCHILLO, EXPRIMIDOR, CAJA, TABLA, PAPELERA }
+public enum ObjectType { FRUTA, BOLLO, VASO, CUCHILLO, EXPRIMIDOR, CAJA, TABLA, PAPELERA, BASE }
 
 
 public class InteractableObject : MonoBehaviour

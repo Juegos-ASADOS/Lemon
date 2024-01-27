@@ -28,7 +28,7 @@ public class PlayerInstance : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void ClickObject(GameObject obj)
@@ -40,7 +40,7 @@ public class PlayerInstance : MonoBehaviour
         ObjectType t = interact.objType;
         if (pickedObject == null)
         {
-            if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || obj.transform.parent != null)
+            if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || (obj.transform.parent != null && t == ObjectType.FRUTA))
                 pickedObject = obj;
             else if(t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
                 pickedObject = Instantiate(obj);             
