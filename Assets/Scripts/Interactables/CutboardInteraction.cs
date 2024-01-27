@@ -9,19 +9,14 @@ public class CutboardInteraction : InteractableObject
 
     void Update()
     {
-        if (objectContained != null)
-        {
-            if (objectContained.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
-            {
-                GetComponent<HoldToComplete>().changeHold(true);
-            }
-        }
+       
     }
     public override void Interact(GameObject pickedObject)
     {
         if (pickedObject != null)
         {
-            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO)
+            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO && 
+                objectContained != null && objectContained.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
                 GetComponent<HoldToComplete>().changeHold(true);
             }
