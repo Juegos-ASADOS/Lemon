@@ -28,8 +28,8 @@ public class CutboardInteraction : InteractableObject
             }
             else if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
-                pickedObject.transform.position = gameObject.transform.position;
-                pickedObject.transform.parent = gameObject.transform;
+                pickedObject.transform.position = transform.GetChild(0).position;
+                pickedObject.transform.parent = transform;
                 objectContained = pickedObject;
                 PlayerInstance.instance.RemoveHandObject();
             }
@@ -49,7 +49,7 @@ public class CutboardInteraction : InteractableObject
         {
             if (objectContained != null)
                 objectContained.GetComponent<FruitCharacteristics>().cutFruit();
-            cutParticles.transform.position = gameObject.transform.position;
+            cutParticles.transform.position = transform.GetChild(0).position;
             cutParticles.Play();
             restingTime = holdTime;
         }
