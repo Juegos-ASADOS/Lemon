@@ -11,8 +11,13 @@ public class MovingCamera : MonoBehaviour
     private Vector3 movingAxis;
     [SerializeField] private CameraWaypoint actualWaypoint = null;
 
+    private CameraEvent cameraEvent;
+
+
     private void Start()
     {
+        cameraEvent = GetComponent<CameraEvent>();
+        // Ve al primer Waypoint (Se pasa 0.0.0 para evitar que cambie de waypoint)
         StartCoroutine(RotateTo(Vector3.zero));
     }
 
@@ -39,6 +44,14 @@ public class MovingCamera : MonoBehaviour
         {
             movingAxis = Vector3.right;
             StartCoroutine(RotateTo(Vector3.down));
+        }
+        else if (Input.GetKeyDown(KeyCode.Z))
+        {
+            cameraEvent.CallEvent("PeopleTalking");
+        }
+        else if (Input.GetKeyDown(KeyCode.X))
+        {
+            cameraEvent.RemoveEvent();
         }
     }
 
