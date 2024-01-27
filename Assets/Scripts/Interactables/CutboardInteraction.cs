@@ -12,7 +12,6 @@ public class CutboardInteraction : InteractableObject
     [SerializeField]
     private ParticleSystem cutParticles;
 
-    private GameObject objectContained;
     private GameObject knife;
 
     private bool hover = false;
@@ -23,7 +22,7 @@ public class CutboardInteraction : InteractableObject
         if (pickedObject != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO &&
-                objectContained != null && objectContained.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
+                transform.childCount == 2  && transform.GetChild(1).GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
                 canHold = true;
                 knife = pickedObject;
@@ -32,7 +31,6 @@ public class CutboardInteraction : InteractableObject
             {
                 pickedObject.transform.position = transform.GetChild(0).position;
                 pickedObject.transform.parent = transform;
-                objectContained = pickedObject;
                 PlayerInstance.instance.RemoveHandObject();
             }
         }
@@ -49,8 +47,11 @@ public class CutboardInteraction : InteractableObject
         }
         if (restingTime <= 0.0f)
         {
-            if (objectContained != null)
-                objectContained.GetComponent<FruitCharacteristics>().cutFruit();
+            if (transform.childCount == 2)
+            {
+                transform.GetChild(1).GetComponent<FruitCharacteristics>().cutFruit();
+                canHold = false;
+            }
             cutParticles.transform.position = transform.GetChild(0).position;
             cutParticles.Play();
             restingTime = holdTime;
