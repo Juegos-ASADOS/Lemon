@@ -4,13 +4,30 @@ using UnityEngine;
 public enum JuiceType { EMPTY, LEMON, ORANGE, GRAPEFRUIT }
 public class SqueezerInteraction : InteractableObject
 {
-    private GameObject objectContained;
+    [SerializeField]
+    private float holdTime = 1.0f;
+
+    private GameObject fruit;
     private JuiceType juice = JuiceType.EMPTY;
+
+    private bool hover = false;
+    private bool canHold = false;
+    private bool completed = false;
+
     void Update()
     {
-        if (objectContained != null)
+        if (hover && canHold && Input.GetMouseButton(0) && holdTime >= 0.0f)
         {
-
+            holdTime -= Time.deltaTime;
+        }
+        if (holdTime <= 0.0f && !completed)
+        {
+            Debug.Log(tag + " Completed!");
+            completed = true;
+            ///TODO: acción de clic completada
+           gameObject.GetComponent<Renderer>().material = fruit.GetComponent<Renderer>().material;
+            PlayerInstance.instance.RemoveHandObject();
+            Destroy(fruit);
         }
     }
     public override void Interact(GameObject pickedObject)
@@ -30,9 +47,10 @@ public class SqueezerInteraction : InteractableObject
                     case "Lemon":
                         juice = JuiceType.LEMON;
                         break;
-                        default: break;
+                    default: break;
                 }
-                GetComponent<HoldToComplete>().ChangeHold(true);
+                canHold = true;
+                fruit = pickedObject;
             }
         }
     }
@@ -44,4 +62,7 @@ public class SqueezerInteraction : InteractableObject
     {
         juice = JuiceType.EMPTY;
     }
+
+    void OnMouseOver() { hover = true; }
+    void OnMouseExit() { hover = false; }
 }
