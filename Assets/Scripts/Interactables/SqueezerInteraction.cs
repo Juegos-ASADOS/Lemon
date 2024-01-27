@@ -44,20 +44,8 @@ public class SqueezerInteraction : InteractableObject
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
                 fruit = pickedObject;
-                Debug.Log(pickedObject.name);
-                switch (pickedObject.tag)
-                {
-                    case "Orange":
-                        juice = JuiceType.ORANGE;
-                        break;
-                    case "Grapefruit":
-                        juice = JuiceType.GRAPEFRUIT;
-                        break;
-                    case "Lemon":
-                        juice = JuiceType.LEMON;
-                        break;
-                    default: break;
-                }
+
+                juice = fruit.GetComponent<FruitCharacteristics>().GetTypeFruit();
                 canHold = true;
             }
         }
