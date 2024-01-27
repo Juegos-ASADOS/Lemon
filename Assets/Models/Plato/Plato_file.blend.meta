@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 2c8765ab355ff054fbac5ff0cfedee95
+guid: b6691a4b7cc4daf4b86a0374ed951eac
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plato
+    second: {fileID: 2100000, guid: 63a4730b43f691946b34a13ee0a6726a, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
