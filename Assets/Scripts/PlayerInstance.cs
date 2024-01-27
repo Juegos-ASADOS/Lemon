@@ -56,7 +56,7 @@ public class PlayerInstance : MonoBehaviour
             if (pickedObject != null)
             {
                 //pickedObject.transform.position = pickTransform.position;
-                pickedObject.transform.SetParent(transform);
+                pickedObject.transform.parent = transform;
             } 
         }
         else
