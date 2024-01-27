@@ -42,7 +42,7 @@ public class PlayerInstance : MonoBehaviour
         {
             if (t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
                 pickedObject = Instantiate(obj);
-            else if (t != ObjectType.CAJA)
+            else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR)
                 pickedObject = obj;
             else
                 interact.Interact(null);
