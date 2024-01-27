@@ -40,10 +40,10 @@ public class PlayerInstance : MonoBehaviour
         ObjectType t = interact.objType;
         if (pickedObject == null)
         {
-            if (t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
-                pickedObject = Instantiate(obj);
-            else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR)
+            if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || obj.transform.parent != null)
                 pickedObject = obj;
+            else if(t == ObjectType.FRUTA || t == ObjectType.BOLLO || t == ObjectType.VASO)
+                pickedObject = Instantiate(obj);             
             else
                 interact.Interact(null);
 
