@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objType: 0
+  destMovement: {fileID: 0}
 --- !u!114 &8182727167069204288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,3 +127,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruit: 1
+  cutMesh: {fileID: -606419294924500904, guid: 0bc8cf8b30aa06449a4328872f4b4717, type: 3}
