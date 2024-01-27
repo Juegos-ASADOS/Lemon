@@ -33,7 +33,7 @@ public class Cliente : MonoBehaviour
         //teleport = true;
         //
 
-        InteractableTimbre.SendOrder += CheckOrder;
+        TrayInteraction.GiveOrder += CheckOrder;
         ClientCounterPosition.CounterOutOfSight += enterTeleport;
 
         DirectorClients.ClientEnter += setEnter;
@@ -101,7 +101,7 @@ public class Cliente : MonoBehaviour
     }
 
 
-    private void CheckOrder(items i)
+    private void CheckOrder(comandas com)
     {
 
         moving = true;
