@@ -6,30 +6,36 @@ using UnityEngine.Events;
 
 public class DialogueSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         dialogueBox = transform.Find("TextBox").gameObject;
         dialogueTMP = dialogueBox.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
-        StartCoroutine(dialogueStart());
+        Cliente.ClientEnter += startCoroutines;
+        Cliente.ClientExit += dialogueStop;
     }
 
-    // Update is called once per frame
-    void Update()
+    void startCoroutines(string clientName)
     {
-        //Listen to event
+        StartCoroutine(dialogueStart(clientName));
     }
 
-    public IEnumerator dialogueStart()
+    public IEnumerator dialogueStart(string clientName)
     {
 
         dialogueBox.SetActive(true);
 
         // Get characterEvent
-        foreach (dialogueCharacter dC in characters)
+        bool found = false;
+        short i = 0;
+        while (!found && i < characters.Count)
         {
-            yield return StartCoroutine(PrintDialogue(dC.dialogueList));
+            Debug.Log(i);
+            if (characters[i].name == clientName)
+                break;
+
+            i++;
         }
+        yield return StartCoroutine(PrintDialogue(characters[i].dialogueList));
     }
 
     private IEnumerator PrintDialogue(List<dialogueLine> dialogueList)
@@ -49,7 +55,7 @@ public class DialogueSystem : MonoBehaviour
         }
 
         yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
-        //dialogueStop();
+        dialogueStop();
     }
 
     private IEnumerator letterByLetter(dialogueLine dialogue)
@@ -81,7 +87,6 @@ public class DialogueSystem : MonoBehaviour
     private TextMeshProUGUI dialogueTMP;
 
     short dialogueIndex;
-    //Textos de momento aqui
 }
 
 [System.Serializable]
