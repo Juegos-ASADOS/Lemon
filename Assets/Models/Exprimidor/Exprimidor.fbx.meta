@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: fc106d919f0bdab4f9454bd8a3c22cde
+guid: eb3fa0ba7f33d6941b6381f0319da69d
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Exprimidor
+    second: {fileID: 2100000, guid: cb45f51f28613ce4494fdfa09161d252, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plato
+    second: {fileID: 2100000, guid: 2f96265a3cd7d9642bf37ff1936be318, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RecipienteExprimidor
+    second: {fileID: 2100000, guid: f31cee49b499e8b4996fb6fc64576b66, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

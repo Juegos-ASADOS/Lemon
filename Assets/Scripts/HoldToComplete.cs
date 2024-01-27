@@ -42,9 +42,14 @@ public class HoldToComplete : MonoBehaviour
             ///TODO: acción de clic completada
         }
     }
-    public void changeHold(bool canHold_)
+    public void ChangeHold(bool canHold_)
     {
         canHold = canHold_;
     }
-    public bool getCompleted() { return completed; }
+    public bool GetCompleted() { return completed; }
+    public void ResetState()
+    {
+        canHold = false;
+        completed = false;
+    }
 }
