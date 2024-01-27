@@ -34,9 +34,47 @@ public class Cliente : MonoBehaviour
         InteractableTimbre.SendOrder += CheckOrder;
         ClientCounterPosition.CounterOutOfSight += enterTeleport;
 
+        DirectorClients.ClientEnter += setEnter;
+        DirectorClients.ClientExit += setExit;
+        DirectorClients.ClientAppear += setAppear;
+        DirectorClients.ClientDisappear += setDisAppear;
+
     }
 
 
+    //Debug
+    void setEnter()
+    {
+        teleport = false;
+        moving = true;
+        destino = counterPos;
+        intention = Intention.ENTER;
+    }
+    void setExit()
+    {
+        teleport = false;
+        moving = true;
+        destino = OutOfSightPos;
+        intention = Intention.EXIT;
+
+    }
+    void setAppear()
+    {
+        moving = false;
+        teleport = true;
+        destino = counterPos;
+        intention = Intention.APPEAR;
+
+    }
+    void setDisAppear()
+    {
+        moving = false;
+        teleport = true;
+        destino = OutOfSightPos;
+        intention = Intention.DISAPPEAR;
+
+    }
+    //
     private void FixedUpdate()
     {
         if (moving)
@@ -129,11 +167,13 @@ public class Cliente : MonoBehaviour
     {
         //Teleport to CounterPos
         this.GetComponent<Transform>().position = counterPos;
+        teleport = false;
     }
 
     void dissappearInScene()
     {
         //Telport to OutOfSight
         this.GetComponent<Transform>().position = OutOfSightPos;
+        teleport = false;
     }
 }
