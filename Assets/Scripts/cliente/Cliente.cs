@@ -88,15 +88,21 @@ public class Cliente : MonoBehaviour
     void onOutOffSight()
     {
         if (intention == Intention.DISAPPEAR)
-            teleportToDest();
+        {
+            dissappearInScene();
+            ClientExit();
+        }
     }
 
     public void enterTeleport()
     {
-        Debug.Log("se teletrasporta");
+        //Debug.Log("se teletrasporta");
 
         if (intention == Intention.APPEAR)
-            teleportToDest();
+        {
+            appearInScene();
+            ClientEnter();
+        }
     }
     public void teleportToDest()
     {
