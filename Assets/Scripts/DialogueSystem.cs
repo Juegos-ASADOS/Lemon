@@ -30,7 +30,6 @@ public class DialogueSystem : MonoBehaviour
         short i = 0;
         while (!found && i < characters.Count)
         {
-            Debug.Log(i);
             if (characters[i].name == clientName)
                 break;
 
@@ -69,14 +68,21 @@ public class DialogueSystem : MonoBehaviour
     }
     private IEnumerator letterByLetter(dialogueLine dialogue)
     {
-        char[] messageArray = dialogue.text.ToCharArray();
         //TODO SONIDO DE HABLAR
+        char[] messageArray = dialogue.text.ToCharArray();
+        //Speed
+        if (dialogue.letterSpeedSeconds <= 0)
+            dialogue.letterSpeedSeconds = defaultLetterSpeed;
+        //Size
+        if (dialogue.fontSize <= 0)
+            dialogue.fontSize = defaultFontSize;
+
+        dialogueTMP.fontSize = dialogue.fontSize;
+
         for (int i = 0; i < messageArray.Length; i++)
         {
             dialogueTMP.text += messageArray[i];
-            if (dialogue.letterSpeedSeconds == 0)
-                dialogue.letterSpeedSeconds = defaultLetterSpeed;
-
+            
             yield return new WaitForSeconds(dialogue.letterSpeedSeconds);
         }
 
@@ -100,6 +106,9 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField]
     private float defaultLetterSpeed = 0.04f;
+    
+    [SerializeField]
+    private float defaultFontSize = 36f;
 
     private GameObject dialogueBox;
     private TextMeshProUGUI dialogueTMP;
@@ -117,6 +126,7 @@ struct dialogueLine
     public float startWaitTimeSeconds;
     //public float endWaitTimeSeconds;
     public float letterSpeedSeconds;
+    public float fontSize;
 
     [Header("Events")]
     public UnityEvent startLineEvent;

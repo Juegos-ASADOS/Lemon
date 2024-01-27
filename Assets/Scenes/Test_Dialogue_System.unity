@@ -1808,6 +1808,7 @@ MonoBehaviour:
     - text: "T\xEDo me llamo Dani"
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1816,7 +1817,8 @@ MonoBehaviour:
           m_Calls: []
     - text: I want a "Zumo de pera"
       startWaitTimeSeconds: 0.5
-      letterSpeedSeconds: 0.1
+      letterSpeedSeconds: 0.07
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1826,6 +1828,7 @@ MonoBehaviour:
     - text: "Ey ey ey peque\xF1a no digas eso"
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1835,6 +1838,7 @@ MonoBehaviour:
     - text: Mira, soy eminem
       startWaitTimeSeconds: 2
       letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1845,6 +1849,7 @@ MonoBehaviour:
         in my back pocket My pen'll rap god. bla bla y demas cosas que dice.
       startWaitTimeSeconds: 0.1
       letterSpeedSeconds: 0.0005
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls:
@@ -1863,9 +1868,20 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: jeje, que bueno macho
+    - text: ...
       startWaitTimeSeconds: 0.6
+      letterSpeedSeconds: 1
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: jeje, que bueno macho
+      startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
+      fontSize: 16
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1877,6 +1893,7 @@ MonoBehaviour:
     - text: Me duele la barriga
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1886,6 +1903,7 @@ MonoBehaviour:
     - text: De puro comer pisa
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -1895,13 +1913,15 @@ MonoBehaviour:
     - text: jeje
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
+      fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  defaultLetterSpeed: 0.04
+  defaultLetterSpeed: 0.03
+  defaultFontSize: 36
 --- !u!1001 &2099270877
 PrefabInstance:
   m_ObjectHideFlags: 0
