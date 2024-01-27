@@ -38,14 +38,17 @@ public class ComandasClientes : MonoBehaviour
         while (!found && i < personajes.Count)
         {
             if (personajes[i].name == clientName)
+            {
+                found = true;
                 break;
+            }
             i++;
         }
         if (!found)
         {
-
-        }
-        //return personajes[i].comanda;
             return comandas.Error; //wtf why? ajaja el nombre estaba mal
+            Debug.Log("hay un nombre mal o no existe el que pides");
+        }
+        return personajes[i].comanda;
     }
 }
