@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public enum Type { LIMON, CRUASAN, MANZANA }
+public enum Type { LIMON, CRUASAN, MANZANA,TIMBRE }
 
 public class InteractableObject : MonoBehaviour
 {
