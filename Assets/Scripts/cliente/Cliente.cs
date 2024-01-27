@@ -17,7 +17,7 @@ public class Cliente : MonoBehaviour
     [SerializeField] float aceptableDistance = 0.5f;
 
     //provisional cambiar segun situacion
-    public Intention intention = Intention.ENTER;
+    public Intention intention;//= Intention.ENTER;
 
     private Vector3 destino;
     public bool moving = false;
@@ -27,16 +27,54 @@ public class Cliente : MonoBehaviour
     {
         //provisional
         destino = counterPos;
-        moving = true;
+        //moving = true;
         //teleport = true;
         //
 
         InteractableTimbre.SendOrder += CheckOrder;
-        InteractableTimbre.CounterOutOfSight += enterTeleport;
+        ClientCounterPosition.CounterOutOfSight += enterTeleport;
+
+        DirectorClients.ClientEnter += setEnter;
+        DirectorClients.ClientExit += setExit;
+        DirectorClients.ClientAppear += setAppear;
+        DirectorClients.ClientDisappear += setDisAppear;
 
     }
 
 
+    //Debug
+    void setEnter()
+    {
+        teleport = false;
+        moving = true;
+        destino = counterPos;
+        intention = Intention.ENTER;
+    }
+    void setExit()
+    {
+        teleport = false;
+        moving = true;
+        destino = OutOfSightPos;
+        intention = Intention.EXIT;
+
+    }
+    void setAppear()
+    {
+        moving = false;
+        teleport = true;
+        destino = counterPos;
+        intention = Intention.APPEAR;
+
+    }
+    void setDisAppear()
+    {
+        moving = false;
+        teleport = true;
+        destino = OutOfSightPos;
+        intention = Intention.DISAPPEAR;
+
+    }
+    //
     private void FixedUpdate()
     {
         if (moving)
@@ -87,15 +125,22 @@ public class Cliente : MonoBehaviour
     }
     void onOutOffSight()
     {
-        teleportToDest();
+        if (intention == Intention.DISAPPEAR)
+        {
+            dissappearInScene();
+            ClientExit();
+        }
     }
 
     public void enterTeleport()
     {
-        Debug.Log("se teletrasporta");
+        //Debug.Log("se teletrasporta");
 
         if (intention == Intention.APPEAR)
-            teleportToDest();
+        {
+            appearInScene();
+            ClientEnter();
+        }
     }
     public void teleportToDest()
     {
@@ -122,11 +167,13 @@ public class Cliente : MonoBehaviour
     {
         //Teleport to CounterPos
         this.GetComponent<Transform>().position = counterPos;
+        teleport = false;
     }
 
     void dissappearInScene()
     {
         //Telport to OutOfSight
         this.GetComponent<Transform>().position = OutOfSightPos;
+        teleport = false;
     }
 }
