@@ -13,6 +13,8 @@ public class SqueezerInteraction : InteractableObject
     private float restingTime = 0.0f;
     private GameObject fruit;
     private JuiceType juice = JuiceType.EMPTY;
+
+    private Transform originalPos;
     Material mat;
     private bool hover = false;
     private bool canHold = false;
@@ -20,6 +22,7 @@ public class SqueezerInteraction : InteractableObject
     {
         restingTime = holdTime;
         mat = GetComponent<Renderer>().material;
+        originalPos = transform.parent;
     }
     void Update()
     {
@@ -62,6 +65,9 @@ public class SqueezerInteraction : InteractableObject
     {
         juice = JuiceType.EMPTY;
         gameObject.GetComponent<Renderer>().material = mat;
+        PlayerInstance.instance.RemoveHandObject();
+        transform.parent = originalPos;
+        transform.position = originalPos.GetChild(0).position;
     }
 
     void OnMouseOver() { hover = true; }
