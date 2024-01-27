@@ -47,4 +47,9 @@ public class HoldToComplete : MonoBehaviour
         canHold = canHold_;
     }
     public bool GetCompleted() { return completed; }
+    public void ResetState()
+    {
+        canHold = false;
+        completed = false;
+    }
 }
