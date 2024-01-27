@@ -27,7 +27,8 @@ public class CutboardInteraction : InteractableObject
             }
             else if(pickedObject.GetComponent<InteractableObject>().objType == ObjectType.FRUTA)
             {
-                pickedObject.transform.position = this.gameObject.transform.position;
+                pickedObject.transform.position = gameObject.transform.position;
+                pickedObject.transform.parent = gameObject.transform;
                 objectContained = pickedObject;
                 PlayerInstance.instance.RemoveHandObject();
             }
