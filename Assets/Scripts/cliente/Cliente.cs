@@ -16,7 +16,7 @@ public class Cliente : MonoBehaviour
     [SerializeField] float MoveSpeed;
     [SerializeField] float aceptableDistance = 0.5f;
 
-    [SerializeField] string name;
+    [SerializeField] string nombre;
 
     //provisional cambiar segun situacion
     public Intention intention;//= Intention.ENTER;
@@ -141,7 +141,7 @@ public class Cliente : MonoBehaviour
         if (intention == Intention.APPEAR)
         {
             appearInScene();
-            ClientEnter(name);
+            ClientEnter(nombre);
         }
     }
     public void teleportToDest()
@@ -155,7 +155,7 @@ public class Cliente : MonoBehaviour
     void enterScene()
     {
         //Go to CounterPos
-        ClientEnter(name); //evento de cliente entrado
+        ClientEnter(nombre); //evento de cliente entrado
         destino = OutOfSightPos;
     }
 
