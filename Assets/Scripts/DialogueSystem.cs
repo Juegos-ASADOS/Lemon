@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.Events;
+using System;
 
 [System.Serializable]
 struct dialogueLine
@@ -27,6 +28,11 @@ struct dialogueCharacter
 
 public class DialogueSystem : MonoBehaviour
 {
+
+
+    public static event Action ImportantClientEvent = delegate { };
+    public static event Action EndDialogueEvent = delegate { };
+
     private void Awake()
     {
         if (!limoncin)
@@ -42,13 +48,26 @@ public class DialogueSystem : MonoBehaviour
 
         if (!limoncin)
         {
-            Cliente.ClientEnter += startCoroutines;
+            Cliente.ClientEnter += startImportance;
             Cliente.ClientExit += dialogueStop;
         }
         else
             Limoncin.LimoncinEvent += startCoroutines;
     }
 
+    void startImportance(bool importance, string clientname)
+    {
+
+        if (importance)
+        {
+            //do something
+            //lanzar evento de cliente importante, lookeara la camara en un punto
+            ImportantClientEvent();
+        }
+        //testing de que el cliente es importnate cuando no
+        ImportantClientEvent();
+        startCoroutines(clientname);
+    }
     void startCoroutines(string clientName)
     {
         dialogueTMP.color = defaultFontColor;
@@ -109,7 +128,10 @@ public class DialogueSystem : MonoBehaviour
         if (limoncin)
             yield return new WaitForSeconds(limoncin_time_till_dialogue_disappears);
         else
+        {
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+            EndDialogueEvent();
+        }
 
         dialogueStop();
     }
@@ -142,9 +164,10 @@ public class DialogueSystem : MonoBehaviour
     {
         // Maybe hide textbox
         StopAllCoroutines();
-        Debug.Log(limoncin);
+        //Debug.Log(limoncin);
         dialogueTMP.text = "";
         dialogueBox.SetActive(false);
+        
     }
 
     public void changeFont(TMP_FontAsset font)

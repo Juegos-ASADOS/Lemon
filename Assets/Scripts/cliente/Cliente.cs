@@ -6,8 +6,10 @@ using UnityEngine;
 public class Cliente : MonoBehaviour
 {
     //Eventos a los que se les puede añadir informacion
-    public static event Action<string> ClientEnter = delegate { };
+    public static event Action<bool, string> ClientEnter = delegate { };
     public static event Action ClientExit = delegate { };
+
+    public static event Action<bool, string> ClientSeen = delegate { };
     public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, OTHER }
 
     [SerializeField] Vector3 counterPos;
@@ -24,6 +26,7 @@ public class Cliente : MonoBehaviour
     private Vector3 destino;
     public bool moving = false;
     public bool teleport = false;
+    public bool importance = false;
 
     private void Awake()
     {
@@ -150,6 +153,11 @@ public class Cliente : MonoBehaviour
         //codigo para cuando miremos al cliente,
 
         //Ejemplo, lanzar texto
+        if (Vector3.Distance(transform.position, counterPos) <= 0.5)
+        {
+            ClientSeen(importance, nombre);
+        }
+
     }
     void OnBecameInvisible()
     {
@@ -172,7 +180,8 @@ public class Cliente : MonoBehaviour
         if (intention == Intention.APPEAR)
         {
             appearInScene();
-            ClientEnter(nombre);
+            ClientEnter(importance, nombre);
+            intention = Intention.STAY;
         }
     }
     public void teleportToDest()
@@ -186,7 +195,7 @@ public class Cliente : MonoBehaviour
     void enterScene()
     {
         //Go to CounterPos
-        ClientEnter(nombre); //evento de cliente entrado
+        ClientEnter(importance, nombre); //evento de cliente entrado
         destino = OutOfSightPos;
     }
 
