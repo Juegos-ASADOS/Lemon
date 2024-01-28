@@ -8,7 +8,8 @@ public class sc_Day4 : MonoBehaviour
 {
 
     [SerializeField] private Cliente client;
-
+    public GameObject client_1 = null;
+    public GameObject client_2 = null;
     //vamos a diseñar los dias mediante eventos, llevando la cuenta de estos, por ejemplo, cuando un cliente ha salido, eso solo lo podra hacer una unica vez
     int contador = 2;
     private void Awake()
@@ -44,6 +45,7 @@ public class sc_Day4 : MonoBehaviour
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
         client.setEnter();
+        client_1?.SetActive(true);
     }
 
     private IEnumerator EventClientThree()
@@ -53,6 +55,8 @@ public class sc_Day4 : MonoBehaviour
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
 
-        client.setAppear();
+        client.setEnter();
+        client_1?.SetActive(false);
+        client_2?.SetActive(true);
     }
 }
