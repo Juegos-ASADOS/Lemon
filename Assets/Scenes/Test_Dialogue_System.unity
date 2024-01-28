@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -320,6 +320,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   animationDuration: 0.5
   actualWaypoint: {fileID: 899490216}
+  CounterWaypoint: {fileID: 899490216}
 --- !u!114 &101565309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -723,6 +724,11 @@ PrefabInstance:
         type: 3}
       propertyPath: intention
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3768878257224201312, guid: 756179a778166b540a683ff5026ad2d6,
+        type: 3}
+      propertyPath: importance
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3768878257224201313, guid: 756179a778166b540a683ff5026ad2d6,
         type: 3}
@@ -1776,9 +1782,152 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
         type: 3}
+      propertyPath: defaultFont
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b9b2fc4c2f733c449bfedaac441ebdb,
+        type: 2}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].text
+      value: But for me to rap like a computer, it must be in my genes I got a laptop
+        in my back pocket My pen'll rap god. bla bla y demas cosas que dice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].text
+      value: But for me to rap like a computer, it must be in my genes I got a laptop
+        in my back pocket My pen'll rap god. bla bla y demas cosas que dice.
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[5].text
+      value: jeje, que bueno macho
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[5].fontSize
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].letterSpeedSeconds
+      value: 0.0005
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].letterSpeedSeconds
+      value: 0.0005
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[5].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startWaitTimeSeconds
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startWaitTimeSeconds
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[5].startWaitTimeSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 101565309}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 101565309}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
       propertyPath: characters.Array.data[0].dialogueList.Array.data[4].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 101565309}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_enabled
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Behaviour, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 373213752832693884, guid: b58f4e07952486f4c9e671bfc5b19ea1,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b58f4e07952486f4c9e671bfc5b19ea1, type: 3}
 --- !u!1001 &8246374225884537081

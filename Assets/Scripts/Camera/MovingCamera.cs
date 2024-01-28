@@ -10,9 +10,61 @@ public class MovingCamera : MonoBehaviour
     private bool cameraMoving = false;
     private Vector3 movingAxis;
     [SerializeField] private CameraWaypoint actualWaypoint = null;
+    [SerializeField] private CameraWaypoint CounterWaypoint = null;
 
     private CameraEvent cameraEvent;
+    private bool cameraLock = false;
 
+    private void Awake()
+    {
+        DialogueSystem.ImportantClientEvent += rotateToCounter;
+        DialogueSystem.EndDialogueEvent += unLockCamera;
+    }
+
+    void unLockCamera()
+    {
+
+        Debug.Log("desbloqueado");
+        //it will unlock everytime a dialogue is ended, it will not end with limoncio tho, he is eternal!
+        cameraLock = false;
+    }
+    void rotateToCounter()
+    {
+        cameraLock = true;
+        StartCoroutine(rotateImportant());
+    }
+
+    private IEnumerator rotateImportant()
+    {
+        //por si ya se estaba moviendo el mingui que no se queden bloqueados o se cancelen
+        while (cameraMoving)
+            yield return null;
+
+        actualWaypoint = CounterWaypoint;
+
+        cameraMoving = true;
+
+        float elapsedTime = 0f;
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = actualWaypoint.transform.rotation;
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = actualWaypoint.transform.position;
+        while (elapsedTime < animationDuration)
+        {
+            float t = elapsedTime / animationDuration;
+
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, movementCurve.Evaluate(t));
+            transform.position = Vector3.Slerp(startPosition, targetPosition, movementCurve.Evaluate(t));
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.rotation = targetRotation;
+        transform.position = targetPosition;
+
+        cameraMoving = false;
+    }
 
     private void Start()
     {
@@ -23,7 +75,7 @@ public class MovingCamera : MonoBehaviour
 
     private void Update()
     {
-        if (cameraMoving || actualWaypoint == null) return;
+        if (cameraLock || cameraMoving || actualWaypoint == null) return;
 
         if (Input.GetKeyDown(KeyCode.A))
         {
@@ -57,7 +109,7 @@ public class MovingCamera : MonoBehaviour
 
     private IEnumerator RotateTo(Vector3 dir)
     {
-        if (cameraMoving || actualWaypoint == null)
+        if (cameraLock || cameraMoving || actualWaypoint == null)
             yield break;
 
         actualWaypoint = actualWaypoint.ProcessMovement(dir);

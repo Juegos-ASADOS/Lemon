@@ -14,9 +14,12 @@ public class InteractableCup : InteractableObject
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.EXPRIMIDOR)
             {
                 juice = pickedObject.GetComponent<SqueezerInteraction>().GetJuice();
-                gameObject.GetComponent<Renderer>().material = pickedObject.GetComponent<Renderer>().material;
-                pickedObject.GetComponent<SqueezerInteraction>().RemoveJuice();
-                Debug.Log(juice.ToString());
+                if (juice != JuiceType.EMPTY)
+                {
+                    pickedObject.GetComponent<SqueezerInteraction>().RemoveJuice();
+                    Debug.Log(juice.ToString());
+                }
+                //gameObject.GetComponent<Renderer>().material = pickedObject.GetComponent<Renderer>().material;
             }
         }
     }
