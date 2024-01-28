@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_StrangeMan
+  m_Name: MAT_Limoncio_eyes
   m_Shader: {fileID: -6465566751694194690, guid: e6b26ae3aa722d94dae916b26629296e,
     type: 3}
   m_ValidKeywords: []
@@ -162,7 +162,7 @@ Material:
     - Vector1_33A59A05: 0.49
     - Vector1_405D6B7A: 0.46
     - Vector1_42DF547C: 1
-    - Vector1_44647F2E: 200
+    - Vector1_44647F2E: 50
     - Vector1_48DB2587: 60
     - Vector1_4D001C1D: 0.95
     - Vector1_530889D2: 0.724
@@ -173,7 +173,7 @@ Material:
     - Vector1_AB2B4414: 1.22
     - Vector1_AD7F0061: 0.57
     - Vector1_C98D84E8: 37
-    - Vector1_F5A1C629: 0.297
+    - Vector1_F5A1C629: 0.207
     - Vector1_FE843ED: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -304,7 +304,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_4CA557F2: {r: 1, g: 0.27525952, b: 0.14509803, a: 1}
+    - Color_4CA557F2: {r: 1, g: 1, b: 1, a: 1}
     - Color_57AE9BFF: {r: 0.9734455, g: 0.3662527, b: 0.0056053917, a: 1}
     - Color_9647173B: {r: 1, g: 1, b: 1, a: 1}
     - Color_CA48CB5: {r: 450.98138, g: 450.98138, b: 450.98138, a: 1}
