@@ -1,19 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 public enum JuiceType { EMPTY, LEMON, ORANGE, GRAPEFRUIT, CAKE }
 public class SqueezerInteraction : InteractableObject
 {
     [SerializeField]
     private float holdTime = 1.0f;
+    [SerializeField]
+    private Image fillBar;
+    [SerializeField]
+    private Canvas bar;
 
+    private bool endJuice = false;
     //[SerializeField]
     //private ParticleSystem finishParticles;
 
     private float restingTime = 0.0f;
     private GameObject fruit;
     private JuiceType juice = JuiceType.EMPTY;
-
+    private JuiceType frute_t = JuiceType.EMPTY;
+    
     private Transform originalPos;
     Material mat;
     private bool hover = false;
@@ -26,9 +34,12 @@ public class SqueezerInteraction : InteractableObject
     }
     void Update()
     {
-        if (hover && canHold && Input.GetMouseButton(0) && restingTime >= 0.0f)
+        
+        if ( hover && canHold && Input.GetMouseButton(0) && restingTime >= 0.0f)
         {
+            if (juice == JuiceType.EMPTY && !bar.gameObject.activeSelf) bar.gameObject.SetActive(true);
             restingTime -= Time.deltaTime;
+            fillBar.fillAmount -= Time.deltaTime / holdTime;
         }
 
         if (restingTime <= 0.0f)
@@ -52,9 +63,13 @@ public class SqueezerInteraction : InteractableObject
                     color = Color.white;
                     break;
             }
+
+            fillBar.fillAmount = 1.0f;
+            bar.gameObject.SetActive(false);
             GameObject liquid = transform.GetChild(1).gameObject;
             liquid.SetActive(true);
             liquid.GetComponent<Renderer>().material.color = color;
+            juice = frute_t;
             //finishParticles.transform.position = gameObject.transform.position;
             //finishParticles.Play();
             restingTime = holdTime;
@@ -69,8 +84,8 @@ public class SqueezerInteraction : InteractableObject
                 fruit = pickedObject;
                 if (fruit.GetComponent<FruitCharacteristics>().IsCut())
                 {
-                    juice = fruit.GetComponent<FruitCharacteristics>().GetTypeFruit();
-                    canHold = true;
+                    frute_t= fruit.GetComponent<FruitCharacteristics>().GetTypeFruit();
+                     canHold = true;
                 }
             }
         }
@@ -82,6 +97,7 @@ public class SqueezerInteraction : InteractableObject
     public void RemoveJuice()
     {
         juice = JuiceType.EMPTY;
+        frute_t = JuiceType.EMPTY;
         gameObject.GetComponent<Renderer>().material = mat;
         PlayerInstance.instance.RemoveHandObject();
         GameObject liquid = transform.GetChild(1).gameObject;
