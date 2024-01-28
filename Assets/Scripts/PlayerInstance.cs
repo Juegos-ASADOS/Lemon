@@ -63,6 +63,7 @@ public class PlayerInstance : MonoBehaviour
             {
                 pickedObject.GetComponent<InteractableObject>().destMovement = pickTransform;
                 pickedObject.transform.parent = transform;
+                pickedObject.GetComponent<InteractableObject>().PickUp();
             } 
         }
         else
