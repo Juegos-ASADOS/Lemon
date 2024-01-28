@@ -39,6 +39,7 @@ public class sc_Day2 : MonoBehaviour
     void openShop()
     {
         StartCoroutine(EventClientOne()) ;
+        Register.RegisterOpen -= openShop;
     }
 
     private IEnumerator EventClientOne()
