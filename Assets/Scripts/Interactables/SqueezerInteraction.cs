@@ -33,6 +33,7 @@ public class SqueezerInteraction : InteractableObject
             {
                 if (pickedObject.GetComponent<FruitCharacteristics>().IsCut())
                 {
+                    FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Squeez"); 
                     PlayerInstance.instance.RemoveHandObject();
                     juice = pickedObject.GetComponent<FruitCharacteristics>().GetTypeFruit();
                     Destroy(pickedObject);
