@@ -88,7 +88,8 @@ public class FMOD_Manager : MonoBehaviour
         }
         else
         {
-            Debug.Log("Missing Group Name");
+            Debug.Log("Missing Group Name " + groupName);
+            Debug.Log("Event: " + controllers[controllers.Length - 1].GetComponent<FMODUnity.StudioEventEmitter>().EventReference.Path);
         }
     }
 

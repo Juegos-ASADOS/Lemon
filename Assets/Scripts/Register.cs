@@ -40,8 +40,7 @@ public class Register : MonoBehaviour
             fmodManager.SetGlobalParameterByName("CashRegister", 0);
             //SONIDO inicioCaja
             OpenDrawer(0);
-            Debug.Log("Abrir");
-            fmodManager.PlaySingleInstanceEmitterControllerGroup("CashRegister");
+            fmodManager.PlaySingleInstanceEmitterControllerGroup("Abrir");
 
         }
         else
