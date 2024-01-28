@@ -13,10 +13,19 @@ public class Limoncin : MonoBehaviour
     {
         //Esto Tendrá que ser o cuando se coja o cuando se intente cortar o lo que sea
         LimoncinEvent("Limoncin");
+    }
+    public void HablaLimoncin(int a)
+    {
+
+        LimoncinEvent("Limoncin"+a.ToString());
+    }
+    public void StartAnimation()
+    {
         animator.SetBool("talk",true);
     }
-    public void HablaLimoncin()
+    public void EndAnimation()
     {
-        LimoncinEvent("Limoncin");
+        animator.SetBool("talk",false);
+
     }
 }
