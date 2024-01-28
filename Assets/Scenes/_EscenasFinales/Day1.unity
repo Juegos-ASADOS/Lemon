@@ -773,6 +773,51 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f169932eab2aa647b5014498cd47a30, type: 3}
+--- !u!1 &282267358
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 282267360}
+  - component: {fileID: 282267359}
+  m_Layer: 0
+  m_Name: DayManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &282267359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282267358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a96d1125cfd49634e971025112ccb5e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  client: {fileID: 1359350674}
+--- !u!4 &282267360
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282267358}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.7202866, y: 3.6871057, z: 0.18374088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &308712583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1569,6 +1614,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4929655111222074298, guid: 8802459edc567b648b120b5ebbcec7e9,
+        type: 3}
+      propertyPath: personajes.Array.data[1].name
+      value: Dani
+      objectReference: {fileID: 0}
+    - target: {fileID: 4929655111222074298, guid: 8802459edc567b648b120b5ebbcec7e9,
+        type: 3}
+      propertyPath: personajes.Array.data[2].name
+      value: Lemonian
+      objectReference: {fileID: 0}
     - target: {fileID: 7119490241002486791, guid: 8802459edc567b648b120b5ebbcec7e9,
         type: 3}
       propertyPath: m_Name
@@ -4451,6 +4506,11 @@ PrefabInstance:
       propertyPath: actualWaypoint
       value: 
       objectReference: {fileID: 2116177147}
+    - target: {fileID: 7049772605963468468, guid: d028227927499b848aa51cf384e85365,
+        type: 3}
+      propertyPath: CounterWaypoint
+      value: 
+      objectReference: {fileID: 2116177147}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d028227927499b848aa51cf384e85365, type: 3}
 --- !u!1001 &1319348092
@@ -4548,6 +4608,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 401717620}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1359350674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3768878257224201312, guid: 756179a778166b540a683ff5026ad2d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2103946809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec9a6697c67f9f4bb96114b256eef11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1401433104
 PrefabInstance:
   m_ObjectHideFlags: 0

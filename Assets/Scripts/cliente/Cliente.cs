@@ -12,7 +12,7 @@ public class Cliente : MonoBehaviour
     public static event Action<bool, string> ClientSatisfiedEvent = delegate { };
 
     public static event Action<bool, string> ClientSeen = delegate { };
-    public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, READY }
+    public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, READY, WAITING }
     public enum ExitType { moving, teleport }
 
     [SerializeField] Vector3 counterPos;
@@ -21,9 +21,9 @@ public class Cliente : MonoBehaviour
     [SerializeField] float MoveSpeed;
     [SerializeField] float aceptableDistance = 0.5f;
 
-    [SerializeField] string nombre;
-    [SerializeField] bool importance = false;
-    [SerializeField] ExitType exitWay;
+    public string nombre;
+    public bool importance = false;
+    public ExitType exitWay;
 
     //provisional cambiar segun situacion
     public Intention intention;//= Intention.ENTER;
@@ -69,14 +69,14 @@ public class Cliente : MonoBehaviour
     }
 
     //Debug
-    void setEnter()
+    public void setEnter()
     {
         teleport = false;
         moving = true;
         destino = counterPos;
         intention = Intention.ENTER;
     }
-    void setExit()
+    public  void setExit()
     {
         teleport = false;
         moving = true;
@@ -84,7 +84,7 @@ public class Cliente : MonoBehaviour
         intention = Intention.EXIT;
 
     }
-    void setAppear()
+    public void setAppear()
     {
         moving = false;
         teleport = true;
@@ -92,7 +92,7 @@ public class Cliente : MonoBehaviour
         intention = Intention.APPEAR;
 
     }
-    void setDisAppear()
+    public void setDisAppear()
     {
         moving = false;
         teleport = true;
@@ -132,33 +132,32 @@ public class Cliente : MonoBehaviour
     private void CheckOrder(comandas com)
     {
 
-        //moving = true;
-        Debug.Log("Pedido recibidio y procesado");
-        //eventos de conseguir o fallar pedido
-
-        if (com == comandas.Empty_Cup)
+        if (intention == Intention.WAITING)
         {
-            //vaso vacio
-            return;
-        }
-        if (com == comandas.Empty_Plate)
-        {
-            //plato vacio
-            return;
-        }
-        if (com == comandas.No_Tray)
-        {
-            //bandeja vacia
-            return;
-        }
+            if (com == comandas.Empty_Cup)
+            {
+                //vaso vacio
+                return;
+            }
+            if (com == comandas.Empty_Plate)
+            {
+                //plato vacio
+                return;
+            }
+            if (com == comandas.No_Tray)
+            {
+                //bandeja vacia
+                return;
+            }
 
-        if (com == ComandasClientes.Instance.GetCommandByName(nombre))
-        {
-            //success
+            if (com == ComandasClientes.Instance.GetCommandByName(nombre))
+            {
+                //success
 
-            ClientSatisfiedEvent(importance, nombre);
+                ClientSatisfiedEvent(importance, nombre);
 
-            return;
+                return;
+            }
         }
         
 
@@ -176,7 +175,7 @@ public class Cliente : MonoBehaviour
         if (intention == Intention.READY)
         {
             ClientEnter(importance, nombre); //evento de cliente entrado
-            intention = Intention.STAY;
+            intention = Intention.WAITING;
         }
     }
     void OnBecameInvisible()
@@ -202,7 +201,7 @@ public class Cliente : MonoBehaviour
         {
             appearInScene();
             ClientEnter(importance, nombre);
-            intention = Intention.STAY;
+            intention = Intention.WAITING;
         }
     }
     public void teleportToDest()
