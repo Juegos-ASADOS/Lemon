@@ -11,6 +11,17 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Image fadeImage;
 
+    [SerializeField]
+    private float delay;
+
+    [SerializeField]
+    private Color Alpha0;
+
+    [SerializeField]
+    private Color Alpha1;
+
+    public bool sceneFading;
+
     public static event Action<int> EndOfDay = delegate { };
 
     public static GameManager Instance { get; private set; }
@@ -44,6 +55,8 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.LoadScene("Day" + day);
                 end = false;
+                sceneFading = false;
+                fadeImage.color = Alpha0;
             }
             timer -= Time.deltaTime;
         }
@@ -65,17 +78,19 @@ public class GameManager : MonoBehaviour
         day++;
         timer = 3;
         end = true;
+        sceneFading = true;
+        StartCoroutine(FadeOut());
     }
 
 
     private IEnumerator FadeOut()
     {
-        //while ((fadeImage.color.a < 1) || (sceneFading == true))
-        //{
-        //    fadeImage.color = Color.Lerp(fadeImage.color, Alpha1, delay * Time.deltaTime);
-        //    yield return null;
-        //}
-        //yield return new WaitForSeconds(delay);
+        while ((fadeImage.color.a < 1) || (sceneFading == true))
+        {
+            fadeImage.color = Color.Lerp(fadeImage.color, Alpha1, delay * Time.deltaTime);
+            yield return null;
+        }
+        yield return new WaitForSeconds(delay);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         yield return null;
     }
