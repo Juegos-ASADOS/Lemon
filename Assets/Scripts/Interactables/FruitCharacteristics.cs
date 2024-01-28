@@ -11,11 +11,11 @@ public class FruitCharacteristics : MonoBehaviour
     bool isCut = false;
     [SerializeField]
     GameObject cutObject;
-    public void cutFruit()
+    public void CutFruit()
     {
         SetCut();
-        
-        GameObject newfruit = Instantiate(cutObject, transform.position,transform.rotation);
+
+        GameObject newfruit = Instantiate(cutObject, transform.position, transform.rotation);
         //newfruit.transform.localScale = transform.localScale;
         newfruit.transform.parent = transform.parent;
         if (newfruit.GetComponent<FruitCharacteristics>().GetTypeFruit() != JuiceType.LEMON)
