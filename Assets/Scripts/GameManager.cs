@@ -53,7 +53,10 @@ public class GameManager : MonoBehaviour
         {
             if (timer < 0)
             {
-                SceneManager.LoadScene("Day" + day);
+                if(day < 8)
+                    SceneManager.LoadScene("Day" + day);
+                else
+                    SceneManager.LoadScene("MainMenu");
                 end = false;
                StopAllCoroutines();
                StartCoroutine(FadeIn());
