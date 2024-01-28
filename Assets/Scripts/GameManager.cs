@@ -42,6 +42,9 @@ public class GameManager : MonoBehaviour
             }
             timer -= Time.deltaTime;
         }
+
+        if (Input.GetKeyDown(KeyCode.Asterisk))
+            end = true;
     }
 
     public void finishDay()
