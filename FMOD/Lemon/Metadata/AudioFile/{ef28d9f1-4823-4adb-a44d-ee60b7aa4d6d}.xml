@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{ef28d9f1-4823-4adb-a44d-ee60b7aa4d6d}">
+		<property name="assetPath">
+			<value>Musica/Demon.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.9512244897959183</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ca5f652a-30bc-447f-b750-a0163f4f7a7c}</destination>
+		</relationship>
+	</object>
+</objects>
