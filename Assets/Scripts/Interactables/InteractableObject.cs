@@ -17,6 +17,8 @@ public class InteractableObject : MonoBehaviour
 
     public virtual void Interact(GameObject pickedObject) { }
 
+    public virtual void PickUp() { }
+
     private void FixedUpdate()
     {
         if (destMovement != null)
