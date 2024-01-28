@@ -59,8 +59,8 @@ public class Register : MonoBehaviour
    
     public void OpenDrawer(int drawer)
     {
-        Camera.main.GetComponent<MovingCamera>().ForcedRotateTo(waypoint);
-        //Camera.main.GetComponent<MovingCamera>().lockCamera();
+        StartCoroutine(Camera.main.GetComponent<MovingCamera>().ForcedRotateTo(waypoint));
+        Camera.main.GetComponent<MovingCamera>().lockCamera();
         fmodManager.SetGlobalParameterByName("CashRegister", "Open");
         fmodManager.PlaySingleInstanceEmitterControllerGroup("Abrir");
         transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Open");
