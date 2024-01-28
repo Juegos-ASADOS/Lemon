@@ -49,14 +49,14 @@ public class sc_Day3 : MonoBehaviour
 
     private IEnumerator EventClientThree()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0);
         client.nombre = "C2";
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
 
-        client.setAppear();
+        client.setEnter();
         PlayerInstance.instance.GetCameraComponent().rotateToCounter();
         Transform t = GameObject.FindGameObjectWithTag("Punto").transform;
-        Instantiate(gorro, t);
+        Instantiate(gorro, t).GetComponent<LemonCap>().SetClient(client);
     }
 }
