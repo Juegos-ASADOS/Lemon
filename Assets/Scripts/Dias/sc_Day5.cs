@@ -79,7 +79,7 @@ public class sc_Day5 : MonoBehaviour
         client_2?.SetActive(false);
         client_3?.SetActive(true);
 
-        client.setAppear();
+        client.setEnter();
     }
 
     private void OnDestroy()
