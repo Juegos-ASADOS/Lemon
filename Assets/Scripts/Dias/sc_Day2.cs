@@ -11,11 +11,9 @@ public class sc_Day2 : MonoBehaviour
 
     public GameObject client_1 = null;
     public GameObject client_2 = null;
-    public GameObject client_3 = null;
-    public GameObject client_4 = null;
 
     //vamos a diseñar los dias mediante eventos, llevando la cuenta de estos, por ejemplo, cuando un cliente ha salido, eso solo lo podra hacer una unica vez
-    int contador = 4;
+    int contador = 2;
     private void Awake()
     {
         Register.RegisterOpen += openShop;
@@ -26,18 +24,11 @@ public class sc_Day2 : MonoBehaviour
     {
         contador--;
 
-        if (contador == 3)
+        if (contador == 1)
         {
             StartCoroutine(EventClientTWO());
         }
-        if (contador == 2)
-        {
-            StartCoroutine(EventClientThree());
-        }
-        if (contador == 1)
-        {
-            StartCoroutine(EventClientFour());
-        }
+
         if (contador == 0)
         {
             //final del dia
@@ -74,29 +65,4 @@ public class sc_Day2 : MonoBehaviour
         client.setEnter();
     }
 
-    private IEnumerator EventClientThree()
-    {
-        yield return new WaitForSeconds(5);
-        client.nombre = "C3";
-        client.importance = true;
-        client.exitWay = Cliente.ExitType.moving;
-
-        client_2?.SetActive(false);
-        client_3?.SetActive(true);
-
-        client.setAppear();
-    }
-
-    private IEnumerator EventClientFour()
-    {
-        yield return new WaitForSeconds(5);
-        client.nombre = "C4";
-        client.importance = true;
-        client.exitWay = Cliente.ExitType.moving;
-
-        client_3?.SetActive(false);
-        client_4?.SetActive(true);
-
-        client.setAppear();
-    }
 }
