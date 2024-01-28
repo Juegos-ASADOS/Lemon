@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
                 end = false;
                 sceneFading = false;
                 fadeImage.color = Alpha0;
+                StopAllCoroutines();
             }
             timer -= Time.deltaTime;
         }
