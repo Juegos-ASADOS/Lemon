@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour
 {
     [SerializeField]
@@ -68,12 +70,13 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator FadeOut()
     {
-        while ((fadeImage.color.a < 1) || (sceneFading == true))
-        {
-            fadeImage.color = Color.Lerp(fadeImage.color, Alpha1, delay * Time.deltaTime);
-            yield return null;
-        }
-        yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //while ((fadeImage.color.a < 1) || (sceneFading == true))
+        //{
+        //    fadeImage.color = Color.Lerp(fadeImage.color, Alpha1, delay * Time.deltaTime);
+        //    yield return null;
+        //}
+        //yield return new WaitForSeconds(delay);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return null;
     }
 }
