@@ -1842,12 +1842,12 @@ PrefabInstance:
     - target: {fileID: 4929655111222074298, guid: 8802459edc567b648b120b5ebbcec7e9,
         type: 3}
       propertyPath: personajes.Array.data[1].comanda
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4929655111222074298, guid: 8802459edc567b648b120b5ebbcec7e9,
         type: 3}
       propertyPath: personajes.Array.data[2].comanda
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7119490241002486791, guid: 8802459edc567b648b120b5ebbcec7e9,
         type: 3}
@@ -3560,18 +3560,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
+      propertyPath: characters.Array.data[1].dialogueList.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
       propertyPath: charactersOut.Array.data[0].dialogueList.Array.size
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
       propertyPath: charactersOut.Array.data[1].dialogueList.Array.size
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
       propertyPath: charactersOut.Array.data[2].dialogueList.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
@@ -3615,6 +3625,41 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
+      propertyPath: characters.Array.data[1].dialogueList.Array.data[0].text
+      value: "\xA1BUENOS DIAS!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[1].dialogueList.Array.data[1].text
+      value: "\xBFDesde cuando vendes tambi\xE9n comida? QUE BUENA PINTA"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[1].dialogueList.Array.data[2].text
+      value: jeje jeje jeje
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[1].dialogueList.Array.data[3].text
+      value: Quiero una de esas magdalenas por favor.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[1].dialogueList.Array.data[4].text
+      value: "(Los alimentos tendr\xE1s que servirlos en plato y no en vaso)"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[0].text
+      value: "Tengo prisa, as\xED que ponme ya un trozo de tarta."
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[1].text
+      value: jeje
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
       propertyPath: charactersOut.Array.data[0].dialogueList.Array.data[0].text
       value: "\xA1\xA1Este zumo esta espectacular!!"
       objectReference: {fileID: 0}
@@ -3631,12 +3676,27 @@ PrefabInstance:
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
       propertyPath: charactersOut.Array.data[1].dialogueList.Array.data[0].text
-      value: Estoy de limones...
+      value: UFFFFFF que rico huele
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: charactersOut.Array.data[1].dialogueList.Array.data[1].text
+      value: Muchas gracias joven, toma estas monedas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: charactersOut.Array.data[1].dialogueList.Array.data[2].text
+      value: je jeje jeje jejejejejeje
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
       propertyPath: charactersOut.Array.data[2].dialogueList.Array.data[0].text
-      value: UNACEPTABLE!
+      value: "JOJOJOJOJOJO, qu\xE9 velocidad hijo"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: charactersOut.Array.data[2].dialogueList.Array.data[1].text
+      value: "Qu\xE9date el cambio, me voy corriendoooooo."
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
