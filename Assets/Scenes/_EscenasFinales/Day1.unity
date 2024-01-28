@@ -3492,7 +3492,7 @@ PrefabInstance:
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
       propertyPath: characters.Array.data[0].dialogueList.Array.size
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
@@ -3511,6 +3511,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[1].text
+      value: "T\xEDo me llamo Dani"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[2].text
+      value: "T\xEDo me llamo Dani"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].text
+      value: "T\xEDo me llamo Dani"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
       propertyPath: charactersOut.Array.data[0].dialogueList.Array.data[0].text
       value: Este zumo esta espectacular!!
       objectReference: {fileID: 0}
@@ -3523,6 +3538,21 @@ PrefabInstance:
         type: 3}
       propertyPath: charactersOut.Array.data[2].dialogueList.Array.data[0].text
       value: UNACEPTABLE!
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[1].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[1].startWaitTimeSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598536086561389131, guid: 08b18ba0c15f32847bd657186ff69338,
+        type: 3}
+      propertyPath: characters.Array.data[0].dialogueList.Array.data[3].startWaitTimeSeconds
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6598536086561389168, guid: 08b18ba0c15f32847bd657186ff69338,
         type: 3}
