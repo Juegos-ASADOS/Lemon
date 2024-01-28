@@ -82,6 +82,7 @@ public class CutboardInteraction : InteractableObject
             if (knife != null)
             {
                 FMOD_Manager.instance.SetGlobalParameterByName("Cutting", 1);
+                FMOD_Manager.instance.StopSingleInstanceEmitterControllerGroup("KnifeCut");
                 knife.GetComponent<KnifeInteraction>().CutEnd();
                 knife = null;
                 transform.GetComponent<BoxCollider>().enabled = false;
