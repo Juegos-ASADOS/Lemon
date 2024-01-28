@@ -85,4 +85,34 @@ public class MovingCamera : MonoBehaviour
 
         cameraMoving = false;
     }
+
+    private IEnumerator ForcedRotateTo(CameraWaypoint waypoint)
+    {
+        if (cameraMoving)
+            yield break;
+
+        cameraMoving = true;
+
+        float elapsedTime = 0f;
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = waypoint.transform.rotation;
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = waypoint.transform.position;
+        while (elapsedTime < animationDuration)
+        {
+            float t = elapsedTime / animationDuration;
+
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, movementCurve.Evaluate(t));
+            transform.position = Vector3.Slerp(startPosition, targetPosition, movementCurve.Evaluate(t));
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.rotation = targetRotation;
+        transform.position = targetPosition;
+
+        cameraMoving = false;
+    }
+
 }
