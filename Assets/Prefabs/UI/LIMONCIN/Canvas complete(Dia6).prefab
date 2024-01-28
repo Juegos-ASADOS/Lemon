@@ -679,9 +679,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - name: Dani
+  - name: C1
     dialogueList:
-    - text: "T\xEDo me llamo Dani"
+    - text: Hola soy MariaJesus
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -691,22 +691,65 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Jose
-    dialogueList:
-    - text: Me duele la barriga
+    - text: "Ver\xE1s es el cumple de mi t\xEDa y necesito una tarta pero claro en
+        mi tienda de tartas no tienen tartas suficientes y es que a mi tia que es
+        un poco rarita, bueno no es rara es que est\xE1 loca pero claro no le podemos
+        decir eso porque se enfada"
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
-      fontSize: 0
+      letterSpeedSeconds: 0.005
+      fontSize: 25
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: De puro comer pisa
+    - text: 'y es que la tia loca quiere si o si una '
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.005
+      fontSize: 25
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "TARTA DE LIM\xD3N"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.005
+      fontSize: 25
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "tienes TARTA DE LIM\xD3N?"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.005
+      fontSize: 25
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+  - name: C2
+    dialogueList:
+    - text: LIMONADA
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
-      fontSize: 0
+      fontSize: 50
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: YA!!!!!!!!!!!!!
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.2
+      fontSize: 50
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -716,7 +759,7 @@ MonoBehaviour:
     - text: jeje
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
-      fontSize: 0
+      fontSize: 20
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -781,12 +824,13 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
   charactersOut:
-  - name: Dani
+  - name: C1
     dialogueList:
-    - text: Este zumo esta espectacular!!
+    - text: "Anda que no est\xE1 loca mi t\xEDa pero como te vas a comer una tarta
+        de lim\xF3n"
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
-      fontSize: 0
+      letterSpeedSeconds: 0.02
+      fontSize: 25
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
