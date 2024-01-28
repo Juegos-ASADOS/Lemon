@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     private const int EndingDayScene = 11;
 
     private int actualSceneNumber = StartingDayScene;
+
+    public uint money = 0;
     private void Awake()
     {
         if (Instance != null)
