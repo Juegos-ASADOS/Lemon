@@ -19,15 +19,23 @@ public class CutboardInteraction : InteractableObject
         if (pickedObject != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO &&
-                transform.childCount == 2  && !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
+                transform.childCount == 2 && !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
             {
                 canHold = true;
+                transform.GetComponent<BoxCollider>().enabled = true;
                 knife = pickedObject;
             }
-            else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>()!= null)
+            else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>() != null)
             {
+                transform.GetComponent<BoxCollider>().enabled = false;
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);
                 pickedObject.transform.parent = transform;
+                if(pickedObject.GetComponent<FruitCharacteristics>().GetTypeFruit() == JuiceType.CAKE)
+                {
+                    Vector3 newT = pickedObject.GetComponent<InteractableObject>().destMovement.position;
+                    newT.y = 2.4f;
+                    pickedObject.GetComponent<InteractableObject>().destMovement.position = newT;
+                }
                 PlayerInstance.instance.RemoveHandObject();
             }
         }
@@ -38,16 +46,21 @@ public class CutboardInteraction : InteractableObject
 
     void Update()
     {
-        if (hover && canHold && Input.GetMouseButton(0) && restingTime >= 0.0f)
+        if (hover && canHold)
         {
-            restingTime -= Time.deltaTime;
+            if (Input.GetMouseButton(0) && restingTime >= 0.0f)
+            {
+                restingTime -= Time.deltaTime;
+            }
         }
         if (restingTime <= 0.0f)
         {
             if (transform.childCount == 2)
             {
-                transform.GetChild(1).GetComponent<FruitCharacteristics>().cutFruit();
+                transform.GetChild(1).GetComponent<FruitCharacteristics>().CutFruit();
+
                 canHold = false;
+                transform.GetComponent<BoxCollider>().enabled = false;
             }
             //cutParticles.transform.position = transform.GetChild(0).position;
             //cutParticles.Play();
@@ -56,6 +69,7 @@ public class CutboardInteraction : InteractableObject
             {
                 knife.GetComponent<KnifeInteraction>().CutEnd();
                 knife = null;
+                transform.GetComponent<BoxCollider>().enabled = false;
             }
         }
     }
