@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MAT_tronco
+  m_Name: MAT_Hierba
   m_Shader: {fileID: -6465566751694194690, guid: e6b26ae3aa722d94dae916b26629296e,
     type: 3}
   m_ValidKeywords: []
@@ -155,25 +155,25 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - Vector1_12549AA: 0.36
+    - Vector1_12549AA: 0.64
     - Vector1_238EC9A3: 0
     - Vector1_295DF5A4: 0.61
     - Vector1_30912EEC: 10
     - Vector1_33A59A05: 0.49
     - Vector1_405D6B7A: 0.46
-    - Vector1_42DF547C: 0.38
-    - Vector1_44647F2E: 592
+    - Vector1_42DF547C: 1
+    - Vector1_44647F2E: 500
     - Vector1_48DB2587: 60
     - Vector1_4D001C1D: 0.95
-    - Vector1_530889D2: 0.651
+    - Vector1_530889D2: 0.724
     - Vector1_55322685: 0
     - Vector1_7B56CB4F: 0.305
-    - Vector1_95FF30AC: 7
-    - Vector1_A56F83C9: 175
+    - Vector1_95FF30AC: 15
+    - Vector1_A56F83C9: 35
     - Vector1_AB2B4414: 1.22
-    - Vector1_AD7F0061: 0.8
+    - Vector1_AD7F0061: 0.57
     - Vector1_C98D84E8: 37
-    - Vector1_F5A1C629: 0
+    - Vector1_F5A1C629: 0.207
     - Vector1_FE843ED: 1
     - _AORemapMax: 1
     - _AORemapMin: 0
@@ -227,7 +227,7 @@ Material:
     - _EnableGeometricSpecularAA: 0
     - _EnableSpecularOcclusion: 0
     - _EnergyConservingSpecularColor: 1
-    - _GeneralMultiplier_VertexDIstorsion: 0.1
+    - _GeneralMultiplier_VertexDIstorsion: 0.025
     - _HdrpVersion: 2
     - _HeightAmplitude: 0.02
     - _HeightCenter: 0.5
@@ -259,8 +259,8 @@ Material:
     - _RenderQueueType: 1
     - _RequireSplitLighting: 1
     - _SSRefractionProjectionModel: 0
-    - _Scale: 22.8
-    - _Scale_VertexDistorsion: 18.6
+    - _Scale: 7.62
+    - _Scale_VertexDistorsion: 15
     - _Smoothness: 0
     - _SmoothnessRemapMax: 1
     - _SmoothnessRemapMin: 0
@@ -284,7 +284,7 @@ Material:
     - _TexWorldScaleEmissive: 1
     - _Thickness: 1
     - _ThicknessMultiplier: 1
-    - _TimeMultiplier_VertexDistorsion: 7.57
+    - _TimeMultiplier_VertexDistorsion: 9
     - _Time_multiplier: 2
     - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
@@ -304,9 +304,9 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_4CA557F2: {r: 1, g: 0.59827304, b: 0.3443396, a: 1}
+    - Color_4CA557F2: {r: 0.65016264, g: 1, b: 0.4666667, a: 1}
     - Color_57AE9BFF: {r: 0.9734455, g: 0.3662527, b: 0.0056053917, a: 1}
-    - Color_9647173B: {r: 0.93333334, g: 0.41595137, b: 0, a: 1}
+    - Color_9647173B: {r: 1, g: 1, b: 1, a: 1}
     - Color_CA48CB5: {r: 450.98138, g: 450.98138, b: 450.98138, a: 1}
     - _BaseColor: {r: 0, g: 0.449816, b: 1, a: 1}
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
