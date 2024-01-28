@@ -10,7 +10,7 @@ public class InteractableButton : InteractableObject
             //SONIDO interactuar pero no funciona
             return;
         }
-        transform.GetChild(0).GetComponent<Animator>().SetTrigger("Pressed");
+        transform.GetComponent<Animator>().SetTrigger("Pressed");
         if(this.name == "Enter")
         {
             //SONIDO boton
