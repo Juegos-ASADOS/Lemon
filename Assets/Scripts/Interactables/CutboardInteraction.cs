@@ -19,12 +19,12 @@ public class CutboardInteraction : InteractableObject
         if (pickedObject != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO &&
-                transform.childCount == 2  && !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
+                transform.childCount == 2 && !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
             {
                 canHold = true;
                 knife = pickedObject;
             }
-            else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>()!= null)
+            else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>() != null)
             {
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);
                 pickedObject.transform.parent = transform;
@@ -38,9 +38,12 @@ public class CutboardInteraction : InteractableObject
 
     void Update()
     {
-        if (hover && canHold && Input.GetMouseButton(0) && restingTime >= 0.0f)
+        if (hover && canHold)
         {
-            restingTime -= Time.deltaTime;
+            if (Input.GetMouseButton(0) && restingTime >= 0.0f)
+            {
+                restingTime -= Time.deltaTime;
+            }
         }
         if (restingTime <= 0.0f)
         {

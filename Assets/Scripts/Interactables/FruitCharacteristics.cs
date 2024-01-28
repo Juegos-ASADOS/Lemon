@@ -14,8 +14,8 @@ public class FruitCharacteristics : MonoBehaviour
     public void cutFruit()
     {
         SetCut();
-        
-        GameObject newfruit = Instantiate(cutObject, transform.position,transform.rotation);
+
+        GameObject newfruit = Instantiate(cutObject, transform.position, transform.rotation);
         //newfruit.transform.localScale = transform.localScale;
         newfruit.transform.parent = transform.parent;
         newfruit.GetComponent<FruitCharacteristics>().SetCut();
