@@ -29,13 +29,24 @@ public class DialogueSystem : MonoBehaviour
 {
     private void Awake()
     {
-        dialogueBox = transform.Find("TextBox").gameObject;
-        dialogueTMP = dialogueBox.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
-        
-   
-        Cliente.ClientEnter += startCoroutines;
-        Cliente.ClientExit += dialogueStop;
-        //TODO: Evento de diálogo de limoncín (esto igual es con otro script)
+        if (!limoncin)
+        {
+            dialogueBox = transform.Find("TextBox").gameObject;
+            dialogueTMP = dialogueBox.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
+        }
+        else
+        {
+            dialogueBox = transform.Find("LemonTextBox").gameObject;
+            dialogueTMP = dialogueBox.transform.Find("LemonDialogueText").GetComponent<TextMeshProUGUI>();
+        }
+
+        if (!limoncin)
+        {
+            Cliente.ClientEnter += startCoroutines;
+            Cliente.ClientExit += dialogueStop;
+        }
+        else
+            Limoncin.LimoncinEvent += startCoroutines;
     }
 
     void startCoroutines(string clientName)
@@ -43,25 +54,31 @@ public class DialogueSystem : MonoBehaviour
         dialogueTMP.color = defaultFontColor;
         dialogueTMP.font = defaultFont;
         StopAllCoroutines();
+        Debug.Log(limoncin);
         StartCoroutine(dialogueStart(clientName));
     }
 
     public IEnumerator dialogueStart(string clientName)
     {
-
-        dialogueBox.SetActive(true);
-
         // Get characterEvent
         bool found = false;
         short i = 0;
         while (!found && i < characters.Count)
         {
             if (characters[i].name == clientName)
+            {
+                found = true;
                 break;
+            }
 
             i++;
         }
-        yield return StartCoroutine(PrintDialogue(characters[i].dialogueList));
+        if (((limoncin && clientName == "Limoncin") || !limoncin) && found)
+        {
+            dialogueBox.SetActive(true);
+            yield return StartCoroutine(PrintDialogue(characters[i].dialogueList));
+        }
+
     }
     private IEnumerator PrintDialogue(List<dialogueLine> dialogueList)
     {
@@ -89,7 +106,11 @@ public class DialogueSystem : MonoBehaviour
             dialogueIndex++;
         }
 
-        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        if (limoncin)
+            yield return new WaitForSeconds(limoncin_time_till_dialogue_disappears);
+        else
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+
         dialogueStop();
     }
     private IEnumerator letterByLetter(dialogueLine dialogue)
@@ -108,16 +129,20 @@ public class DialogueSystem : MonoBehaviour
         for (int i = 0; i < messageArray.Length; i++)
         {
             dialogueTMP.text += messageArray[i];
-            
+
             yield return new WaitForSeconds(dialogue.letterSpeedSeconds);
         }
 
-        yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
+        if (limoncin)
+            yield return new WaitForSeconds(limoncin_time_till_dialogue_disappears);
+        else
+            yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
     }
     private void dialogueStop()
     {
         // Maybe hide textbox
         StopAllCoroutines();
+        Debug.Log(limoncin);
         dialogueTMP.text = "";
         dialogueBox.SetActive(false);
     }
@@ -136,7 +161,7 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField]
     private float defaultLetterSpeed = 0.04f;
-    
+
     [SerializeField]
     private float defaultFontSize = 36f;
 
@@ -148,7 +173,7 @@ public class DialogueSystem : MonoBehaviour
     private GameObject dialogueBox;
     private TextMeshProUGUI dialogueTMP;
 
-    //Limoncin
-    private GameObject limDialogueBox;
-    private TextMeshProUGUI limDialogueTMP;
+    [SerializeField]
+    bool limoncin;
+    const float limoncin_time_till_dialogue_disappears = 1f;
 }
