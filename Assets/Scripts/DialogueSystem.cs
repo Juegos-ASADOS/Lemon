@@ -78,7 +78,15 @@ public class DialogueSystem : MonoBehaviour
         //testing de que el cliente es importante cuando no
         StartDespedidas(clientname);
     }
-    void startCoroutines(string clientName)
+
+    public void startTutorial()
+    {
+        dialogueTMP.color = defaultFontColor;
+        dialogueTMP.font = defaultFont;
+        StopAllCoroutines();
+        StartCoroutine(dialogueStart("Tutorial"));
+    }
+     void startCoroutines(string clientName)
     {
         dialogueTMP.color = defaultFontColor;
         dialogueTMP.font = defaultFont;
@@ -122,7 +130,6 @@ public class DialogueSystem : MonoBehaviour
     public IEnumerator dialogueStart(string clientName)
     {
 
-        Debug.Log(characters.Count);
         // Get characterEvent
         bool found = false;
         short i = 0;
@@ -145,6 +152,7 @@ public class DialogueSystem : MonoBehaviour
     }
     private IEnumerator PrintDialogue(List<dialogueLine> dialogueList, bool despedida)
     {
+
         short dialogueIndex = 0;
         while (dialogueIndex < dialogueList.Count)
         {
