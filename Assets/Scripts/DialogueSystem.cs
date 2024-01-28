@@ -42,6 +42,7 @@ public class DialogueSystem : MonoBehaviour
             dialogueTMP = dialogueBox.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
             Cliente.ClientEnter += startImportance;
             Cliente.ClientExit += dialogueStop;
+        Cliente.ClientSatisfiedEvent += startDespedida;
         }
         else
         {
@@ -51,7 +52,6 @@ public class DialogueSystem : MonoBehaviour
             Limoncin.LimoncinEvent += startCoroutines;
         }
             
-        Cliente.ClientSatisfiedEvent += startDespedida;
     }
 
     void startImportance(bool importance, string clientname)
