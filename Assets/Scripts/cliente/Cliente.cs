@@ -56,8 +56,6 @@ public class Cliente : MonoBehaviour
 
     void setExitWay()
     {
-
-        Debug.Log("se ejecuta el exitway");
         if (exitWay == ExitType.moving)
         {
             setExit();
