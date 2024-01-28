@@ -113,7 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruit: 3
-  cutObject: {fileID: 0}
+  cutObject: {fileID: 8387761235736558094, guid: bb5fd120041351b4c930d18f0a6e4adc,
+    type: 3}
 --- !u!114 &1015088286176297552
 MonoBehaviour:
   m_ObjectHideFlags: 0
