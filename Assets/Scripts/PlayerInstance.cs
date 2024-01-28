@@ -91,4 +91,9 @@ public class PlayerInstance : MonoBehaviour
     {
         pickedObject = null;
     }
+
+    public MovingCamera GetCameraComponent()
+    {
+        return GetComponent<MovingCamera>();
+    }
 }
