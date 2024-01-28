@@ -55,9 +55,8 @@ public class GameManager : MonoBehaviour
             {
                 SceneManager.LoadScene("Day" + day);
                 end = false;
-                sceneFading = false;
-                fadeImage.color = Alpha0;
-                StopAllCoroutines();
+               StopAllCoroutines();
+               StartCoroutine(FadeIn());
             }
             timer -= Time.deltaTime;
         }
@@ -93,6 +92,17 @@ public class GameManager : MonoBehaviour
         }
         yield return new WaitForSeconds(delay);
         //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        yield return null;
+    }
+
+    private IEnumerator FadeIn()
+    {
+        while ((fadeImage.color.a > 0) || (sceneFading == true))
+        {
+            fadeImage.color = Color.Lerp(fadeImage.color, Alpha0, delay * Time.deltaTime);
+            yield return null;
+        }
+        sceneFading = false;
         yield return null;
     }
 }
