@@ -50,7 +50,7 @@ public class DialogueSystem : MonoBehaviour
             defaultFontColor = Color.yellow;
             Limoncin.LimoncinEvent += startCoroutines;
         }
-            
+
         Cliente.ClientSatisfiedEvent += startDespedida;
     }
 
@@ -114,7 +114,7 @@ public class DialogueSystem : MonoBehaviour
         if (((limoncin && clientName == "Limoncin") || !limoncin) && found)
         {
             dialogueBox.SetActive(true);
-            yield return StartCoroutine(PrintDialogue(charactersOut[i].dialogueList, true));
+            yield return StartCoroutine(PrintDialogue(charactersOut[i].dialogueList, true, clientName));
         }
 
     }
@@ -139,12 +139,13 @@ public class DialogueSystem : MonoBehaviour
         if (((limoncin && clientName == "Limoncin") || !limoncin) && found)
         {
             dialogueBox.SetActive(true);
-            yield return StartCoroutine(PrintDialogue(characters[i].dialogueList, false));
+            yield return StartCoroutine(PrintDialogue(characters[i].dialogueList, false, clientName));
         }
 
     }
-    private IEnumerator PrintDialogue(List<dialogueLine> dialogueList, bool despedida)
+    private IEnumerator PrintDialogue(List<dialogueLine> dialogueList, bool despedida, string name)
     {
+
         short dialogueIndex = 0;
         while (dialogueIndex < dialogueList.Count)
         {
@@ -159,7 +160,7 @@ public class DialogueSystem : MonoBehaviour
 
             dialogueTMP.text = "";
 
-            yield return StartCoroutine(letterByLetter(dialogueList[dialogueIndex]));
+            yield return StartCoroutine(letterByLetter(dialogueList[dialogueIndex], name));
 
             dialogueList[dialogueIndex].endLineEvent?.Invoke();
 
@@ -181,9 +182,29 @@ public class DialogueSystem : MonoBehaviour
 
         dialogueStop();
     }
-    private IEnumerator letterByLetter(dialogueLine dialogue)
+    
+    private IEnumerator letterByLetter(dialogueLine dialogue, string name)
     {
         //TODO SONIDO DE HABLAR
+        if (name == "Limoncin")
+        {
+
+            FMOD_Manager.instance.SetGlobalParameterByName("CharacterName", 2);
+            FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("CustomerTalk");
+        }
+        else if (name == "Limoniano")
+        {
+
+            FMOD_Manager.instance.SetGlobalParameterByName("CharacterName", 1);
+            FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("CustomerTalk");
+        }
+        else
+        {
+
+            FMOD_Manager.instance.SetGlobalParameterByName("CharacterName", 0);
+            FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("CustomerTalk");
+        }
+
         char[] messageArray = dialogue.text.ToCharArray();
         //Speed
         if (dialogue.letterSpeedSeconds <= 0)
@@ -213,7 +234,7 @@ public class DialogueSystem : MonoBehaviour
         //Debug.Log(limoncin);
         dialogueTMP.text = "";
         dialogueBox.SetActive(false);
-        
+
     }
 
     public void changeFont(TMP_FontAsset font)

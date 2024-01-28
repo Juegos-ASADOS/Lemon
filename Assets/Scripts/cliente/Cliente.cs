@@ -135,7 +135,7 @@ public class Cliente : MonoBehaviour
             if (com == comandas.Empty_Cup || com == comandas.Empty_Plate || com == comandas.No_Tray)
             {
                 //vaso vacio
-                FMOD_Manager.instance.SetGlobalParameterByName("Task", "Incorrect");
+                FMOD_Manager.instance.SetGlobalParameterByName("Task", 0);
                 FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("CheckTask");
                 return;
             }
@@ -143,7 +143,7 @@ public class Cliente : MonoBehaviour
             if (com == ComandasClientes.Instance.GetCommandByName(nombre))
             {
                 //success
-                FMOD_Manager.instance.SetGlobalParameterByName("Task", "Success");
+                FMOD_Manager.instance.SetGlobalParameterByName("Task", 1);
                 FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("CheckTask");
                 ClientSatisfiedEvent(importance, nombre);
 
@@ -163,6 +163,7 @@ public class Cliente : MonoBehaviour
         if (intention == Intention.READY)
         {
             ClientEnter(importance, nombre); //evento de cliente entrado
+            
             intention = Intention.WAITING;
         }
     }
