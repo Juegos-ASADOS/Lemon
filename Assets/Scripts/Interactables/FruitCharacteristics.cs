@@ -14,7 +14,7 @@ public class FruitCharacteristics : MonoBehaviour
     public void CutFruit()
     {
         SetCut();
-
+        FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("KnifeCut");
         GameObject newfruit = Instantiate(cutObject, transform.position, transform.rotation);
         //newfruit.transform.localScale = transform.localScale;
         newfruit.transform.parent = transform.parent;

@@ -44,7 +44,7 @@ public class sc_Day1 : MonoBehaviour
     private IEnumerator EventClientOne()
     {
         yield return new WaitForSeconds(5);
-        client.nombre = "Dani";
+        client.nombre = "C1";
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
         client.setEnter();
@@ -53,7 +53,7 @@ public class sc_Day1 : MonoBehaviour
     private IEnumerator EventClientTWO()
     {
         yield return new WaitForSeconds(5);
-        client.nombre = "Jose";
+        client.nombre = "C2";
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
 
@@ -63,7 +63,7 @@ public class sc_Day1 : MonoBehaviour
     private IEnumerator EventClientThree()
     {
         yield return new WaitForSeconds(5);
-        client.nombre = "Lemonian";
+        client.nombre = "C3";
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
 

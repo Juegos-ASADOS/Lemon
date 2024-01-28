@@ -47,7 +47,7 @@ public class PlayerInstance : MonoBehaviour
         {
             if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t == ObjectType.PLATO)
             {
-                if(t == ObjectType.FRUTA && obj.transform.parent != null && obj.transform.parent.GetComponent<CutboardInteraction>() != null)
+                if (t == ObjectType.FRUTA && obj.transform.parent != null && obj.transform.parent.GetComponent<CutboardInteraction>() != null)
                     obj.transform.parent.GetComponent<BoxCollider>().enabled = true;
                 if (obj.transform.parent != null && !obj.transform.parent.CompareTag("Cesta"))
                     pickedObject = obj;
@@ -57,21 +57,22 @@ public class PlayerInstance : MonoBehaviour
                     pickedObject.transform.localScale = obj.transform.lossyScale;
                 }
             }
-            else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || t == ObjectType.DINERO)
+            else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || t == ObjectType.DINERO || t == ObjectType.TRAVIESO)
             {
-                if(t == ObjectType.CUCHILLO)
+                if (t == ObjectType.CUCHILLO)
                     GameObject.FindGameObjectWithTag("Cutboard").gameObject.transform.GetComponent<BoxCollider>().enabled = true;
                 pickedObject = obj;
             }
             else
                 interact.Interact(null);
-            
+
             if (pickedObject != null)
             {
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Grab");
                 pickedObject.GetComponent<InteractableObject>().destMovement = pickTransform;
                 pickedObject.transform.parent = transform;
                 pickedObject.GetComponent<InteractableObject>().PickUp();
-            } 
+            }
         }
         else
         {
@@ -83,7 +84,7 @@ public class PlayerInstance : MonoBehaviour
     {
         ObjectType t = pickedObject.GetComponent<InteractableObject>().objType;
 
-        if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t==ObjectType.PLATO)
+        if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t == ObjectType.PLATO)
             Destroy(pickedObject);
     }
     public void RemoveHandObject()

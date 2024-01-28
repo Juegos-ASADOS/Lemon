@@ -24,7 +24,8 @@ public class TrayInteraction : InteractableObject
         //GiveOrder con lo que sea que haya en la bandeja
         GiveOrder(GetComandas());
         //objectContained
-        objectContained = null; //habria que eliminarlo o algo master
+        //objectContained = null; //habria que eliminarlo o algo master
+        Destroy(objectContained);
     }
 
     public comandas GetComandas()
@@ -52,15 +53,16 @@ public class TrayInteraction : InteractableObject
             InteractablePlate plate = objectContained.GetComponent<InteractablePlate>();
         if (plate)
         {
-            FoodCharacteristics food = plate.getFood().GetComponent<FoodCharacteristics>();
-
+            GameObject food = plate.getFood();
             if (!food)
                 return comandas.Empty_Plate;
-            if (food.GetTypeFood() == FoodType.MUFFIN)
+
+            FoodCharacteristics chars = plate.getFood().GetComponent<FoodCharacteristics>();
+            if (chars.GetTypeFood() == FoodType.MUFFIN)
                 return comandas.Muffin;
-            if (food.GetTypeFood() == FoodType.CROISSANT)
+            if (chars.GetTypeFood() == FoodType.CROISSANT)
                 return comandas.Croissant;
-            if (food.GetTypeFood() == FoodType.CAKE)
+            if (chars.GetTypeFood() == FoodType.CAKE)
                 return comandas.Cake;
         }
         return comandas.Error; //esot no ocurrira nunca
@@ -73,6 +75,7 @@ public class TrayInteraction : InteractableObject
                 pickedObject.GetComponent<InteractableObject>().objType == ObjectType.PLATO &&
                 transform.childCount < 2)
             {
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Table");
                 pickedObject.transform.SetPositionAndRotation(transform.GetChild(0).position, transform.GetChild(0).rotation);
                 pickedObject.transform.parent = transform;
                 objectContained = pickedObject;
