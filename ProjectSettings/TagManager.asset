@@ -9,6 +9,7 @@ TagManager:
   - Orange
   - Grapefruit
   - Lemon
+  - Cesta
   layers:
   - Default
   - TransparentFX
