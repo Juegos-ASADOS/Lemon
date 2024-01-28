@@ -95,7 +95,7 @@ public class Cliente : MonoBehaviour
         moving = false;
         teleport = true;
         destino = OutOfSightPos;
-        intention = Intention.DISAPPEAR;
+        intention = Intention.EXIT;
 
     }
     //
