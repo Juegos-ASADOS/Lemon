@@ -2,84 +2,35 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class sc_Day7 : MonoBehaviour
 {
+    float timer = 0.0f;
+    bool up = false;
 
-    [SerializeField] private Cliente client;
-
-    public GameObject client_1 = null;
-    public GameObject client_2 = null;
-    public GameObject client_3 = null;
-
-    //vamos a diseñar los dias mediante eventos, llevando la cuenta de estos, por ejemplo, cuando un cliente ha salido, eso solo lo podra hacer una unica vez
-    int contador = 0;
-    private void Awake()
+    private void Start()
     {
-        Register.RegisterOpen += openShop;
-        Cliente.ClientExit += nextClient;
+        PlayerInstance.instance.GetCameraComponent().lockCamera();
     }
 
-    void nextClient()
+    private void Update()
     {
-        contador--;
-
-        if (contador == 2)
+        if(timer < 3.0f)
+            timer += Time.deltaTime;
+        else
         {
-            StartCoroutine(EventClientTWO());
-        }
-        if (contador == 1)
-        {
-            StartCoroutine(EventClientThree());
-        }
-        if (contador == 0)
-        {
-            //final del dia
-            //GameManager.Instance.finishDay();
+            if (!up)
+            {
+                timer = 0.0f;
+                PlayerInstance.instance.GetCameraComponent().rotateUp();
+                up = true;
+            }
+            else
+            {
+                GameManager.Instance.endDay();
+            }
         }
     }
-
-    void openShop()
-    {
-        StartCoroutine(EventClientOne()) ;
-    }
-
-    private IEnumerator EventClientOne()
-    {
-        yield return new WaitForSeconds(5);
-        client.nombre = "C1";
-        client.importance = true;
-        client.exitWay = Cliente.ExitType.moving;
-
-        client_1?.SetActive(true);
-        client.setEnter();
-    }
-
-    private IEnumerator EventClientTWO()
-    {
-        yield return new WaitForSeconds(5);
-        client.nombre = "C2";
-        client.importance = true;
-        client.exitWay = Cliente.ExitType.moving;
-
-        client_1?.SetActive(false);
-        client_2?.SetActive(true);
-
-        client.setEnter();
-    }
-
-    private IEnumerator EventClientThree()
-    {
-        yield return new WaitForSeconds(5);
-        client.nombre = "C3";
-        client.importance = true;
-        client.exitWay = Cliente.ExitType.moving;
-
-        client_2?.SetActive(false);
-        client_3?.SetActive(true);
-
-        client.setAppear();
-    }
-
 }

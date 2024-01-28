@@ -11,6 +11,7 @@ public class MovingCamera : MonoBehaviour
     private Vector3 movingAxis;
     [SerializeField] private CameraWaypoint actualWaypoint = null;
     [SerializeField] private CameraWaypoint CounterWaypoint = null;
+    [SerializeField] private CameraWaypoint UpWaypoint = null;
 
     private CameraEvent cameraEvent;
     private bool cameraLock = false;
@@ -35,6 +36,44 @@ public class MovingCamera : MonoBehaviour
     {
         cameraLock = true;
         StartCoroutine(rotateImportant());
+    }
+
+    public void rotateUp()
+    {
+        cameraLock = true;
+        StartCoroutine(lookUp());
+    }
+
+    private IEnumerator lookUp()
+    {
+        //por si ya se estaba moviendo el mingui que no se queden bloqueados o se cancelen
+        while (cameraMoving)
+            yield return null;
+
+        actualWaypoint = UpWaypoint;
+
+        cameraMoving = true;
+
+        float elapsedTime = 0f;
+        Quaternion startRotation = transform.rotation;
+        Quaternion targetRotation = actualWaypoint.transform.rotation;
+        Vector3 startPosition = transform.position;
+        Vector3 targetPosition = actualWaypoint.transform.position;
+        while (elapsedTime < animationDuration)
+        {
+            float t = elapsedTime / animationDuration;
+
+            transform.rotation = Quaternion.Slerp(startRotation, targetRotation, movementCurve.Evaluate(t));
+            transform.position = Vector3.Slerp(startPosition, targetPosition, movementCurve.Evaluate(t));
+
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        transform.rotation = targetRotation;
+        transform.position = targetPosition;
+
+        cameraMoving = false;
     }
 
     private IEnumerator rotateImportant()
