@@ -11,6 +11,7 @@ public class InteractableTimbre : InteractableObject
     public static event Action SendOrder = delegate { };
     public override void Interact(GameObject pickedObject) {
         Debug.Log("Timbrado");
+        FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("RingBell");
         //lanzar evento de pedido listo
 
         SendOrder();
