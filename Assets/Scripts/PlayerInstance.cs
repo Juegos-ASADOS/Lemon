@@ -50,7 +50,10 @@ public class PlayerInstance : MonoBehaviour
                 if (obj.transform.parent != null && !obj.transform.parent.CompareTag("Cesta"))
                     pickedObject = obj;
                 else
+                {
                     pickedObject = Instantiate(obj);
+                    pickedObject.transform.localScale = obj.transform.lossyScale;
+                }
             }
             else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || t == ObjectType.DINERO)
                 pickedObject = obj;
