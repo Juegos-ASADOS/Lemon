@@ -5,13 +5,13 @@
 			<value>SFX/wrongTask.wav</value>
 		</property>
 		<property name="frequencyInKHz">
-			<value>44.0999985</value>
+			<value>96</value>
 		</property>
 		<property name="channelCount">
 			<value>2</value>
 		</property>
 		<property name="length">
-			<value>0.84582766439909296</value>
+			<value>0.70485416666666667</value>
 		</property>
 		<relationship name="masterAssetFolder">
 			<destination>{ca5f652a-30bc-447f-b750-a0163f4f7a7c}</destination>
