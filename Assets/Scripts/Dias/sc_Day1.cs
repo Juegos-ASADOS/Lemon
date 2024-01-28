@@ -15,7 +15,7 @@ public class sc_Day1 : MonoBehaviour
     public GameObject client_3 = null;
 
     //vamos a diseñar los dias mediante eventos, llevando la cuenta de estos, por ejemplo, cuando un cliente ha salido, eso solo lo podra hacer una unica vez
-    int contador = 3;
+    int contador = 0;
     private void Awake()
     {
         Register.RegisterOpen += openShop;
@@ -24,7 +24,7 @@ public class sc_Day1 : MonoBehaviour
 
     private void Start()
     {
-
+        GameManager.Instance.endDay();
         dialogos.GetComponent<DialogueSystem>().startTutorial();
 
     }

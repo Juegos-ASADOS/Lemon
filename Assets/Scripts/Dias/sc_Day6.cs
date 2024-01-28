@@ -71,15 +71,15 @@ public class sc_Day6 : MonoBehaviour
 
     private IEnumerator EventClientThree()
     {
-        yield return new WaitForSeconds(5);
-        client.nombre = "C3";
+        yield return new WaitForSeconds(1);
+        client.nombre = "Limoniano";
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
 
         client_2?.SetActive(false);
         client_3?.SetActive(true);
 
-        client.setAppear();
+        client.setEnter();
     }
 
 }
