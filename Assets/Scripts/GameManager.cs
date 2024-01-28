@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public static event Action<int> EndOfDay = delegate { };
+
     public static GameManager Instance { get; private set; }
 
     private DayBase actualDay;
@@ -54,5 +57,10 @@ public class GameManager : MonoBehaviour
     {
         actualDay = FindObjectOfType<DayBase>();
         StartCoroutine(ProcessDay());
+    }
+
+    public void finishDay()
+    {
+        EndOfDay(0);
     }
 }

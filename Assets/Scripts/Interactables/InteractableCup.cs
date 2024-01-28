@@ -35,7 +35,7 @@ public class InteractableCup : InteractableObject
                     liquid.SetActive(true);
                     liquid.GetComponent<Renderer>().material.color = color;
                     pickedObject.GetComponent<SqueezerInteraction>().RemoveJuice();
-                    Debug.Log(juice.ToString());
+                    //Debug.Log(juice.ToString());
                 }
                 //gameObject.GetComponent<Renderer>().material = pickedObject.GetComponent<Renderer>().material;
             }
