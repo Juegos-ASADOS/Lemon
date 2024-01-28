@@ -9,9 +9,11 @@ public class Cliente : MonoBehaviour
     public static event Action<bool, string> ClientEnter = delegate { };
     public static event Action ClientExit = delegate { };
     public static event Action ClientReaddy = delegate { };
+    public static event Action<bool, string> ClientSatisfiedEvent = delegate { };
 
     public static event Action<bool, string> ClientSeen = delegate { };
     public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, READY }
+    public enum ExitType { moving, teleport }
 
     [SerializeField] Vector3 counterPos;
     [SerializeField] Vector3 OutOfSightPos;
@@ -20,14 +22,17 @@ public class Cliente : MonoBehaviour
     [SerializeField] float aceptableDistance = 0.5f;
 
     [SerializeField] string nombre;
+    [SerializeField] bool importance = false;
+    [SerializeField] ExitType exitWay;
 
     //provisional cambiar segun situacion
     public Intention intention;//= Intention.ENTER;
 
     private Vector3 destino;
+    private bool seen;
+
     public bool moving = false;
     public bool teleport = false;
-    public bool importance = false;
 
     private void Awake()
     {
@@ -45,12 +50,22 @@ public class Cliente : MonoBehaviour
         DirectorClients.ClientAppear += setAppear;
         DirectorClients.ClientDisappear += setDisAppear;
 
+        DialogueSystem.EndDespedidaEvent += setExitWay;
+
     }
 
-
-    private void Start()
+    void setExitWay()
     {
 
+        Debug.Log("se ejecuta el exitway");
+        if (exitWay == ExitType.moving)
+        {
+            setExit();
+        }
+        else
+        {
+            setDisAppear();
+        }
     }
 
     //Debug
@@ -99,6 +114,9 @@ public class Cliente : MonoBehaviour
                     //esto se puede llamar desde un evento controlado
                     enterScene();
                     intention = Intention.READY;
+                    if (seen) {
+                        onSight();
+                    }
                 }
                 else if(intention == Intention.EXIT || intention == Intention.DISAPPEAR)
                 {
@@ -138,7 +156,8 @@ public class Cliente : MonoBehaviour
         {
             //success
 
-            Debug.Log("acertastes!");
+            ClientSatisfiedEvent(importance, nombre);
+
             return;
         }
         
@@ -149,24 +168,21 @@ public class Cliente : MonoBehaviour
     {
         //cuando lo estemos mirando
         onSight();
+        seen = true;
     }
     void onSight()
     {
-        //codigo para cuando miremos al cliente,
-
-        //Ejemplo, lanzar texto
-        //if (Vector3.Distance(transform.position, counterPos) <= 0.5)
-        //{
-        //    ClientSeen(importance, nombre);
-        //}
+     
         if (intention == Intention.READY)
         {
             ClientEnter(importance, nombre); //evento de cliente entrado
+            intention = Intention.STAY;
         }
     }
     void OnBecameInvisible()
     {
         //cuando dejamos de mirar al cliente
+        seen = false;
         onOutOffSight();
     }
     void onOutOffSight()
