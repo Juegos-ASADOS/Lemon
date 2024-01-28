@@ -959,6 +959,7 @@ Transform:
   - {fileID: 249821448031582090}
   - {fileID: 249821448636752834}
   - {fileID: 249821449564440082}
+  - {fileID: 8698350504934525910}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1149,3 +1150,113 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1001 &8824837583367227502
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 3326706349310304712}
+    m_Modifications:
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: PlayEvent
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Actions/Ovni
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: 1639527692
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1119652135
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -1427359345
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: 2081259684
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711166, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: groups.Array.data[0]
+      value: Ovni
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711167, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_Name
+      value: 3D Action FMOD Emitter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd0283d59414e414592e09356e449ec2, type: 3}
+--- !u!4 &8698350504934525910 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 8824837583367227502}
+  m_PrefabAsset: {fileID: 0}

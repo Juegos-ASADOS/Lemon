@@ -300,6 +300,9 @@
 		<property name="length">
 			<value>7.8048979591836734</value>
 		</property>
+		<property name="volume">
+			<value>-11</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{6ff81b9b-f662-475b-b2d7-bc100526a627}</destination>
 		</relationship>
@@ -1262,10 +1265,10 @@
 	</object>
 	<object class="LoopRegion" id="{1f100d63-c2d4-481c-8650-ab1c1d445ffd}">
 		<property name="position">
-			<value>117.07317073170729</value>
+			<value>120.97560975609755</value>
 		</property>
 		<property name="length">
-			<value>7.8048780487804947</value>
+			<value>3.9024390243902332</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -1405,10 +1408,10 @@
 	</object>
 	<object class="LoopRegion" id="{66abb9e8-f119-4dc0-82de-a4863111dcdb}">
 		<property name="position">
-			<value>132.6829268292683</value>
+			<value>136.58537580886016</value>
 		</property>
 		<property name="length">
-			<value>7.8048780487804947</value>
+			<value>3.9024290691886279</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
