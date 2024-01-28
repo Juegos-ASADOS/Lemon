@@ -232,4 +232,17 @@ public class Cliente : MonoBehaviour
         this.GetComponent<Transform>().position = OutOfSightPos;
         teleport = false;
     }
+
+    private void OnDestroy()
+    {
+        TrayInteraction.GiveOrder -= CheckOrder;
+        ClientCounterPosition.CounterOutOfSight -= enterTeleport;
+
+        DirectorClients.ClientEnter -= setEnter;
+        DirectorClients.ClientExit -= setExit;
+        DirectorClients.ClientAppear -= setAppear;
+        DirectorClients.ClientDisappear -= setDisAppear;
+
+        DialogueSystem.EndDespedidaEvent -= setExitWay;
+    }
 }

@@ -64,10 +64,10 @@ public class GameManager : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
-        if (Input.GetKeyDown(KeyCode.Asterisk))
+        if (Input.GetKeyDown(KeyCode.Backspace))
             end = true;
 
-        if (Input.GetKeyDown(KeyCode.Slash))
+        if (Input.GetKeyDown(KeyCode.Return))
             endDay();
     }
 

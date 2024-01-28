@@ -82,4 +82,9 @@ public class sc_Day5 : MonoBehaviour
         client.setAppear();
     }
 
+    private void OnDestroy()
+    {
+        Register.RegisterOpen -= openShop;
+        Cliente.ClientExit -= nextClient;
+    }
 }

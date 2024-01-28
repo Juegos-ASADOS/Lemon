@@ -64,4 +64,10 @@ public class sc_Day3 : MonoBehaviour
         Transform t = GameObject.FindGameObjectWithTag("Punto").transform;
         Instantiate(gorro, t).GetComponent<LemonCap>().SetClient(client);
     }
+
+    private void OnDestroy()
+    {
+        Register.RegisterOpen -= openShop;
+        Cliente.ClientExit -= nextClient;
+    }
 }

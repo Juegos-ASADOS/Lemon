@@ -275,4 +275,18 @@ public class DialogueSystem : MonoBehaviour
     [SerializeField]
     bool limoncin;
     const float limoncin_time_till_dialogue_disappears = 1f;
+
+    private void OnDestroy()
+    {
+        if (!limoncin)
+        {
+            Cliente.ClientEnter -= startImportance;
+            Cliente.ClientExit -= dialogueStop;
+            Cliente.ClientSatisfiedEvent -= startDespedida;
+        }
+        else
+        {
+            Limoncin.LimoncinEvent -= startCoroutines;
+        }
+    }
 }

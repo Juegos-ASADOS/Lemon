@@ -27,4 +27,9 @@ public class MoneySpawn : MonoBehaviour
             coins++;
         }
     }
+
+    private void OnDestroy()
+    {
+        Cliente.ClientSatisfiedEvent -= SpawnMoney;
+    }
 }

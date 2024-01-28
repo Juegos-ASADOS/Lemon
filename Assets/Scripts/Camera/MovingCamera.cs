@@ -218,4 +218,10 @@ public class MovingCamera : MonoBehaviour
         cameraMoving = false;
     }
     public bool getCameraMoving() { return cameraMoving; }
+
+    private void OnDestroy()
+    {
+        DialogueSystem.ImportantClientEvent -= rotateToCounter;
+        DialogueSystem.EndDialogueEvent -= unLockCamera;
+    }
 }

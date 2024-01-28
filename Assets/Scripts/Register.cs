@@ -76,4 +76,9 @@ public class Register : MonoBehaviour
             transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>().enabled = false;
         GameManager.Instance.endDay();
     }
+
+    private void OnDestroy()
+    {
+        GameManager.EndOfDay -= OpenDrawer;
+    }
 }

@@ -59,4 +59,9 @@ public class sc_Day4 : MonoBehaviour
         client_1?.SetActive(false);
         client_2?.SetActive(true);
     }
+    private void OnDestroy()
+    {
+        Register.RegisterOpen -= openShop;
+        Cliente.ClientExit -= nextClient;
+    }
 }
