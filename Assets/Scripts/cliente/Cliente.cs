@@ -8,9 +8,10 @@ public class Cliente : MonoBehaviour
     //Eventos a los que se les puede añadir informacion
     public static event Action<bool, string> ClientEnter = delegate { };
     public static event Action ClientExit = delegate { };
+    public static event Action ClientReaddy = delegate { };
 
     public static event Action<bool, string> ClientSeen = delegate { };
-    public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, OTHER }
+    public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, READY }
 
     [SerializeField] Vector3 counterPos;
     [SerializeField] Vector3 OutOfSightPos;
@@ -97,13 +98,14 @@ public class Cliente : MonoBehaviour
                 {
                     //esto se puede llamar desde un evento controlado
                     enterScene();
+                    intention = Intention.READY;
                 }
                 else if(intention == Intention.EXIT || intention == Intention.DISAPPEAR)
                 {
                     //esto se puede llamar desde un evento controlado
                     exitScene();
+                    intention = Intention.STAY;
                 }
-                intention = Intention.STAY;
             }
         }
     }
@@ -153,11 +155,14 @@ public class Cliente : MonoBehaviour
         //codigo para cuando miremos al cliente,
 
         //Ejemplo, lanzar texto
-        if (Vector3.Distance(transform.position, counterPos) <= 0.5)
+        //if (Vector3.Distance(transform.position, counterPos) <= 0.5)
+        //{
+        //    ClientSeen(importance, nombre);
+        //}
+        if (intention == Intention.READY)
         {
-            ClientSeen(importance, nombre);
+            ClientEnter(importance, nombre); //evento de cliente entrado
         }
-
     }
     void OnBecameInvisible()
     {
@@ -195,7 +200,7 @@ public class Cliente : MonoBehaviour
     void enterScene()
     {
         //Go to CounterPos
-        ClientEnter(importance, nombre); //evento de cliente entrado
+        ClientReaddy();
         destino = OutOfSightPos;
     }
 
