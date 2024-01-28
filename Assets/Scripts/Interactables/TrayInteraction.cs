@@ -23,17 +23,19 @@ public class TrayInteraction : InteractableObject
         //recibe el evento de donde sea y envia el evento
         //GiveOrder con lo que sea que haya en la bandeja
         GiveOrder(GetComandas());
-        
+        //objectContained
+        objectContained = null; //habria que eliminarlo o algo master
     }
 
     public comandas GetComandas()
     {
         //pedirle al objeto contenido su hijo, ver si es fruta o comida, is es otra cosa mega cagada ajaja
       
-        if (objectContained != null)
+        if (objectContained == null)
         {
             return comandas.No_Tray;
         }
+
             InteractableCup cup = objectContained.GetComponent<InteractableCup>();
         if (cup)
         {
@@ -46,7 +48,8 @@ public class TrayInteraction : InteractableObject
             if (cup.GetJuice() == JuiceType.EMPTY)
                 return comandas.Empty_Cup;
         }
-        InteractablePlate plate = objectContained.GetComponent<InteractablePlate>();
+
+            InteractablePlate plate = objectContained.GetComponent<InteractablePlate>();
         if (plate)
         {
             FoodCharacteristics food = plate.getFood().GetComponent<FoodCharacteristics>();

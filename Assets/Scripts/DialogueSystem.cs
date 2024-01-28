@@ -32,6 +32,7 @@ public class DialogueSystem : MonoBehaviour
 
     public static event Action ImportantClientEvent = delegate { };
     public static event Action EndDialogueEvent = delegate { };
+    public static event Action EndDespedidaEvent = delegate { };
 
     private void Awake()
     {
@@ -53,6 +54,7 @@ public class DialogueSystem : MonoBehaviour
         }
         else
             Limoncin.LimoncinEvent += startCoroutines;
+        Cliente.ClientSatisfiedEvent += startDespedida;
     }
 
     void startImportance(bool importance, string clientname)
@@ -67,13 +69,57 @@ public class DialogueSystem : MonoBehaviour
         //testing de que el cliente es importante cuando no
         startCoroutines(clientname);
     }
+
+    void startDespedida(bool importance, string clientname)
+    {
+        if (importance)
+        {
+            //do something
+            //lanzar evento de cliente importante, lookeara la camara en un punto
+            ImportantClientEvent();
+        }
+        //testing de que el cliente es importante cuando no
+        StartDespedidas(clientname);
+    }
     void startCoroutines(string clientName)
     {
         dialogueTMP.color = defaultFontColor;
         dialogueTMP.font = defaultFont;
         StopAllCoroutines();
-        Debug.Log(limoncin);
+        //Debug.Log(limoncin);
         StartCoroutine(dialogueStart(clientName));
+    }
+
+    void StartDespedidas(string clientName)
+    {
+        dialogueTMP.color = defaultFontColor;
+        dialogueTMP.font = defaultFont;
+        StopAllCoroutines();
+        //Debug.Log(limoncin);
+        StartCoroutine(despedidasStart(clientName));
+    }
+
+    public IEnumerator despedidasStart(string clientName)
+    {
+        // Get characterEvent
+        bool found = false;
+        short i = 0;
+        while (!found && i < charactersOut.Count)
+        {
+            if (charactersOut[i].name == clientName)
+            {
+                found = true;
+                break;
+            }
+
+            i++;
+        }
+        if (((limoncin && clientName == "Limoncin") || !limoncin) && found)
+        {
+            dialogueBox.SetActive(true);
+            yield return StartCoroutine(PrintDialogue(charactersOut[i].dialogueList, true));
+        }
+
     }
 
     public IEnumerator dialogueStart(string clientName)
@@ -94,11 +140,11 @@ public class DialogueSystem : MonoBehaviour
         if (((limoncin && clientName == "Limoncin") || !limoncin) && found)
         {
             dialogueBox.SetActive(true);
-            yield return StartCoroutine(PrintDialogue(characters[i].dialogueList));
+            yield return StartCoroutine(PrintDialogue(characters[i].dialogueList, false));
         }
 
     }
-    private IEnumerator PrintDialogue(List<dialogueLine> dialogueList)
+    private IEnumerator PrintDialogue(List<dialogueLine> dialogueList, bool despedida)
     {
         short dialogueIndex = 0;
         while (dialogueIndex < dialogueList.Count)
@@ -130,6 +176,8 @@ public class DialogueSystem : MonoBehaviour
         {
             yield return new WaitUntil(() => Input.GetMouseButtonDown(0));
             EndDialogueEvent();
+            if (despedida)
+                EndDespedidaEvent();
         }
 
         dialogueStop();
@@ -180,6 +228,8 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField]
     private List<dialogueCharacter> characters;
+    [SerializeField]
+    private List<dialogueCharacter> charactersOut;
 
     [SerializeField]
     private float defaultLetterSpeed = 0.04f;
