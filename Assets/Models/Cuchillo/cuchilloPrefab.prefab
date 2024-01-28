@@ -196,6 +196,117 @@ Transform:
   m_Children:
   - {fileID: 8332251953912342840}
   - {fileID: 8715175870566222875}
+  - {fileID: 7729089560747312431}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7605909846712288919
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5175688838185677405}
+    m_Modifications:
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Actions/KnifeCut
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -1640286839
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1255522345
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -1677427523
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -1043661994
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711166, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: groups.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711166, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: groups.Array.data[0]
+      value: KnifeCut
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711167, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_Name
+      value: 3D Action FMOD Emitter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd0283d59414e414592e09356e449ec2, type: 3}
+--- !u!4 &7729089560747312431 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7605909846712288919}
+  m_PrefabAsset: {fileID: 0}

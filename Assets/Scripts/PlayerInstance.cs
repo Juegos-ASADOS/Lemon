@@ -68,6 +68,7 @@ public class PlayerInstance : MonoBehaviour
             
             if (pickedObject != null)
             {
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Grab");
                 pickedObject.GetComponent<InteractableObject>().destMovement = pickTransform;
                 pickedObject.transform.parent = transform;
                 pickedObject.GetComponent<InteractableObject>().PickUp();
