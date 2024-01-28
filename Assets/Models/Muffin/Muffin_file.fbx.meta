@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: d894fdd763a642a4582a1f1fed6db879
+guid: 3821a9597e6901146ada5b65f5c21c16
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Muffin
-    second: {fileID: 2100000, guid: e79360fa22a3e344e8f8a14488bbe46b, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -74,7 +69,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
