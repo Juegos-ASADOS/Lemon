@@ -274,6 +274,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 911908706954839625, guid: eac3d25bbb15db242ac0255b405a3087,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7333961454970126539, guid: eac3d25bbb15db242ac0255b405a3087,
         type: 3}
       propertyPath: m_RootOrder
@@ -516,6 +521,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3137149555685492963, guid: 53e9312f0f2eec346ad23a3b67b40446,
+        type: 3}
+      propertyPath: m_Name
+      value: Juice
+      objectReference: {fileID: 0}
+    - target: {fileID: 3137149555685492963, guid: 53e9312f0f2eec346ad23a3b67b40446,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7322487280189595592, guid: 53e9312f0f2eec346ad23a3b67b40446,
         type: 3}
       propertyPath: m_RootOrder
@@ -665,12 +680,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orange
       objectReference: {fileID: 0}
-    - target: {fileID: 8843047007414565137, guid: 072e79086467fe1409e8f41031604fe3,
-        type: 3}
-      propertyPath: cutObject
-      value: 
-      objectReference: {fileID: 8387761235736558094, guid: ca2b6ba1f90e0e540afe300dd814b92a,
-        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 072e79086467fe1409e8f41031604fe3, type: 3}
 --- !u!1001 &1817566120
