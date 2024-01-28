@@ -1253,10 +1253,10 @@
 	</object>
 	<object class="LoopRegion" id="{2f50ce39-7f99-40ff-a593-6b2d474babef}">
 		<property name="position">
-			<value>117.07317073170731</value>
+			<value>120.97560975609755</value>
 		</property>
 		<property name="length">
-			<value>7.8048780487804947</value>
+			<value>3.9024390243902474</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
@@ -1396,10 +1396,10 @@
 	</object>
 	<object class="LoopRegion" id="{169118a5-45be-4360-bf2f-f8ea09d3c9a6}">
 		<property name="position">
-			<value>132.6829268292683</value>
+			<value>136.58537580886014</value>
 		</property>
 		<property name="length">
-			<value>7.8048780487804947</value>
+			<value>3.9024290691886563</value>
 		</property>
 		<property name="triggerProbabilityEnabled">
 			<value>true</value>
