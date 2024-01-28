@@ -33,10 +33,28 @@ public class SqueezerInteraction : InteractableObject
 
         if (restingTime <= 0.0f)
         {
-           // gameObject.GetComponent<Renderer>().material = fruit.GetComponent<Renderer>().material;
+            // gameObject.GetComponent<Renderer>().material = fruit.GetComponent<Renderer>().material;
             PlayerInstance.instance.RemoveHandObject();
             Destroy(fruit);
             fruit = null;
+            Color color;
+            switch (juice)
+            {
+                case JuiceType.LEMON:
+                    color = Color.yellow;
+                    break;
+                case JuiceType.ORANGE:
+                    color = new Color(0.98f, 0.62f, 0.32f, 1.0f);
+                    break;
+                case JuiceType.GRAPEFRUIT:
+                    color = Color.red; break;
+                default:
+                    color = Color.white;
+                    break;
+            }
+            GameObject liquid = transform.GetChild(1).gameObject;
+            liquid.SetActive(true);
+            liquid.GetComponent<Renderer>().material.color = color;
             //finishParticles.transform.position = gameObject.transform.position;
             //finishParticles.Play();
             restingTime = holdTime;
@@ -66,6 +84,8 @@ public class SqueezerInteraction : InteractableObject
         juice = JuiceType.EMPTY;
         gameObject.GetComponent<Renderer>().material = mat;
         PlayerInstance.instance.RemoveHandObject();
+        GameObject liquid = transform.GetChild(1).gameObject;
+        liquid.SetActive(false);
         transform.parent = originalPos;
         transform.position = originalPos.GetChild(0).position;
     }
