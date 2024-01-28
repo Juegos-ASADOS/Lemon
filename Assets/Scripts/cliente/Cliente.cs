@@ -44,6 +44,11 @@ public class Cliente : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+
+    }
+
     //Debug
     void setEnter()
     {

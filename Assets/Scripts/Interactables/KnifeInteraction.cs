@@ -17,4 +17,9 @@ public class KnifeInteraction : InteractableObject
         transform.parent = originalPos;
         transform.position = originalPos.GetChild(0).position;
     }
+
+    public override void PickUp()
+    {
+        transform.Rotate(-90, 0, 0);
+    }
 }
