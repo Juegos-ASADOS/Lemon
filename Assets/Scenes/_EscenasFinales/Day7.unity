@@ -721,12 +721,17 @@ MonoBehaviour:
   - {fileID: 1952957311192155802}
   - {fileID: 2109455390}
   - {fileID: 1318230839}
+  - {fileID: 1099882500}
   - {fileID: 1977274009}
   - {fileID: 1619219903}
+  - {fileID: 695961736}
+  - {fileID: 2064150446}
   globalVariableNames:
   - CashRegister
   - Task
   - Squeezer
+  - Demon
+  - CharacterName
 --- !u!4 &249330979
 Transform:
   m_ObjectHideFlags: 0
@@ -2931,6 +2936,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b011da3314b47d43ae566711bb85580, type: 3}
+--- !u!114 &695961736 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4462086829047999880, guid: 3d90fc5bd25b9b6428956501d64db1ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1950426636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c49fc91397b7b4fb08058fb7724c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &698161315
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4028,6 +4045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49bd95e7db17914788d0d8d0a1766ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fadeImage: {fileID: 0}
   money: 0
 --- !u!4 &877081724
 Transform:
@@ -5229,6 +5247,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed4bc8c0336c6b341bf5bc97eb4b948d, type: 3}
+--- !u!114 &1099882500 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1911474297812608755, guid: 3d90fc5bd25b9b6428956501d64db1ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1950426636}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c49fc91397b7b4fb08058fb7724c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1110064815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8161,6 +8191,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b011da3314b47d43ae566711bb85580, type: 3}
+--- !u!114 &2064150446 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7757186064502536074, guid: 756179a778166b540a683ff5026ad2d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2103946809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c49fc91397b7b4fb08058fb7724c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2065841754
 PrefabInstance:
   m_ObjectHideFlags: 0
