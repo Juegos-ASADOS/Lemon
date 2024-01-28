@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField]
+    private Image fadeImage;
+
     public static event Action<int> EndOfDay = delegate { };
 
     public static GameManager Instance { get; private set; }
@@ -60,5 +63,17 @@ public class GameManager : MonoBehaviour
         day++;
         timer = 3;
         end = true;
+    }
+
+
+    private IEnumerator FadeOut()
+    {
+        while ((fadeImage.color.a < 1) || (sceneFading == true))
+        {
+            fadeImage.color = Color.Lerp(fadeImage.color, Alpha1, delay * Time.deltaTime);
+            yield return null;
+        }
+        yield return new WaitForSeconds(delay);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
