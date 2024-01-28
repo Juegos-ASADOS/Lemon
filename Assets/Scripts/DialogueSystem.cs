@@ -124,6 +124,8 @@ public class DialogueSystem : MonoBehaviour
 
     public IEnumerator dialogueStart(string clientName)
     {
+
+        Debug.Log(characters.Count);
         // Get characterEvent
         bool found = false;
         short i = 0;

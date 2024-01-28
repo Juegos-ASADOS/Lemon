@@ -8,6 +8,7 @@ public class sc_Day1 : MonoBehaviour
 {
 
     [SerializeField] private Cliente client;
+    [SerializeField] private GameObject dialogos;
 
     //vamos a diseñar los dias mediante eventos, llevando la cuenta de estos, por ejemplo, cuando un cliente ha salido, eso solo lo podra hacer una unica vez
     int contador = 3;
@@ -15,6 +16,14 @@ public class sc_Day1 : MonoBehaviour
     {
         Register.RegisterOpen += openShop;
         Cliente.ClientExit += nextClient;
+    }
+
+    private void Start()
+    {
+
+       
+
+        StartTutorial();
     }
 
     void nextClient()
@@ -48,6 +57,13 @@ public class sc_Day1 : MonoBehaviour
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
         client.setEnter();
+    }
+
+    private IEnumerator StartTutorial()
+    {
+        yield return  new WaitForSeconds(5);
+        StartCoroutine( dialogos.GetComponents<DialogueSystem>()[1].dialogueStart("C1"));
+        StartCoroutine( dialogos.GetComponents<DialogueSystem>()[0].dialogueStart("C1"));
     }
 
     private IEnumerator EventClientTWO()
