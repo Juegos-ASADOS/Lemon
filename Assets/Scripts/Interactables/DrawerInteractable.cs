@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class DrawerInteractable : InteractableObject
 {
     // Start is called before the first frame update
+    public TextMeshPro txt;
     void Start()
     {
 
@@ -20,6 +22,8 @@ public class DrawerInteractable : InteractableObject
         if (pickedObject.GetComponent<InteractableObject>().objType != ObjectType.DINERO) return;
         if (pickedObject != null)
             PlayerInstance.instance.RemoveHandObject();
+        GameManager.Instance.money += 1;
+        txt.text = GameManager.Instance.money + "€";
         pickedObject.transform.parent = transform.GetChild(0);
         pickedObject.transform.position = Vector3.zero;
         pickedObject.transform.GetComponent<Rigidbody>().isKinematic = false;
