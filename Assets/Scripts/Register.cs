@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Register : MonoBehaviour
@@ -10,6 +11,8 @@ public class Register : MonoBehaviour
     FMOD_Manager fmodManager;
 
     string actCode = "";
+
+    public TextMeshPro txt;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +29,7 @@ public class Register : MonoBehaviour
         actCode += n;
         if (actCode.Length>4) actCode = n;
 
+        txt.text = actCode;
         Debug.Log(actCode);
     }
 
@@ -46,6 +50,7 @@ public class Register : MonoBehaviour
             //SONIDO errorCodigo
             Debug.Log("Error");
             actCode = "";
+            txt.text = "0000";
         }
     }
 
