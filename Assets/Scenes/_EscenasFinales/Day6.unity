@@ -603,7 +603,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: characters.Array.data[2].name
+      value: Limoniano
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].name
       value: Limoniano
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
@@ -615,6 +625,16 @@ PrefabInstance:
         type: 3}
       propertyPath: charactersOut.Array.data[2].name
       value: Limoniano
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.size
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
@@ -633,13 +653,118 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[3].text
+      value: Como veo que no entiendes el idioma limoniano te vengo a contar la verdad
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[4].text
+      value: Eres el elegido
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[5].text
+      value: 'La antigua Limonia, el planeta del que venimos, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[6].text
+      value: y que maneja los hilos de la tierra desde hace eones
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[7].text
+      value: "necesita un palad\xEDn"
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[8].text
+      value: "La guerra contra los terr\xEDcolas cada vez est\xE1 mas cerca"
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[9].text
+      value: Y viendo que has superado todos los retos limonitisticos
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].text
+      value: tajiojlkqjwoeinfuaoivduoasijfdasdf3a51gra3564352vdc4tf6a52we6rc45qa64gd654a65rsdf4a25s6d
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[1].text
+      value: rg41y716bs5e745rg6fvw7s685e5r7t4gsx78e4g
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[2].text
+      value: as75df78c94wet78987gf768r7efv98daf798acvszd
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[3].text
+      value: Como veo que no entiendes el idioma limoniano te vengo a contar la verdad
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[4].text
+      value: Eres el elegido
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[5].text
+      value: 'La antigua Limonia, el planeta del que venimos, '
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[6].text
+      value: y que maneja los hilos de la tierra desde hace eones
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[7].text
+      value: "necesita un palad\xEDn"
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[8].text
+      value: "La guerra contra los terr\xEDcolas cada vez est\xE1 mas cerca"
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[9].text
+      value: Y viendo que has superado todos los retos limonitisticos
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[10].text
+      value: "Ascender\xE1s como un ser superior y ser\xE1s nombrado"
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[11].text
+      value: LORD LIMONERO
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[12].text
+      value: "Ma\xF1ana vendremos a por ti"
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[13].text
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: charactersOut.Array.data[1].dialogueList.Array.data[0].text
       value: grasiagrasiagrasiagrasiagrasiagrasiagrasiagrasiagrasiagrasiagrasiagrasiagrasia
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
       propertyPath: charactersOut.Array.data[2].dialogueList.Array.data[0].text
-      value: asd`fpiloa621c2a1
+      value: "Espero que est\xE9s preparado"
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
@@ -653,13 +778,203 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[3].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[4].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[5].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[6].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[7].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[8].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[9].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[1].fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[2].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[3].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[4].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[5].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[6].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[7].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[8].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[9].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[10].fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[11].fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[12].fontSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[13].fontSize
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: charactersOut.Array.data[1].dialogueList.Array.data[0].fontSize
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[4].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[5].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[6].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[7].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[8].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[9].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[4].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[6].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[7].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[8].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[9].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[10].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[11].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[12].letterSpeedSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[2].dialogueList.Array.data[13].letterSpeedSeconds
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: charactersOut.Array.data[2].dialogueList.Array.data[0].letterSpeedSeconds
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: characters.Array.data[2].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
@@ -673,9 +988,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: characters.Array.data[2].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1359350674}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1359350674}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
       propertyPath: charactersOut.Array.data[2].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -683,7 +1018,22 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1458202247}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1458202247}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: characters.Array.data[2].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
@@ -695,6 +1045,31 @@ PrefabInstance:
         type: 3}
       propertyPath: characters.Array.data[2].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: setDisAppear
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: setDisAppear
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changeFont
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: changeToLemonianColor
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
@@ -713,12 +1088,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Cliente, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: DialogueSystem, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: charactersOut.Array.data[2].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: Cliente, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
         type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 4a913b0c5685f5746963bfe17637ac52,
+        type: 2}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
       propertyPath: characters.Array.data[2].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].endLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: TMPro.TMP_FontAsset, Unity.TextMeshPro
+      objectReference: {fileID: 0}
+    - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+        type: 3}
+      propertyPath: characters.Array.data[3].dialogueList.Array.data[0].startLineEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
@@ -4007,6 +4418,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeImage: {fileID: 0}
+  delay: 0
+  Alpha0: {r: 0, g: 0, b: 0, a: 0}
+  Alpha1: {r: 0, g: 0, b: 0, a: 0}
+  sceneFading: 0
   money: 0
 --- !u!4 &877081724
 Transform:
@@ -6003,6 +6418,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1446841959}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1458202247 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 589019639660896082, guid: af8efba8c109e1544ab8cd17dad9d44f,
+    type: 3}
+  m_PrefabInstance: {fileID: 239588689}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28921f22fe1b27e4db576c1a489b38bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1463940850
 PrefabInstance:
   m_ObjectHideFlags: 0
