@@ -772,6 +772,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: button_Exit
       objectReference: {fileID: 0}
+    - target: {fileID: 3328148663079334810, guid: 04e9b09e049234644b25ef63d2e9022b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.08
+      objectReference: {fileID: 0}
     - target: {fileID: 7280415688546089554, guid: 04e9b09e049234644b25ef63d2e9022b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2077,6 +2082,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: button_Options
+      objectReference: {fileID: 0}
+    - target: {fileID: 3328148663079334810, guid: 04e9b09e049234644b25ef63d2e9022b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 7280415688546089554, guid: 04e9b09e049234644b25ef63d2e9022b,
         type: 3}
@@ -3637,6 +3647,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: button_Play
       objectReference: {fileID: 0}
+    - target: {fileID: 3328148663079334810, guid: 04e9b09e049234644b25ef63d2e9022b,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.04
+      objectReference: {fileID: 0}
     - target: {fileID: 7280415688546089554, guid: 04e9b09e049234644b25ef63d2e9022b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4593,6 +4608,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4828695112178090724, guid: cb4e69f5d61d0324cb69b2ee89ddaedf,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: e08b27c523abb7c4395eb4cd2137c1cb,
+        type: 2}
     - target: {fileID: 4828695112178090725, guid: cb4e69f5d61d0324cb69b2ee89ddaedf,
         type: 3}
       propertyPath: m_Name
