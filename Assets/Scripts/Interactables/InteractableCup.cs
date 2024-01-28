@@ -16,6 +16,24 @@ public class InteractableCup : InteractableObject
                 juice = pickedObject.GetComponent<SqueezerInteraction>().GetJuice();
                 if (juice != JuiceType.EMPTY)
                 {
+                    Color color;
+                    switch (juice)
+                    {
+                        case JuiceType.LEMON:
+                            color = Color.yellow;
+                            break;
+                        case JuiceType.ORANGE:
+                            color = new Color(0.98f, 0.62f, 0.32f, 1.0f);
+                            break;
+                        case JuiceType.GRAPEFRUIT:
+                            color = Color.red; break;
+                        default:
+                            color = Color.white;
+                            break;
+                    }
+                    GameObject liquid = transform.GetChild(0).gameObject;
+                    liquid.SetActive(true);
+                    liquid.GetComponent<Renderer>().material.color = color;
                     pickedObject.GetComponent<SqueezerInteraction>().RemoveJuice();
                     Debug.Log(juice.ToString());
                 }
