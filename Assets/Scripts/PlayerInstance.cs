@@ -47,7 +47,7 @@ public class PlayerInstance : MonoBehaviour
         {
             if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t == ObjectType.PLATO)
             {
-                if (obj.transform.parent != null)
+                if (obj.transform.parent != null && !obj.transform.parent.CompareTag("Cesta"))
                     pickedObject = obj;
                 else
                     pickedObject = Instantiate(obj);
@@ -57,12 +57,11 @@ public class PlayerInstance : MonoBehaviour
             else
                 interact.Interact(null);
             
-
-            //
             if (pickedObject != null)
             {
                 pickedObject.GetComponent<InteractableObject>().destMovement = pickTransform;
                 pickedObject.transform.parent = transform;
+                pickedObject.GetComponent<InteractableObject>().PickUp();
             } 
         }
         else

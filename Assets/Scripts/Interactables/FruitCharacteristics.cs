@@ -10,12 +10,17 @@ public class FruitCharacteristics : MonoBehaviour
     JuiceType fruit;
     bool isCut = false;
     [SerializeField]
-    Mesh cutMesh = null;
-    public void cutFruit() { 
-        isCut = true; 
-        gameObject.GetComponent<MeshFilter>().mesh = cutMesh;
-        gameObject.GetComponent<MeshCollider>().sharedMesh = cutMesh;
+    GameObject cutObject;
+    public void cutFruit()
+    {
+        SetCut();
+        
+        GameObject newfruit = Instantiate(cutObject, transform.position,transform.rotation);
+        newfruit.transform.parent = transform.parent;
+        newfruit.GetComponent<FruitCharacteristics>().SetCut();
+        Destroy(gameObject);
     }
     public JuiceType GetTypeFruit() { return fruit; }
     public bool IsCut() { return isCut; }
+    public void SetCut() { isCut = true; }
 }
