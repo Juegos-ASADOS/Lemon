@@ -15,6 +15,7 @@ public class DirectorClients : MonoBehaviour
 
     private void Update()
     {
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             ClientEnter();
@@ -31,5 +32,6 @@ public class DirectorClients : MonoBehaviour
         {
             ClientDisappear();
         }
+#endif
     }
 }
