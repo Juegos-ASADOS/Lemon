@@ -64,8 +64,7 @@ public class DialogueSystem : MonoBehaviour
             //lanzar evento de cliente importante, lookeara la camara en un punto
             ImportantClientEvent();
         }
-        //testing de que el cliente es importnate cuando no
-        ImportantClientEvent();
+        //testing de que el cliente es importante cuando no
         startCoroutines(clientname);
     }
     void startCoroutines(string clientName)
