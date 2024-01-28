@@ -113,7 +113,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fruit: 2
-  cutMesh: {fileID: 4137455876009383503, guid: 76f3832d359a3c2428cc77da3fb60337, type: 3}
+  cutObject: {fileID: 8387761235736558094, guid: ca2b6ba1f90e0e540afe300dd814b92a,
+    type: 3}
 --- !u!114 &5758637184160844288
 MonoBehaviour:
   m_ObjectHideFlags: 0
