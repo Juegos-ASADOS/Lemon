@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum comandas { No_Tray, Empty_Cup, Empty_Plate, Lemon, Orange, grapefruit, Muffin, Croissant, Cake, Error}
+public enum comandas { No_Tray, Empty_Cup, Empty_Plate, Lemon, Orange, grapefruit, Muffin, Croissant, Cake, Error }
 public class TrayInteraction : InteractableObject
 {
     private GameObject objectContained;
@@ -31,13 +31,13 @@ public class TrayInteraction : InteractableObject
     public comandas GetComandas()
     {
         //pedirle al objeto contenido su hijo, ver si es fruta o comida, is es otra cosa mega cagada ajaja
-      
+
         if (objectContained == null)
         {
             return comandas.No_Tray;
         }
 
-            InteractableCup cup = objectContained.GetComponent<InteractableCup>();
+        InteractableCup cup = objectContained.GetComponent<InteractableCup>();
         if (cup)
         {
             if (cup.GetJuice() == JuiceType.ORANGE)
@@ -50,7 +50,7 @@ public class TrayInteraction : InteractableObject
                 return comandas.Empty_Cup;
         }
 
-            InteractablePlate plate = objectContained.GetComponent<InteractablePlate>();
+        InteractablePlate plate = objectContained.GetComponent<InteractablePlate>();
         if (plate)
         {
             GameObject food = plate.getFood();
@@ -58,20 +58,23 @@ public class TrayInteraction : InteractableObject
                 return comandas.Empty_Plate;
 
             FoodCharacteristics chars = plate.getFood().GetComponent<FoodCharacteristics>();
-            if (chars.GetTypeFood() == FoodType.MUFFIN)
-                return comandas.Muffin;
-            if (chars.GetTypeFood() == FoodType.CROISSANT)
-                return comandas.Croissant;
-            if (chars.GetTypeFood() == FoodType.CAKE)
-                return comandas.Cake;
+            if (chars != null)
+            {
+                if (chars.GetTypeFood() == FoodType.MUFFIN)
+                    return comandas.Muffin;
+                if (chars.GetTypeFood() == FoodType.CROISSANT)
+                    return comandas.Croissant;
+            }
+
+            return comandas.Cake;
         }
         return comandas.Error; //esot no ocurrira nunca
     }
     public override void Interact(GameObject pickedObject)
     {
         if (pickedObject != null)
-        {            
-            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.VASO||
+        {
+            if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.VASO ||
                 pickedObject.GetComponent<InteractableObject>().objType == ObjectType.PLATO &&
                 transform.childCount < 2)
             {

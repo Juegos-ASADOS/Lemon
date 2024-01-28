@@ -47,7 +47,7 @@ public class PlayerInstance : MonoBehaviour
         {
             if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t == ObjectType.PLATO)
             {
-                if (t == ObjectType.FRUTA && obj.transform.parent != null && obj.transform.parent.GetComponent<CutboardInteraction>() != null)
+                if ((t == ObjectType.FRUTA || t == ObjectType.COMIDA) && obj.transform.parent != null && obj.transform.parent.GetComponent<CutboardInteraction>() != null)
                     obj.transform.parent.GetComponent<BoxCollider>().enabled = true;
                 if (obj.transform.parent != null && !obj.transform.parent.CompareTag("Cesta"))
                     pickedObject = obj;
