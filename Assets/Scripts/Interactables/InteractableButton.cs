@@ -11,13 +11,14 @@ public class InteractableButton : InteractableObject
             return;
         }
         transform.GetComponent<Animator>().SetTrigger("Pressed");
-        if(this.name == "Enter")
+        if (this.name == "Enter")
         {
             //SONIDO boton
             this.transform.parent.GetComponentInParent<Register>().Enter();
         }
         else
         {
+            FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Button");
             //SONIDO boton
             this.transform.parent.GetComponentInParent<Register>().Number(this.name);
 
