@@ -12,4 +12,14 @@ public class LimoncinTalk : MonoBehaviour
     {
         FMOD_Manager.instance.SetGlobalParameterByName("Demon", 0);
     }
+
+    public void talkLimoncioDemon()
+    {
+        FMOD_Manager.instance.SetGlobalParameterByName("Demon", 2);
+    }
+
+    public void talkLimoncioChill()
+    {
+        FMOD_Manager.instance.SetGlobalParameterByName("Demon", 0);
+    }
 }

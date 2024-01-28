@@ -48,13 +48,13 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -937848326
-      Data2: 1284022170
-      Data3: -1208002391
-      Data4: -1190120781
-    Path: event:/Presets/2D Timeline Labelled Param
+      Data1: 1075076280
+      Data2: 1172878832
+      Data3: -1180681587
+      Data4: -1335351283
+    Path: event:/Music/LevelChill
   Event: 
-  PlayEvent: 0
+  PlayEvent: 1
   StopEvent: 2
   AllowFadeout: 1
   TriggerOnce: 0
@@ -78,4 +78,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventEmitter_: {fileID: 96431417859942450}
   groups:
-  - 2DActionTimeline
+  - LevelChill

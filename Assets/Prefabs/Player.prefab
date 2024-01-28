@@ -240,7 +240,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  animationDuration: 0.5
+  animationDuration: 0.15
   actualWaypoint: {fileID: 0}
   CounterWaypoint: {fileID: 0}
 --- !u!1001 &5029016727847715342
@@ -268,7 +268,7 @@ PrefabInstance:
     - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
         type: 3}
@@ -373,7 +373,7 @@ PrefabInstance:
     - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
         type: 3}
