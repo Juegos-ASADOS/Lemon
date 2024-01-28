@@ -1971,7 +1971,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eventEmitter_: {fileID: 1952957311004734600}
   groups:
-  - CashRegister
+  - Abrir
 --- !u!1 &1952957311380548557
 GameObject:
   m_ObjectHideFlags: 0

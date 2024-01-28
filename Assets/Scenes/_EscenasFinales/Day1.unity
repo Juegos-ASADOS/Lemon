@@ -665,7 +665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controllers:
-  - {fileID: 1842060321}
+  - {fileID: 1619219903}
+  - {fileID: 1977274009}
   globalVariableNames:
   - Global States
 --- !u!4 &249330979
@@ -2490,6 +2491,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Timbre
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410454211692859115, guid: 20793085dbc1e054b840624d285ceedc,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5410454211692859115, guid: 20793085dbc1e054b840624d285ceedc,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20793085dbc1e054b840624d285ceedc, type: 3}
@@ -5334,6 +5345,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4628100999675420068}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1619219903 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1952957311004734615, guid: 7b0fa76428cd672459dd0170c77e7d52,
+    type: 3}
+  m_PrefabInstance: {fileID: 1952957311192155800}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c49fc91397b7b4fb08058fb7724c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1643289868
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6049,6 +6072,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1950426636}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1977274009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5410454211692859112, guid: 20793085dbc1e054b840624d285ceedc,
+    type: 3}
+  m_PrefabInstance: {fileID: 729314715}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77c49fc91397b7b4fb08058fb7724c37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2020813428
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7043,11 +7078,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1952957311004734615, guid: 7b0fa76428cd672459dd0170c77e7d52,
-        type: 3}
-      propertyPath: groups.Array.data[0]
-      value: Abrir1
       objectReference: {fileID: 0}
     - target: {fileID: 8835086244988875158, guid: 7b0fa76428cd672459dd0170c77e7d52,
         type: 3}
