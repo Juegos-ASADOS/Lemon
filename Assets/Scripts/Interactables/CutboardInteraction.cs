@@ -30,6 +30,7 @@ public class CutboardInteraction : InteractableObject
             }
             else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>() != null)
             {
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Table");
                 transform.GetComponent<BoxCollider>().enabled = false;
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);
                 pickedObject.transform.parent = transform;

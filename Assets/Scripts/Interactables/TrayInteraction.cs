@@ -73,6 +73,7 @@ public class TrayInteraction : InteractableObject
                 pickedObject.GetComponent<InteractableObject>().objType == ObjectType.PLATO &&
                 transform.childCount < 2)
             {
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Table");
                 pickedObject.transform.SetPositionAndRotation(transform.GetChild(0).position, transform.GetChild(0).rotation);
                 pickedObject.transform.parent = transform;
                 objectContained = pickedObject;

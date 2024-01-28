@@ -347,6 +347,7 @@ Transform:
   m_Children:
   - {fileID: 4145975749259321779}
   - {fileID: 8412834709485470236}
+  - {fileID: 3251634541074966190}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -428,3 +429,108 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objType: 9
   destMovement: {fileID: 0}
+--- !u!1001 &3453839626341541142
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 7322487280189595592}
+    m_Modifications:
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Actions/Squeezer
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -393853426
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1292649280
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: 1927760273
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711161, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -1240773512
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711166, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: groups.Array.data[0]
+      value: Squeez
+      objectReference: {fileID: 0}
+    - target: {fileID: 202275729967711167, guid: bd0283d59414e414592e09356e449ec2,
+        type: 3}
+      propertyPath: m_Name
+      value: 3D Action FMOD Emitter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd0283d59414e414592e09356e449ec2, type: 3}
+--- !u!4 &3251634541074966190 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 202275729967711160, guid: bd0283d59414e414592e09356e449ec2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3453839626341541142}
+  m_PrefabAsset: {fileID: 0}
