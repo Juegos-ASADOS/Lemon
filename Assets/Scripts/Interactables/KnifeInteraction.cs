@@ -20,6 +20,6 @@ public class KnifeInteraction : InteractableObject
 
     public override void PickUp()
     {
-        transform.Rotate(-90, 0, 0);
+        transform.Rotate(90, 0, 0);
     }
 }
