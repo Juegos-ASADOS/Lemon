@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7411038264168039589
+--- !u!1 &1692258770335464448
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7411038264168039588}
-  - component: {fileID: 7411038264168039594}
-  - component: {fileID: 7411038264168039595}
+  - component: {fileID: 1692258770335464449}
+  - component: {fileID: 1692258770335464463}
+  - component: {fileID: 1692258770335464462}
   m_Layer: 5
   m_Name: LemonDialogueText
   m_TagString: Untagged
@@ -18,19 +18,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7411038264168039588
+--- !u!224 &1692258770335464449
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264168039589}
+  m_GameObject: {fileID: 1692258770335464448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7411038264444630253}
+  m_Father: {fileID: 1692258770580573256}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -38,21 +38,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7411038264168039594
+--- !u!222 &1692258770335464463
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264168039589}
+  m_GameObject: {fileID: 1692258770335464448}
   m_CullTransparentMesh: 1
---- !u!114 &7411038264168039595
+--- !u!114 &1692258770335464462
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264168039589}
+  m_GameObject: {fileID: 1692258770335464448}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &7411038264213057544
+--- !u!1 &1692258770342447277
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -144,34 +144,34 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7411038264213057548}
-  - component: {fileID: 7411038264213057549}
-  - component: {fileID: 7411038264213057550}
-  - component: {fileID: 7411038264213057551}
-  - component: {fileID: 7411038264213057586}
-  - component: {fileID: 7411038264213057587}
+  - component: {fileID: 1692258770342447273}
+  - component: {fileID: 1692258770342447272}
+  - component: {fileID: 1692258770342447275}
+  - component: {fileID: 1692258770342447274}
+  - component: {fileID: 1692258770342447255}
+  - component: {fileID: 1692258770342447254}
   m_Layer: 5
-  m_Name: Canvas complete(L3)
+  m_Name: Canvas complete(Dia5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7411038264213057548
+--- !u!224 &1692258770342447273
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264213057544}
+  m_GameObject: {fileID: 1692258770342447277}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 403483884755746710}
-  - {fileID: 7411038264845488523}
-  - {fileID: 7411038264444630253}
+  - {fileID: 8375611322091947827}
+  - {fileID: 1692258770731886894}
+  - {fileID: 1692258770580573256}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -180,13 +180,13 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!223 &7411038264213057549
+--- !u!223 &1692258770342447272
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264213057544}
+  m_GameObject: {fileID: 1692258770342447277}
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
@@ -201,13 +201,13 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &7411038264213057550
+--- !u!114 &1692258770342447275
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264213057544}
+  m_GameObject: {fileID: 1692258770342447277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
@@ -224,13 +224,13 @@ MonoBehaviour:
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
   m_PresetInfoIsWorld: 0
---- !u!114 &7411038264213057551
+--- !u!114 &1692258770342447274
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264213057544}
+  m_GameObject: {fileID: 1692258770342447277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
@@ -241,13 +241,13 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &7411038264213057586
+--- !u!114 &1692258770342447255
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264213057544}
+  m_GameObject: {fileID: 1692258770342447277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28921f22fe1b27e4db576c1a489b38bb, type: 3}
@@ -256,15 +256,14 @@ MonoBehaviour:
   characters:
   - name: Limoncin
     dialogueList:
-    - text: "Las vacunas llevan microchips en forma de lim\xF3n para que no veas
-        la verdad"
-      startWaitTimeSeconds: 3
+    - text: Hey
+      startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 7411038264213057586}
+          - m_Target: {fileID: 1692258770342447255}
             m_TargetAssemblyTypeName: DialogueSystem, Assembly-CSharp
             m_MethodName: changeToLemonianColor
             m_Mode: 1
@@ -303,8 +302,8 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    - text: "Eh\u2026 espera, tengo m\xE1s, te lo prometo "
-      startWaitTimeSeconds: 10
+    - text: "Hola,\xBFque tal?"
+      startWaitTimeSeconds: 1
       letterSpeedSeconds: 0
       fontSize: 0
       startLineEvent:
@@ -337,9 +336,8 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    - text: "El lim\xF3n sabe \xE1cido para que no tomes mucho y no empieces a ver
-        la verdad "
-      startWaitTimeSeconds: 5
+    - text: "Estoy aqu\xED"
+      startWaitTimeSeconds: 3
       letterSpeedSeconds: 0
       fontSize: 0
       startLineEvent:
@@ -372,8 +370,385 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-    - text: "Lo que mat\xF3 a los dinosaurios fue un lim\xF3n espacial gigante"
-      startWaitTimeSeconds: 20
+    - text: "Aqu\xED delante"
+      startWaitTimeSeconds: 3
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: "\xBF\xBFME OYES??"
+      startWaitTimeSeconds: 3
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: "Soy LIMONC\xCDN"
+      startWaitTimeSeconds: 3
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: hoolaaaaaaaaaaaaaaaa
+      startWaitTimeSeconds: 3
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: "Ahora tienes t\xFA el gorro"
+      startWaitTimeSeconds: 1
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: Menudo gilipollas
+      startWaitTimeSeconds: 2
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: JASJJAJFJADJDFAJJAJAJ
+      startWaitTimeSeconds: 3
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: Buena suerte jasdkjfajdf
+      startWaitTimeSeconds: 3
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: "T\xEDo, por favor a mi, no me cortes. Coge a los otros, c\xF3gelos a
+        ellos"
+      startWaitTimeSeconds: 6
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: "Te puedo ayudar colega, te lo prometo, te lo contar\xE9 todo sobre ellos.
+        Pero mejor me voy a mantener alejado del cuchillo"
+      startWaitTimeSeconds: 2
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: "\xBFSab\xEDas que la palabra \"Masones\" viene de limones?"
+      startWaitTimeSeconds: 15
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: StartAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls:
+          - m_Target: {fileID: 0}
+            m_TargetAssemblyTypeName: Limoncin, Assembly-CSharp
+            m_MethodName: EndAnimation
+            m_Mode: 1
+            m_Arguments:
+              m_ObjectArgument: {fileID: 0}
+              m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+              m_IntArgument: 0
+              m_FloatArgument: 0
+              m_StringArgument: 
+              m_BoolArgument: 0
+            m_CallState: 2
+    - text: El cielo realmente es amarillo, es el gas de los aviones el que lo vuelve
+        azul
+      startWaitTimeSeconds: 12
       letterSpeedSeconds: 0
       fontSize: 0
       startLineEvent:
@@ -411,23 +786,33 @@ MonoBehaviour:
   defaultFontSize: 26
   defaultFont: {fileID: 11400000, guid: 4a913b0c5685f5746963bfe17637ac52, type: 2}
   limoncin: 1
---- !u!114 &7411038264213057587
+--- !u!114 &1692258770342447254
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264213057544}
+  m_GameObject: {fileID: 1692258770342447277}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 28921f22fe1b27e4db576c1a489b38bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - name: Dani
+  - name: C1
     dialogueList:
-    - text: "T\xEDo me llamo Dani"
+    - text: AYAYAY
       startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.01
+      fontSize: 26
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: Como me entraba una limonada
+      startWaitTimeSeconds: 1
       letterSpeedSeconds: 0
       fontSize: 0
       startLineEvent:
@@ -436,9 +821,19 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Jose
+    - text: Que rica la limonada
+      startWaitTimeSeconds: 1
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+  - name: C2
     dialogueList:
-    - text: Me duele la barriga
+    - text: Holaa
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -448,7 +843,17 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: De puro comer pisa
+    - text: "No tendr\xE1s una rica limonada?"
+      startWaitTimeSeconds: 1
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: pofavo
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -458,7 +863,7 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: jeje
+    - text: tengo sed (de conocimiento)
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -468,16 +873,16 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Lemonian
+  - name: C3
     dialogueList:
-    - text: soy un limon
+    - text: Necesito
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
+      letterSpeedSeconds: 0.02
       fontSize: 0
       startLineEvent:
         m_PersistentCalls:
           m_Calls:
-          - m_Target: {fileID: 7411038264213057587}
+          - m_Target: {fileID: 1692258770342447254}
             m_TargetAssemblyTypeName: DialogueSystem, Assembly-CSharp
             m_MethodName: changeFont
             m_Mode: 2
@@ -490,7 +895,7 @@ MonoBehaviour:
               m_StringArgument: 
               m_BoolArgument: 0
             m_CallState: 2
-          - m_Target: {fileID: 7411038264213057587}
+          - m_Target: {fileID: 1692258770342447254}
             m_TargetAssemblyTypeName: DialogueSystem, Assembly-CSharp
             m_MethodName: changeToLemonianColor
             m_Mode: 1
@@ -505,9 +910,9 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: "Un lim\xF3n mam\xF3n"
+    - text: un
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
+      letterSpeedSeconds: 0.02
       fontSize: 0
       startLineEvent:
         m_PersistentCalls:
@@ -515,10 +920,40 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: jeje
+    - text: zumo
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
+      letterSpeedSeconds: 0.02
       fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: de
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.02
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "lim\xF3n"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.02
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "r\xE1pido"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.02
+      fontSize: 40
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -526,9 +961,9 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
   charactersOut:
-  - name: Dani
+  - name: C1
     dialogueList:
-    - text: Este zumo esta espectacular!!
+    - text: Me la meto por el culo
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -538,9 +973,9 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Jose
+  - name: C2
     dialogueList:
-    - text: Estoy de limones...
+    - text: PERO POR QUE ME DAS LIMONES (gracias)
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -550,9 +985,19 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Lemonian
+  - name: C3
     dialogueList:
-    - text: UNACEPTABLE!
+    - text: Has tardado demasiado se ha muerto mi perro
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: Feo
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -566,7 +1011,7 @@ MonoBehaviour:
   defaultFontSize: 36
   defaultFont: {fileID: 11400000, guid: 07380b3ae2588cb48a0a9aba3a64dfcf, type: 2}
   limoncin: 0
---- !u!1 &7411038264444630254
+--- !u!1 &1692258770580573259
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -574,9 +1019,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7411038264444630253}
-  - component: {fileID: 7411038264444630163}
-  - component: {fileID: 7411038264444630252}
+  - component: {fileID: 1692258770580573256}
+  - component: {fileID: 1692258770580573238}
+  - component: {fileID: 1692258770580573257}
   m_Layer: 5
   m_Name: LemonTextBox
   m_TagString: Untagged
@@ -584,20 +1029,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!224 &7411038264444630253
+--- !u!224 &1692258770580573256
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264444630254}
+  m_GameObject: {fileID: 1692258770580573259}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7411038264168039588}
-  m_Father: {fileID: 7411038264213057548}
+  - {fileID: 1692258770335464449}
+  m_Father: {fileID: 1692258770342447273}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -605,21 +1050,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7411038264444630163
+--- !u!222 &1692258770580573238
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264444630254}
+  m_GameObject: {fileID: 1692258770580573259}
   m_CullTransparentMesh: 1
---- !u!114 &7411038264444630252
+--- !u!114 &1692258770580573257
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264444630254}
+  m_GameObject: {fileID: 1692258770580573259}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -643,7 +1088,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &7411038264845488516
+--- !u!1 &1692258770731886881
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -651,9 +1096,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7411038264845488523}
-  - component: {fileID: 7411038264845488521}
-  - component: {fileID: 7411038264845488522}
+  - component: {fileID: 1692258770731886894}
+  - component: {fileID: 1692258770731886892}
+  - component: {fileID: 1692258770731886895}
   m_Layer: 5
   m_Name: TextBox
   m_TagString: Untagged
@@ -661,20 +1106,20 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!224 &7411038264845488523
+--- !u!224 &1692258770731886894
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264845488516}
+  m_GameObject: {fileID: 1692258770731886881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7411038265425657805}
-  m_Father: {fileID: 7411038264213057548}
+  - {fileID: 1692258771293161320}
+  m_Father: {fileID: 1692258770342447273}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -682,21 +1127,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -50}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7411038264845488521
+--- !u!222 &1692258770731886892
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264845488516}
+  m_GameObject: {fileID: 1692258770731886881}
   m_CullTransparentMesh: 1
---- !u!114 &7411038264845488522
+--- !u!114 &1692258770731886895
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038264845488516}
+  m_GameObject: {fileID: 1692258770731886881}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -720,7 +1165,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!1 &7411038265425657806
+--- !u!1 &1692258771293161323
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -728,9 +1173,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7411038265425657805}
-  - component: {fileID: 7411038265425657843}
-  - component: {fileID: 7411038265425657804}
+  - component: {fileID: 1692258771293161320}
+  - component: {fileID: 1692258771293161302}
+  - component: {fileID: 1692258771293161321}
   m_Layer: 5
   m_Name: DialogueText
   m_TagString: Untagged
@@ -738,19 +1183,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &7411038265425657805
+--- !u!224 &1692258771293161320
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038265425657806}
+  m_GameObject: {fileID: 1692258771293161323}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7411038264845488523}
+  m_Father: {fileID: 1692258770731886894}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -758,21 +1203,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &7411038265425657843
+--- !u!222 &1692258771293161302
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038265425657806}
+  m_GameObject: {fileID: 1692258771293161323}
   m_CullTransparentMesh: 1
---- !u!114 &7411038265425657804
+--- !u!114 &1692258771293161321
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7411038265425657806}
+  m_GameObject: {fileID: 1692258771293161323}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -855,12 +1300,12 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1001 &3300871650165504153
+--- !u!1001 &6659237448556970044
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 7411038264213057548}
+    m_TransformParent: {fileID: 1692258770342447273}
     m_Modifications:
     - target: {fileID: 2906646066242799371, guid: 0ce7b94672947fb4b9ea4b56ed227a88,
         type: 3}
@@ -994,9 +1439,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ce7b94672947fb4b9ea4b56ed227a88, type: 3}
---- !u!224 &403483884755746710 stripped
+--- !u!224 &8375611322091947827 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2906646066242799375, guid: 0ce7b94672947fb4b9ea4b56ed227a88,
     type: 3}
-  m_PrefabInstance: {fileID: 3300871650165504153}
+  m_PrefabInstance: {fileID: 6659237448556970044}
   m_PrefabAsset: {fileID: 0}
