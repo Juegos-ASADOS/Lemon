@@ -88,6 +88,7 @@ public class SqueezerInteraction : InteractableObject
         liquid.SetActive(false);
         transform.parent = originalPos;
         transform.position = originalPos.GetChild(0).position;
+        transform.rotation = originalPos.GetChild(0).rotation;
     }
 
     void OnMouseOver() { hover = true; }
