@@ -873,7 +873,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e73026b34d40784fb6bfc1cf8f8ed7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  client: {fileID: 0}
+  client: {fileID: 489177483}
+  gorro: {fileID: 3761293987262992147, guid: 865bc66af3278584ab0ddac12372bdd5, type: 3}
 --- !u!1001 &308712583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1921,6 +1922,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8802459edc567b648b120b5ebbcec7e9, type: 3}
+--- !u!114 &489177483 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3768878257224201312, guid: 756179a778166b540a683ff5026ad2d6,
+    type: 3}
+  m_PrefabInstance: {fileID: 2103946809}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ec9a6697c67f9f4bb96114b256eef11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &505508667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3215,6 +3228,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4828695112178090724, guid: cb4e69f5d61d0324cb69b2ee89ddaedf,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: 83d3d1ad30e15a64780a1946110d728b,
+        type: 2}
     - target: {fileID: 4828695112178090725, guid: cb4e69f5d61d0324cb69b2ee89ddaedf,
         type: 3}
       propertyPath: m_Name
@@ -5641,6 +5660,37 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b04727b59af27f840a0d51f2867f5dff, type: 3}
+--- !u!1 &1319482467
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1319482468}
+  m_Layer: 0
+  m_Name: Gorro
+  m_TagString: Punto
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1319482468
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319482467}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.7213929, y: 2.534, z: 0.047}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1345185586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4647996826536713672, guid: 2b011da3314b47d43ae566711bb85580,
