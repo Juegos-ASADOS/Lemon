@@ -10,12 +10,14 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance { get; private set; }
 
-    private DayBase actualDay;
-
     private const int StartingDayScene = 1;
     private const int EndingDayScene = 11;
 
     private int actualSceneNumber = StartingDayScene;
+
+    float timer = 0;
+    bool end = false;
+    int day = 1;
 
     public uint money = 0;
     private void Awake()
@@ -29,38 +31,28 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-    private IEnumerator ProcessDay()
+    private void Update()
     {
-        //Wait 1 frame
-        yield return null;
-
-        if (actualDay == null){
-            Debug.LogError("Couldn't find a DAY");
-            yield break;
+        if (end)
+        {
+            if (timer < 0)
+            {
+                SceneManager.LoadScene("Day" + day);
+                end = false;
+            }
+            timer -= Time.deltaTime;
         }
-
-        actualDay.InitDay();
-
-        while (!actualDay.HasEnded())
-            yield return null;
-
-        Debug.Log("Día Terminado");
-
-        if (actualSceneNumber == EndingDayScene) { } // Do smth
-
-        actualSceneNumber += 1;
-        SceneManager.LoadScene(actualSceneNumber);
-    }
-
-    private void OnLevelWasLoaded(int level)
-    {
-        actualDay = FindObjectOfType<DayBase>();
-        StartCoroutine(ProcessDay());
     }
 
     public void finishDay()
     {
         EndOfDay(0);
+    }
+
+    public void endDay()
+    {
+        day++;
+        timer = 3;
+        end = true;
     }
 }

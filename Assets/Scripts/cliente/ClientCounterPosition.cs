@@ -17,7 +17,6 @@ public class ClientCounterPosition : MonoBehaviour
             InSight = !InSight;
             if (!InSight)
             {
-                Debug.Log("fuera de vista");
                 CounterOutOfSight();
             }
         }
