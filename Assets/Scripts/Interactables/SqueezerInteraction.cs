@@ -89,6 +89,7 @@ public class SqueezerInteraction : InteractableObject
         transform.parent = originalPos;
         transform.position = originalPos.GetChild(0).position;
         transform.rotation = originalPos.GetChild(0).rotation;
+        canHold = false;
     }
 
     void OnMouseOver() { hover = true; }
