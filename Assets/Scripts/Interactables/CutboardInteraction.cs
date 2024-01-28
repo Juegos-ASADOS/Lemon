@@ -24,7 +24,7 @@ public class CutboardInteraction : InteractableObject
         if (pickedObject != null)
         {
             if (pickedObject.GetComponent<InteractableObject>().objType == ObjectType.CUCHILLO &&
-                transform.childCount == 2 && !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
+                transform.childCount == 4 && !transform.GetChild(3).GetComponent<FruitCharacteristics>().IsCut())
             {
                 canHold = true;
                 knife = pickedObject;
@@ -34,7 +34,7 @@ public class CutboardInteraction : InteractableObject
                     FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Scream");
                 }
             }
-            else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>() != null)
+            else if (transform.childCount < 4 && pickedObject.GetComponent<FruitCharacteristics>() != null)
             {
                 FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Table");
                 transform.GetComponent<BoxCollider>().enabled = false;
@@ -67,9 +67,9 @@ public class CutboardInteraction : InteractableObject
         }
         if (restingTime <= 0.0f)
         {
-            if (transform.childCount == 2)
+            if (transform.childCount == 4)
             {
-                transform.GetChild(1).GetComponent<FruitCharacteristics>().CutFruit();
+                transform.GetChild(3).GetComponent<FruitCharacteristics>().CutFruit();
 
                 canHold = false;
                 transform.GetComponent<BoxCollider>().enabled = false;
