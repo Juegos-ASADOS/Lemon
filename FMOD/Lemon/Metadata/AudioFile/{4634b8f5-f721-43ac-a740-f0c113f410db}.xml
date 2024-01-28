@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{4634b8f5-f721-43ac-a740-f0c113f410db}">
+		<property name="assetPath">
+			<value>SFX/Voices/Limoncio/LemonVoices_Limoncio_4.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.8012698412698414</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{ca5f652a-30bc-447f-b750-a0163f4f7a7c}</destination>
+		</relationship>
+	</object>
+</objects>

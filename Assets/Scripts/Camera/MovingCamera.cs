@@ -23,10 +23,13 @@ public class MovingCamera : MonoBehaviour
 
     void unLockCamera()
     {
-
-        Debug.Log("desbloqueado");
         //it will unlock everytime a dialogue is ended, it will not end with limoncio tho, he is eternal!
         cameraLock = false;
+    }
+
+    public void lockCamera()
+    {
+        cameraLock = true;
     }
     void rotateToCounter()
     {
@@ -140,6 +143,8 @@ public class MovingCamera : MonoBehaviour
 
     public IEnumerator ForcedRotateTo(CameraWaypoint waypoint)
     {
+        if (cameraLock)
+            yield break;
         while (cameraMoving)
             yield return null;
 

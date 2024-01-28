@@ -12,6 +12,7 @@ public class Register : MonoBehaviour
     [SerializeField]
     uint code;
 
+    public CameraWaypoint waypoint;
     FMOD_Manager fmodManager;
 
     string actCode = "";
@@ -58,6 +59,9 @@ public class Register : MonoBehaviour
    
     public void OpenDrawer(int drawer)
     {
+        StartCoroutine(Camera.main.GetComponent<MovingCamera>().ForcedRotateTo(waypoint));
+        Camera.main.GetComponent<MovingCamera>().lockCamera();
+        fmodManager.SetGlobalParameterByName("CashRegister", "Open");
         fmodManager.PlaySingleInstanceEmitterControllerGroup("Abrir");
         transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Open");
         if (transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>() != null)
@@ -66,7 +70,10 @@ public class Register : MonoBehaviour
     public void CloseDrawer(int drawer)
     {
         transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Close");
+        fmodManager.SetGlobalParameterByName("CashRegister", "Close");
+        fmodManager.PlaySingleInstanceEmitterControllerGroup("Abrir");
         if (transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>() != null)
             transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>().enabled = false;
+        GameManager.Instance.endDay();
     }
 }
