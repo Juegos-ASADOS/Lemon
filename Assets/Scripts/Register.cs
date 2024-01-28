@@ -65,8 +65,12 @@ public class Register : MonoBehaviour
         fmodManager.PlaySingleInstanceEmitterControllerGroup("Abrir");
         transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Open");
         if (transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>() != null)
+        {
             transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>().enabled = true;
+            transform.GetChild(drawer + 2).GetComponent<DrawerInteractable>().ActivateCoins();
+        }
     }
+
     public void CloseDrawer(int drawer)
     {
         transform.GetChild(drawer + 2).GetComponent<Animator>().SetTrigger("Close");

@@ -35,4 +35,9 @@ public class DrawerInteractable : InteractableObject
             transform.parent.GetComponent<Register>().CloseDrawer(0);
         }
     }
+
+    public void ActivateCoins()
+    {
+        coins.Activate();
+    }
 }

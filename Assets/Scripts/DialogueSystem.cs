@@ -274,7 +274,7 @@ public class DialogueSystem : MonoBehaviour
 
     [SerializeField]
     bool limoncin;
-    const float limoncin_time_till_dialogue_disappears = 1f;
+    const float limoncin_time_till_dialogue_disappears = 2f;
 
     private void OnDestroy()
     {

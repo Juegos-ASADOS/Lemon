@@ -28,6 +28,14 @@ public class MoneySpawn : MonoBehaviour
         }
     }
 
+    public void Activate()
+    {
+        for(int i = 0; i < coins; i++)
+        {
+            transform.GetChild(i).GetComponent<MeshCollider>().enabled = true;
+        }
+    }
+
     private void OnDestroy()
     {
         Cliente.ClientSatisfiedEvent -= SpawnMoney;
