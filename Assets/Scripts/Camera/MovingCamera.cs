@@ -138,7 +138,7 @@ public class MovingCamera : MonoBehaviour
         cameraMoving = false;
     }
 
-    private IEnumerator ForcedRotateTo(CameraWaypoint waypoint)
+    public IEnumerator ForcedRotateTo(CameraWaypoint waypoint)
     {
         while (cameraMoving)
             yield return null;

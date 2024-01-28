@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6509194692916708221}
   - component: {fileID: 1183863056103998464}
   m_Layer: 0
-  m_Name: Muffin
+  m_Name: Croissant
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2642490091234997641}
-  m_Mesh: {fileID: -4112205284317897512, guid: d894fdd763a642a4582a1f1fed6db879, type: 3}
+  m_Mesh: {fileID: -7151485785541977250, guid: 8833a9b7d6d151046931827e82efcca6, type: 3}
 --- !u!23 &4588322276740600924
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb6e59aae05e95a4ea267fa208f8daee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  food: 0
+  food: 1
 --- !u!114 &6509194692916708221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,4 +126,4 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: -4112205284317897512, guid: d894fdd763a642a4582a1f1fed6db879, type: 3}
+  m_Mesh: {fileID: -7151485785541977250, guid: 8833a9b7d6d151046931827e82efcca6, type: 3}
