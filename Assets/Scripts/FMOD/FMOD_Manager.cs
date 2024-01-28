@@ -135,7 +135,13 @@ public class FMOD_Manager : MonoBehaviour
         if (globalVariableNames.Contains(name))
             FMODUnity.RuntimeManager.StudioSystem.setParameterByName(name, value);
         else
-            Debug.Log("Missing Global Variable name");
+            Debug.Log("Missing Global Variable name " + name);
     }
-
+    public void SetGlobalParameterByName(string name, string value)
+    {
+        if (globalVariableNames.Contains(name))
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByNameWithLabel(name, value);
+        else
+            Debug.Log("Missing Global Variable name " + name);
+    }
 }

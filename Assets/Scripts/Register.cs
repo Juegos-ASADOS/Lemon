@@ -34,22 +34,21 @@ public class Register : MonoBehaviour
         if (actCode.Length>4) actCode = n;
 
         txt.text = actCode;
-        Debug.Log(actCode);
     }
 
     public void Enter()
     {
         if(actCode.Length > 0  && code == int.Parse(actCode))
         {
-            fmodManager.SetGlobalParameterByName("CashRegister", 0);
+            fmodManager.SetGlobalParameterByName("CashRegister", "Init");
             //SONIDO inicioCaja
             RegisterOpen();
         }
         else
         {
-            fmodManager.SetGlobalParameterByName("CashRegister", 1);
+            fmodManager.SetGlobalParameterByName("CashRegister", "CodeError");
+            fmodManager.PlaySingleInstanceEmitterControllerGroup("Abrir");
             //SONIDO errorCodigo
-            Debug.Log("Error");
             actCode = "";
             txt.text = "0000";
         }
