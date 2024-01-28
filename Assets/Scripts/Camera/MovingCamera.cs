@@ -166,5 +166,5 @@ public class MovingCamera : MonoBehaviour
 
         cameraMoving = false;
     }
-
+    public bool getCameraMoving() { return cameraMoving; }
 }
