@@ -21,7 +21,7 @@ public class MovingCamera : MonoBehaviour
         DialogueSystem.EndDialogueEvent += unLockCamera;
     }
 
-    void unLockCamera()
+    public void unLockCamera()
     {
         //it will unlock everytime a dialogue is ended, it will not end with limoncio tho, he is eternal!
         cameraLock = false;
@@ -31,7 +31,7 @@ public class MovingCamera : MonoBehaviour
     {
         cameraLock = true;
     }
-    void rotateToCounter()
+    public void rotateToCounter()
     {
         cameraLock = true;
         StartCoroutine(rotateImportant());
