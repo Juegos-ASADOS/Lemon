@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CutboardInteraction : InteractableObject
 {
@@ -27,6 +28,11 @@ public class CutboardInteraction : InteractableObject
             {
                 canHold = true;
                 knife = pickedObject;
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("KnifeCut");
+                if(SceneManager.GetActiveScene().name == "Dia 7")
+                {
+                    FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Scream");
+                }
             }
             else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>() != null)
             {
@@ -75,6 +81,7 @@ public class CutboardInteraction : InteractableObject
             bar.gameObject.SetActive(false);
             if (knife != null)
             {
+                FMOD_Manager.instance.SetGlobalParameterByName("Cutting", 1);
                 knife.GetComponent<KnifeInteraction>().CutEnd();
                 knife = null;
                 transform.GetComponent<BoxCollider>().enabled = false;

@@ -33,6 +33,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8299327366403383424}
+  - {fileID: 1911474297812608752}
+  - {fileID: 4462086829047999883}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -101,6 +103,8 @@ MonoBehaviour:
   objType: 7
   destMovement: {fileID: 0}
   holdTime: 1
+  fillBar: {fileID: 0}
+  bar: {fileID: 0}
 --- !u!65 &4108565326939919123
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -145,3 +149,223 @@ Transform:
   m_Father: {fileID: 5731514975863097326}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &782435140100721097
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5731514975863097326}
+    m_Modifications:
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Actions/ScreamLemon
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -1215446455
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1266143831
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -850782792
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -834520685
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098497, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: groups.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098497, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: groups.Array.data[0]
+      value: Scream
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098499, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_Name
+      value: Scream FMOD EventEmitter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a26baf9746ba694a9d9e49b231dce56, type: 3}
+--- !u!4 &4462086829047999883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+    type: 3}
+  m_PrefabInstance: {fileID: 782435140100721097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3292601326639153842
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5731514975863097326}
+    m_Modifications:
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Path
+      value: event:/Actions/KnifeCut
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data1
+      value: -1640286839
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data2
+      value: 1255522345
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data3
+      value: -1677427523
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098496, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: EventReference.Guid.Data4
+      value: -1043661994
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098497, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: groups.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098497, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: groups.Array.data[0]
+      value: KnifeCut
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3978720028830098499, guid: 7a26baf9746ba694a9d9e49b231dce56,
+        type: 3}
+      propertyPath: m_Name
+      value: Cutting FMOD EventEmitter
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7a26baf9746ba694a9d9e49b231dce56, type: 3}
+--- !u!4 &1911474297812608752 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3978720028830098498, guid: 7a26baf9746ba694a9d9e49b231dce56,
+    type: 3}
+  m_PrefabInstance: {fileID: 3292601326639153842}
+  m_PrefabAsset: {fileID: 0}
