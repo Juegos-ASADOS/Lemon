@@ -132,34 +132,24 @@ public class Cliente : MonoBehaviour
 
         if (intention == Intention.WAITING)
         {
-            if (com == comandas.Empty_Cup)
+            if (com == comandas.Empty_Cup || com == comandas.Empty_Plate || com == comandas.No_Tray)
             {
                 //vaso vacio
-                return;
-            }
-            if (com == comandas.Empty_Plate)
-            {
-                //plato vacio
-                return;
-            }
-            if (com == comandas.No_Tray)
-            {
-                //bandeja vacia
+                FMOD_Manager.instance.SetGlobalParameterByName("Task", "Incorrect");
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("CheckTask");
                 return;
             }
 
             if (com == ComandasClientes.Instance.GetCommandByName(nombre))
             {
                 //success
-
+                FMOD_Manager.instance.SetGlobalParameterByName("Task", "Success");
+                FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("CheckTask");
                 ClientSatisfiedEvent(importance, nombre);
 
                 return;
             }
-        }
-        
-
-
+        }        
     }
     void OnBecameVisible()
     {
