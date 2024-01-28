@@ -11,7 +11,7 @@ public class FruitCharacteristics : MonoBehaviour
     bool isCut = false;
     [SerializeField]
     GameObject cutObject;
-    public void cutFruit()
+    public void CutFruit()
     {
         SetCut();
 

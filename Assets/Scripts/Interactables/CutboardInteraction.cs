@@ -22,10 +22,12 @@ public class CutboardInteraction : InteractableObject
                 transform.childCount == 2 && !transform.GetChild(1).GetComponent<FruitCharacteristics>().IsCut())
             {
                 canHold = true;
+                transform.GetComponent<BoxCollider>().enabled = true;
                 knife = pickedObject;
             }
             else if (transform.childCount < 2 && pickedObject.GetComponent<FruitCharacteristics>() != null)
             {
+                transform.GetComponent<BoxCollider>().enabled = false;
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);
                 pickedObject.transform.parent = transform;
                 PlayerInstance.instance.RemoveHandObject();
@@ -49,8 +51,10 @@ public class CutboardInteraction : InteractableObject
         {
             if (transform.childCount == 2)
             {
-                transform.GetChild(1).GetComponent<FruitCharacteristics>().cutFruit();
+                transform.GetChild(1).GetComponent<FruitCharacteristics>().CutFruit();
+
                 canHold = false;
+                transform.GetComponent<BoxCollider>().enabled = false;
             }
             //cutParticles.transform.position = transform.GetChild(0).position;
             //cutParticles.Play();
@@ -59,6 +63,7 @@ public class CutboardInteraction : InteractableObject
             {
                 knife.GetComponent<KnifeInteraction>().CutEnd();
                 knife = null;
+                transform.GetComponent<BoxCollider>().enabled = false;
             }
         }
     }

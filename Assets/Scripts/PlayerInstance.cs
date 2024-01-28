@@ -47,13 +47,19 @@ public class PlayerInstance : MonoBehaviour
         {
             if (t == ObjectType.FRUTA || t == ObjectType.COMIDA || t == ObjectType.VASO || t == ObjectType.PLATO)
             {
+                if(t == ObjectType.FRUTA && obj.transform.parent != null && obj.transform.parent.GetComponent<CutboardInteraction>() != null)
+                    obj.transform.parent.GetComponent<BoxCollider>().enabled = true;
                 if (obj.transform.parent != null && !obj.transform.parent.CompareTag("Cesta"))
                     pickedObject = obj;
                 else
                     pickedObject = Instantiate(obj);
             }
             else if (t == ObjectType.CUCHILLO || t == ObjectType.EXPRIMIDOR || t == ObjectType.DINERO)
+            {
+                if(t == ObjectType.CUCHILLO)
+                    GameObject.FindGameObjectWithTag("Cutboard").gameObject.transform.GetComponent<BoxCollider>().enabled = true;
                 pickedObject = obj;
+            }
             else
                 interact.Interact(null);
             
