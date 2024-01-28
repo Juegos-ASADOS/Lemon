@@ -18,6 +18,12 @@ public class FruitCharacteristics : MonoBehaviour
         GameObject newfruit = Instantiate(cutObject, transform.position, transform.rotation);
         //newfruit.transform.localScale = transform.localScale;
         newfruit.transform.parent = transform.parent;
+        if (newfruit.GetComponent<FruitCharacteristics>().GetTypeFruit() != JuiceType.LEMON)
+        {
+            Vector3 newPos = newfruit.transform.localPosition;
+            newPos.y = 0.0f;
+            newfruit.transform.localPosition = newPos;
+        }
         newfruit.GetComponent<FruitCharacteristics>().SetCut();
         Destroy(gameObject);
     }

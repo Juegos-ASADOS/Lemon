@@ -13,6 +13,8 @@ public class InteractableButton : InteractableObject
         transform.GetComponent<Animator>().SetTrigger("Pressed");
         if (this.name == "Enter")
         {
+            FMOD_Manager.instance.SetGlobalParameterByName("CashRegister", "Init");
+            FMOD_Manager.instance.PlaySingleInstanceEmitterControllerGroup("Abrir");
             //SONIDO boton
             this.transform.parent.GetComponentInParent<Register>().Enter();
         }
