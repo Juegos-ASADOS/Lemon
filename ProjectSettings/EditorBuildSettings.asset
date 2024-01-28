@@ -14,4 +14,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/_EscenasFinales/Day1.unity
     guid: 23f53d85cbe1fd6408b62d6e0152c1df
+  - enabled: 1
+    path: Assets/Scenes/_EscenasFinales/Day2.unity
+    guid: 9f69e266db6db0f418abfaad3db6a0ba
+  - enabled: 1
+    path: Assets/Scenes/_EscenasFinales/Day3.unity
+    guid: 1e3061749c6723849aa8283a7fb32148
+  - enabled: 1
+    path: Assets/Scenes/_EscenasFinales/Day4.unity
+    guid: 297d0a397d830e4419676f5857ae4b77
+  - enabled: 1
+    path: Assets/Scenes/_EscenasFinales/Day5.unity
+    guid: 142ee5277d0cd294fb61049f4a47b1cc
+  - enabled: 1
+    path: Assets/Scenes/_EscenasFinales/Day_PostProcessing.unity
+    guid: e6eb68bf21d80314394c68f26f09c0d2
+  - enabled: 1
+    path: Assets/Scenes/_EscenasFinales/DayLimoncio.unity
+    guid: cc35020a1496e754b902709bff44b1a4
   m_configObjects: {}
