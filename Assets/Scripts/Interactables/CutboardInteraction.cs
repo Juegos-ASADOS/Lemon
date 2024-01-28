@@ -33,6 +33,12 @@ public class CutboardInteraction : InteractableObject
                 transform.GetComponent<BoxCollider>().enabled = false;
                 pickedObject.GetComponent<InteractableObject>().destMovement = transform.GetChild(0);
                 pickedObject.transform.parent = transform;
+                if(pickedObject.GetComponent<FruitCharacteristics>().GetTypeFruit() == JuiceType.CAKE)
+                {
+                    Vector3 newT = pickedObject.GetComponent<InteractableObject>().destMovement.position;
+                    newT.y = 2.4f;
+                    pickedObject.GetComponent<InteractableObject>().destMovement.position = newT;
+                }
                 PlayerInstance.instance.RemoveHandObject();
             }
         }
