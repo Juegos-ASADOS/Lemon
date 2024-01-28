@@ -13,7 +13,7 @@ public class KnifeHolderInteractable : InteractableObject
             PlayerInstance.instance.RemoveHandObject();
             pickedObject.transform.parent = transform;
             pickedObject.transform.position = transform.GetChild(0).position;
-            pickedObject.transform.Rotate(90, 0, 0);
+            pickedObject.transform.Rotate(-90, 0, 0);
         }
             
     }

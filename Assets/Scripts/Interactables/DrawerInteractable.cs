@@ -25,7 +25,7 @@ public class DrawerInteractable : InteractableObject
         GameManager.Instance.money += 1;
         txt.text = GameManager.Instance.money + "€";
         pickedObject.transform.parent = transform.GetChild(0);
-        pickedObject.transform.position = Vector3.zero;
         pickedObject.transform.GetComponent<Rigidbody>().isKinematic = false;
+        pickedObject.transform.localPosition = Vector3.zero;
     }
 }
