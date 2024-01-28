@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2b2457792d78d174bbd495174c618f3f, type: 2}
+  - {fileID: 2100000, guid: bac7ecc6456a6f74e9b0e508010883d4, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5b27e29eae5cd2845803548cb36db711, type: 2}
+  - {fileID: 2100000, guid: bae7d15de3aca39479774925ce7e07d2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -227,7 +227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: dbd5bdbaa5d954e43992dac456abd28b, type: 2}
+  - {fileID: 2100000, guid: dc048a2228e3231459f6c71e6f7ec594, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -260,9 +260,8 @@ GameObject:
   - component: {fileID: 9163840954622156980}
   - component: {fileID: 5650261131769080784}
   - component: {fileID: 674352185217995174}
-  - component: {fileID: 5044415812532874799}
   m_Layer: 0
-  m_Name: CutOrange
+  m_Name: CutGrapeFruit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -277,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 8387761235736558094}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.8582767, y: 0, z: 2.2520938}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8949077778827398154}
@@ -314,16 +313,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruit: 2
   cutObject: {fileID: 0}
---- !u!65 &5044415812532874799
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8387761235736558094}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.72908837, y: 0.35801125, z: 0.4558456}
-  m_Center: {x: -0.022867233, y: 0.20156747, z: -0.0045315027}
