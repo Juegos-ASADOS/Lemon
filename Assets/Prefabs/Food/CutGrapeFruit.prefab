@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 9163840954622156980}
   - component: {fileID: 5650261131769080784}
   - component: {fileID: 674352185217995174}
+  - component: {fileID: 1365176751104687432}
   m_Layer: 0
   m_Name: CutGrapeFruit
   m_TagString: Untagged
@@ -313,3 +314,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fruit: 2
   cutObject: {fileID: 0}
+--- !u!65 &1365176751104687432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8387761235736558094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9730453, y: 0.39836067, z: 0.37463298}
+  m_Center: {x: -0.013477344, y: 0.214799, z: -0.012150361}

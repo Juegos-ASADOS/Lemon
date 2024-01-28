@@ -16,10 +16,11 @@ public class KnifeInteraction : InteractableObject
         PlayerInstance.instance.RemoveHandObject();
         transform.parent = originalPos;
         transform.position = originalPos.GetChild(0).position;
+        transform.Rotate(-90, 0, 0);
     }
 
     public override void PickUp()
     {
-        transform.Rotate(-90, 0, 0);
+        transform.Rotate(90, 0, 0);
     }
 }
