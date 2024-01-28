@@ -88,8 +88,8 @@ public class MovingCamera : MonoBehaviour
 
     private IEnumerator ForcedRotateTo(CameraWaypoint waypoint)
     {
-        if (cameraMoving)
-            yield break;
+        while (cameraMoving)
+            yield return null;
 
         cameraMoving = true;
 
