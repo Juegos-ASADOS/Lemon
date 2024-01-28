@@ -6,11 +6,17 @@ using UnityEngine.Events;
 
 public class Limoncin : MonoBehaviour
 {
+    public Animator animator;
     public static event Action<string> LimoncinEvent = delegate { };
 
     private void Start()
     {
         //Esto Tendrá que ser o cuando se coja o cuando se intente cortar o lo que sea
+        LimoncinEvent("Limoncin");
+        animator.SetBool("talk",true);
+    }
+    public void HablaLimoncin()
+    {
         LimoncinEvent("Limoncin");
     }
 }
