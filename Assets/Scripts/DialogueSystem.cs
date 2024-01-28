@@ -42,6 +42,7 @@ public class DialogueSystem : MonoBehaviour
             dialogueTMP = dialogueBox.transform.Find("DialogueText").GetComponent<TextMeshProUGUI>();
             Cliente.ClientEnter += startImportance;
             Cliente.ClientExit += dialogueStop;
+        Cliente.ClientSatisfiedEvent += startDespedida;
         }
         else
         {
@@ -50,8 +51,7 @@ public class DialogueSystem : MonoBehaviour
             defaultFontColor = Color.yellow;
             Limoncin.LimoncinEvent += startCoroutines;
         }
-
-        Cliente.ClientSatisfiedEvent += startDespedida;
+            
     }
 
     void startImportance(bool importance, string clientname)
@@ -78,7 +78,15 @@ public class DialogueSystem : MonoBehaviour
         //testing de que el cliente es importante cuando no
         StartDespedidas(clientname);
     }
-    void startCoroutines(string clientName)
+
+    public void startTutorial()
+    {
+        dialogueTMP.color = defaultFontColor;
+        dialogueTMP.font = defaultFont;
+        StopAllCoroutines();
+        StartCoroutine(dialogueStart("Tutorial"));
+    }
+     void startCoroutines(string clientName)
     {
         dialogueTMP.color = defaultFontColor;
         dialogueTMP.font = defaultFont;
@@ -122,7 +130,6 @@ public class DialogueSystem : MonoBehaviour
     public IEnumerator dialogueStart(string clientName)
     {
 
-        Debug.Log(characters.Count);
         // Get characterEvent
         bool found = false;
         short i = 0;

@@ -312,7 +312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29df627380909ac41a2db50283ff6afe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fruit: 2
+  fruit: 3
   cutObject: {fileID: 0}
 --- !u!65 &1365176751104687432
 BoxCollider:

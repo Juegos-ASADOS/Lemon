@@ -8,6 +8,8 @@ public class sc_Day3 : MonoBehaviour
 {
 
     [SerializeField] private Cliente client;
+    public GameObject client_1 = null;
+    public GameObject client_2 = null;
     public GameObject gorro;
 
     //vamos a diseñar los dias mediante eventos, llevando la cuenta de estos, por ejemplo, cuando un cliente ha salido, eso solo lo podra hacer una unica vez
@@ -45,18 +47,21 @@ public class sc_Day3 : MonoBehaviour
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
         client.setEnter();
+        client_1?.SetActive(true);
     }
 
     private IEnumerator EventClientThree()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(0);
         client.nombre = "C2";
         client.importance = true;
         client.exitWay = Cliente.ExitType.moving;
+        client_1?.SetActive(false);
+        client_2?.SetActive(true);
 
-        client.setAppear();
+        client.setEnter();
         PlayerInstance.instance.GetCameraComponent().rotateToCounter();
         Transform t = GameObject.FindGameObjectWithTag("Punto").transform;
-        Instantiate(gorro, t);
+        Instantiate(gorro, t).GetComponent<LemonCap>().SetClient(client);
     }
 }

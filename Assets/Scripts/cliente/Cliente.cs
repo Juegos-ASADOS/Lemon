@@ -74,7 +74,7 @@ public class Cliente : MonoBehaviour
         destino = counterPos;
         intention = Intention.ENTER;
     }
-    public  void setExit()
+    public void setExit()
     {
         teleport = false;
         moving = true;
@@ -103,7 +103,7 @@ public class Cliente : MonoBehaviour
     {
         if (moving)
         {
-                transform.position = Vector3.MoveTowards(transform.position, destino, MoveSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, destino, MoveSpeed * Time.deltaTime);
             if (Vector3.Distance(transform.position, destino) <= aceptableDistance)
             {
                 moving = false;
@@ -112,11 +112,12 @@ public class Cliente : MonoBehaviour
                     //esto se puede llamar desde un evento controlado
                     enterScene();
                     intention = Intention.READY;
-                    if (seen) {
+                    if (seen)
+                    {
                         onSight();
                     }
                 }
-                else if(intention == Intention.EXIT || intention == Intention.DISAPPEAR)
+                else if (intention == Intention.EXIT || intention == Intention.DISAPPEAR)
                 {
                     //esto se puede llamar desde un evento controlado
                     exitScene();
@@ -149,7 +150,11 @@ public class Cliente : MonoBehaviour
 
                 return;
             }
-        }        
+        }
+    }
+    public void Contentillo()
+    {
+        ClientSatisfiedEvent(importance, nombre);
     }
     void OnBecameVisible()
     {
@@ -159,7 +164,7 @@ public class Cliente : MonoBehaviour
     }
     void onSight()
     {
-     
+
         if (intention == Intention.READY)
         {
             ClientEnter(importance, nombre); //evento de cliente entrado

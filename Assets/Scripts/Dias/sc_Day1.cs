@@ -25,9 +25,8 @@ public class sc_Day1 : MonoBehaviour
     private void Start()
     {
 
-       
+        dialogos.GetComponent<DialogueSystem>().startTutorial();
 
-        StartTutorial();
     }
 
     void nextClient()
@@ -65,12 +64,7 @@ public class sc_Day1 : MonoBehaviour
         client.setEnter();
     }
 
-    private IEnumerator StartTutorial()
-    {
-        yield return  new WaitForSeconds(5);
-        StartCoroutine( dialogos.GetComponents<DialogueSystem>()[1].dialogueStart("C1"));
-        StartCoroutine( dialogos.GetComponents<DialogueSystem>()[0].dialogueStart("C1"));
-    }
+   
 
     private IEnumerator EventClientTWO()
     {

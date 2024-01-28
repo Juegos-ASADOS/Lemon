@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 1692258770342447255}
   - component: {fileID: 1692258770342447254}
   m_Layer: 5
-  m_Name: Canvas complete(L1)
+  m_Name: Canvas complete(Dia5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -799,10 +799,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characters:
-  - name: Dani
+  - name: C1
     dialogueList:
-    - text: "T\xEDo me llamo Dani"
+    - text: AYAYAY
       startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.01
+      fontSize: 26
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: Como me entraba una limonada
+      startWaitTimeSeconds: 1
       letterSpeedSeconds: 0
       fontSize: 0
       startLineEvent:
@@ -811,9 +821,19 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Jose
+    - text: Que rica la limonada
+      startWaitTimeSeconds: 1
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+  - name: C2
     dialogueList:
-    - text: Me duele la barriga
+    - text: Holaa
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -823,7 +843,17 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: De puro comer pisa
+    - text: "No tendr\xE1s una rica limonada?"
+      startWaitTimeSeconds: 1
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: pofavo
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -833,7 +863,7 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: jeje
+    - text: tengo sed (de conocimiento)
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -843,11 +873,11 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Lemonian
+  - name: C3
     dialogueList:
-    - text: soy un limon
+    - text: Necesito
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
+      letterSpeedSeconds: 0.02
       fontSize: 0
       startLineEvent:
         m_PersistentCalls:
@@ -880,9 +910,9 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: "Un lim\xF3n mam\xF3n"
+    - text: un
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
+      letterSpeedSeconds: 0.02
       fontSize: 0
       startLineEvent:
         m_PersistentCalls:
@@ -890,10 +920,40 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-    - text: jeje
+    - text: zumo
       startWaitTimeSeconds: 0
-      letterSpeedSeconds: 0
+      letterSpeedSeconds: 0.02
       fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: de
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.02
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "lim\xF3n"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.02
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: "r\xE1pido"
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0.02
+      fontSize: 40
       startLineEvent:
         m_PersistentCalls:
           m_Calls: []
@@ -901,9 +961,9 @@ MonoBehaviour:
         m_PersistentCalls:
           m_Calls: []
   charactersOut:
-  - name: Dani
+  - name: C1
     dialogueList:
-    - text: Este zumo esta espectacular!!
+    - text: Me la meto por el culo
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -913,9 +973,9 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Jose
+  - name: C2
     dialogueList:
-    - text: Estoy de limones...
+    - text: PERO POR QUE ME DAS LIMONES (gracias)
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0
@@ -925,9 +985,19 @@ MonoBehaviour:
       endLineEvent:
         m_PersistentCalls:
           m_Calls: []
-  - name: Lemonian
+  - name: C3
     dialogueList:
-    - text: UNACEPTABLE!
+    - text: Has tardado demasiado se ha muerto mi perro
+      startWaitTimeSeconds: 0
+      letterSpeedSeconds: 0
+      fontSize: 0
+      startLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+      endLineEvent:
+        m_PersistentCalls:
+          m_Calls: []
+    - text: Feo
       startWaitTimeSeconds: 0
       letterSpeedSeconds: 0
       fontSize: 0

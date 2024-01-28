@@ -45,6 +45,9 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Asterisk))
             end = true;
+
+        if (Input.GetKeyDown(KeyCode.Slash))
+            endDay();
     }
 
     public void finishDay()
