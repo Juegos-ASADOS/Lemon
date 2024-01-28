@@ -6,9 +6,12 @@ using UnityEngine;
 public class Cliente : MonoBehaviour
 {
     //Eventos a los que se les puede añadir informacion
-    public static event Action<string> ClientEnter = delegate { };
+    public static event Action<bool, string> ClientEnter = delegate { };
     public static event Action ClientExit = delegate { };
-    public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, OTHER }
+    public static event Action ClientReaddy = delegate { };
+
+    public static event Action<bool, string> ClientSeen = delegate { };
+    public enum Intention { ENTER, EXIT, APPEAR, DISAPPEAR, STAY, READY }
 
     [SerializeField] Vector3 counterPos;
     [SerializeField] Vector3 OutOfSightPos;
@@ -24,6 +27,7 @@ public class Cliente : MonoBehaviour
     private Vector3 destino;
     public bool moving = false;
     public bool teleport = false;
+    public bool importance = false;
 
     private void Awake()
     {
@@ -94,13 +98,14 @@ public class Cliente : MonoBehaviour
                 {
                     //esto se puede llamar desde un evento controlado
                     enterScene();
+                    intention = Intention.READY;
                 }
                 else if(intention == Intention.EXIT || intention == Intention.DISAPPEAR)
                 {
                     //esto se puede llamar desde un evento controlado
                     exitScene();
+                    intention = Intention.STAY;
                 }
-                intention = Intention.STAY;
             }
         }
     }
@@ -150,6 +155,14 @@ public class Cliente : MonoBehaviour
         //codigo para cuando miremos al cliente,
 
         //Ejemplo, lanzar texto
+        //if (Vector3.Distance(transform.position, counterPos) <= 0.5)
+        //{
+        //    ClientSeen(importance, nombre);
+        //}
+        if (intention == Intention.READY)
+        {
+            ClientEnter(importance, nombre); //evento de cliente entrado
+        }
     }
     void OnBecameInvisible()
     {
@@ -172,7 +185,8 @@ public class Cliente : MonoBehaviour
         if (intention == Intention.APPEAR)
         {
             appearInScene();
-            ClientEnter(nombre);
+            ClientEnter(importance, nombre);
+            intention = Intention.STAY;
         }
     }
     public void teleportToDest()
@@ -186,7 +200,7 @@ public class Cliente : MonoBehaviour
     void enterScene()
     {
         //Go to CounterPos
-        ClientEnter(nombre); //evento de cliente entrado
+        ClientReaddy();
         destino = OutOfSightPos;
     }
 

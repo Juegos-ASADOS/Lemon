@@ -33,7 +33,7 @@ public class SqueezerInteraction : InteractableObject
 
         if (restingTime <= 0.0f)
         {
-            gameObject.GetComponent<Renderer>().material = fruit.GetComponent<Renderer>().material;
+           // gameObject.GetComponent<Renderer>().material = fruit.GetComponent<Renderer>().material;
             PlayerInstance.instance.RemoveHandObject();
             Destroy(fruit);
             fruit = null;

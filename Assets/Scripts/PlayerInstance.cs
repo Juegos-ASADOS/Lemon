@@ -57,8 +57,6 @@ public class PlayerInstance : MonoBehaviour
             else
                 interact.Interact(null);
             
-
-            //
             if (pickedObject != null)
             {
                 pickedObject.GetComponent<InteractableObject>().destMovement = pickTransform;
