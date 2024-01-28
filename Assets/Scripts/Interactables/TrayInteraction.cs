@@ -70,7 +70,7 @@ public class TrayInteraction : InteractableObject
                 pickedObject.GetComponent<InteractableObject>().objType == ObjectType.PLATO &&
                 transform.childCount < 2)
             {
-                pickedObject.transform.position = transform.GetChild(0).position;
+                pickedObject.transform.SetPositionAndRotation(transform.GetChild(0).position, transform.GetChild(0).rotation);
                 pickedObject.transform.parent = transform;
                 objectContained = pickedObject;
                 PlayerInstance.instance.RemoveHandObject();
