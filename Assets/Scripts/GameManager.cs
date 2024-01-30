@@ -64,11 +64,13 @@ public class GameManager : MonoBehaviour
             timer -= Time.deltaTime;
         }
 
+#if UNITY_EDITOR
         if (Input.GetKeyDown(KeyCode.Backspace))
             end = true;
 
         if (Input.GetKeyDown(KeyCode.Return))
             endDay();
+#endif
     }
 
     public void finishDay()
