@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     float timer = 0;
     bool end = false;
-    int day = 1;
+    public int day = 1;
 
     public uint money = 0;
     private void Awake()

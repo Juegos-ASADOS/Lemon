@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] GameObject pauseMenu;
-
+    [SerializeField] GameObject optionsMenu;
     bool active = false;
     private void Update()
     {
@@ -29,6 +29,7 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
         Time.timeScale = 1f;
         active = false;
     }
@@ -37,6 +38,7 @@ public class PauseMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
 
+        GameManager.Instance.day = 1; //reseteamos el dia, al parecer es algo malo
         if (SceneManager.GetActiveScene().buildIndex == sceneID)
             Debug.LogWarning("Se ha intentado cargar la escena actual!");
         else
